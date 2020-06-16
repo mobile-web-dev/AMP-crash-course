@@ -1,0 +1,143 @@
+<!doctype html>
+<html ⚡>
+<head>
+  <meta charset="utf-8">
+  <title>amp-carousel - Example 1</title>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async></script>
+  <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+  <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+  <link rel="canonical" href="/index.html">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  <style amp-custom>
+    /* any custom styles go here. */
+    body {
+      background-color:wheat;;
+    }
+    amp-img {
+      border: 5px solid black;
+    }
+    .headerbar{
+        background-color:tomato;    
+    }
+   
+    .site-name{
+        font-family: cursive;
+        font-weight: 700;
+        font-size:100px;
+        color:wheat;
+        text-align: center;
+    }
+    h2{
+        font-family: cursive;
+        font-weight: 700;
+        color: tomato;
+        font-size:30px;
+        border: 2px solid grey;
+        text-align: center;
+    }
+    amp-social-share.social-media{
+        border: 10px solid grey;
+        text-align:center;
+    }
+    .hamburger {
+     padding-left: 10px; 
+     font-size: 70px;
+     color:wheat;
+    }
+    .sidebar {
+    padding: 10px;
+    margin: 0;
+    }
+    .sidebar > li {
+    list-style: none;
+    margin-bottom:10px;
+    }
+   .sidebar a {
+    text-decoration: none;
+    color:tomato;
+   }
+  .close-sidebar {
+    font-size: 1.5em;
+    padding-left: 5px;
+   }
+   table, th, td {
+    border: 1px solid black;
+   }
+   table{
+       width:100%;
+       background-color:#e0dcdc;
+   }
+   th {
+     text-align: center;
+   }
+  </style>
+</head>
+<header class="headerbar">
+    <div role="button" on="tap:sidebar1.toggle" tabindex="0" class="hamburger">☰</div>
+    <div class="site-name">Habeeba Naaz</div>
+</header>
+<amp-sidebar id="sidebar1" layout="nodisplay" side="left">
+    <div role="button" aria-label="close sidebar" on="tap:sidebar1.toggle" tabindex="0" class="close-sidebar">✕</div>
+    <ul class="sidebar">
+      <li><a href="#">About Me</a></li>
+      <li><a href="#skills">My Skills</a></li>
+      <li><a href="#motivation-video">Motivational Video</a></li>
+      <li><a href="#contact">Contact Me</a></li>
+    </ul>
+  </amp-sidebar>
+<body>
+    <div id="About">
+        <h2>About Me</h2>
+        <amp-carousel height="100"
+        layout="fixed-height"
+        type="carousel">
+       <table>
+           <tr><th>Education</th></tr>
+           <tr><td>BTech Computer Science</td></tr>
+           <tr><th>Hobbies</th></tr>
+           <tr><td>Learning New Technologies and Programming</td></tr>
+           </table>
+        </amp-carousel>
+    </div>
+    <div id="skills">
+       <h2>My Skills</h2>
+       <amp-carousel width="450" height="300" layout="responsive" type="slides">
+       <amp-img
+            src="images/html.jpg"
+            width="450"
+            height="300"></amp-img>
+      <amp-img
+           src="images/css.jpg"
+           width="450"
+           height="300"></amp-img>
+      <amp-img
+          src="images/javascript.png"
+          width="450"
+          height="300"></amp-img>
+      </amp-carousel>
+    </div>
+<div id="motivation-video">
+  <h2>My Motivational Video</h2>
+  <amp-youtube
+   data-videoid="APrZdruiQIA"
+   layout="responsive"
+   width="300"
+   height="100">
+  </amp-youtube>
+</div>
+<div id="contact">
+   <h2>Contact Me</h2>
+  <amp-social-share
+    class = "social-media"
+    type="linkedin"
+    width="60"
+    height="44"
+    data-param-text="Checkout My LinkedIn"
+    data-param-url="https://www.linkedin.com/in/habeeba-naaz-mohammad-452a474a/">
+  </amp-social-share>
+</div>
+</body>
+</html>
