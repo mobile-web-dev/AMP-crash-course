@@ -1,0 +1,57 @@
+<!doctype html>
+<html ⚡>
+<head>
+  <meta charset="utf-8">
+  <title>amp-carousel - Example 1</title>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+  <script custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async></script>
+  <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+  <link rel="canonical" href="https://preview.amp.dev/documentation/components/amp-carousel.example.1.html">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+</head>
+<style amp-custom>
+      body{
+          
+          background-color: #f2f2f2;
+      }
+      .about{
+        padding: 10px;
+        letter-spacing: 1px;
+        font-family: "Lucida Console", Courier, monospace;
+      }
+      a{
+        color: black;
+        
+      }
+  </style>
+<body>
+    <center>
+      <h1>My Portfolio</h1>
+      <h2>Lakshya Bansal<h2>
+      <h4>Developer</h4>
+      <div class="about">
+        Hello there! I'm a b.tech second year student. I am developer and my major technical skills are Web Development, Machine Learning and VUI. I love spending time on fixing little details and optimizing things. Also I like working in a team,you'll learn faster and much more. If you find anything interesting in me then do hit me up!
+      </div>
+      <amp-img src="https://drive.google.com/thumbnail?id=1vcxVi-6d7WyS31s9q77shhcsChDmi4uB" width="450" height="250" layout="responsive"></amp-img>
+      <h3>Technical Stack</h3>
+      <amp-carousel width="450" height="300" layout="responsive" type="slides" loop>
+        <amp-img src="https://drive.google.com/thumbnail?id=1ZU56vbP0F8JJYCI-04HHPG7s02yhLO-f" width="450" height="300" layout="responsive"></amp-img>
+        <amp-img src="https://drive.google.com/thumbnail?id=18ozd6WaHviCEztdo3r9z24I4JSjzVw9A" width="450" height="300" layout="responsive"></amp-img>
+        <amp-img src="https://drive.google.com/thumbnail?id=1NvwRvNX34hI-kv8ZLrD5VLnR9O7MnE6B" width="450" height="300" layout="responsive"></amp-img>
+      </amp-carousel>
+      <h3>A short video about me</h3>
+      <amp-youtube data-videoid="aR4CEO0N_-I" layout="responsive" width="480" height="270"></amp-youtube>
+      <h3>Grow our network</h3>
+      <div>
+        <amp-social-share type="twitter" width="60" height="44" data-param-url="http://lakshyabansal.000webhostapp.com/"></amp-social-share>
+        <amp-social-share type="linkedin" width="60" height="44" data-param-url="http://lakshyabansal.000webhostapp.com/"></amp-social-share>
+        <amp-social-share type="facebook" width="60" height="44" data-param-url="http://lakshyabansal.000webhostapp.com/"></amp-social-share>
+        <amp-social-share type="whatsapp" width="60" height="44" data-param-url="http://lakshyabansal.000webhostapp.com/"></amp-social-share>
+        <amp-social-share type="sms" width="60" height="44" data-param-url="http://lakshyabansal.000webhostapp.com/"></amp-social-share>
+      </div>
+      Made with ❤ by <a href="http://lakshyabansal.000webhostapp.com/">Lakshya</a>
+    </center>
+  </body>
+</html>
