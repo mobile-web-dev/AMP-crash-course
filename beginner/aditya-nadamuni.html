@@ -1,0 +1,104 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Assignment 1 For AMP Crash Course</title>
+    <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Open-source framework for publishing content",
+        "datePublished": "2015-10-07T12:02:41Z",
+        "image": [
+          "logo.jpg"
+        ]
+      }
+    </script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  </head>
+  <style amp-custom>
+      .container {
+          margin: 0 auto;
+          width: 60%;
+      }
+      body h1{
+          font-size: 36px;
+      }
+      .carousel {
+          margin: 0 auto;
+          width: 60%;
+      }
+      p {
+          font-size: 28px;
+      }
+      footer {
+          margin: 0 auto;
+          width: 60%;
+      }
+  </style>
+  <body>
+    <div class="container">
+        <h1>AMP Crash Course Assignment 1</h1>
+    <p>Example For <strong>AMP Image</strong> :</p>
+    <amp-img
+        alt="A view of the sea"
+        src="https://amp.dev/static/inline-examples/images/sea.jpg?width=2000&hash=5465c0705e4d7e87b6c4c9e82ea2ac9b226fed4f"
+        width="900"
+        height="675"
+        layout="responsive"
+    >
+    </amp-img>
+    <br>
+    <hr>
+    <p>Example For <strong>AMP Youtube Video Link</strong> :</p>
+    <amp-youtube
+       data-videoid="Uf9fpGe0PGs"
+       layout="responsive"
+       width="480" 
+       height="270"
+    ></amp-youtube>
+    <p>Example For <strong>AMP Carousel</strong> :</p>
+    <hr>
+    <div class="carousel">
+        <amp-carousel width="450" height="300" layout="responsive" type="slides">
+            <amp-img
+              src="https://amp.dev/static/inline-examples/images/image1.jpg?width=1000&hash=291849ad595fa089a312bf754ec92f0d7d69f9fa"
+              width="450"
+              height="300"
+            ></amp-img>
+            <amp-img
+              src="https://amp.dev/static/inline-examples/images/image2.jpg?width=1000&hash=0d8909f11844b66a726944909b49a453a5603913"
+              width="450"
+              height="300"
+            ></amp-img>
+            <amp-img
+              src="https://amp.dev/static/inline-examples/images/image3.jpg?width=1000&hash=3a38587ef8ce1ef067dc81de2b46567ee32752ba"
+              width="450"
+              height="300"
+            ></amp-img>
+          </amp-carousel>
+    </div>
+    <hr>
+    <p>Example For <strong>AMP Social Share Links</strong> :</p>
+    <div>
+        <amp-social-share
+        type="linkedin"
+        width="60"
+        height="44"
+        data-param-text="Connect on linkedin"
+        data-param-url="https://www.linkedin.com/in/aditya-nadamuni-31aaa549/"
+      >
+      </amp-social-share>
+    </div>
+    </div>
+  </body>
+  <footer>
+      <p>&copy;2020 Aditya Nadamuni</p>
+  </footer>
+</html>

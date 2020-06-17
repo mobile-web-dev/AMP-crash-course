@@ -1,0 +1,92 @@
+<!doctype html>
+<html amp lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Hello, AMPs</title>
+    <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Open-source framework for publishing content",
+        "datePublished": "2015-10-07T12:02:41Z",
+        "image": [
+            "logo.jpg"
+        ]
+    }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript>
+        <style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style>
+    </noscript>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+    <style amp-custom>
+        body{
+          font-family: cursive;
+          padding: 30px;
+          background-color: #9df9ef;
+          color: maroon;
+          margin: center;
+      }
+      body h1{
+          font-weight: bolder;
+          border: 1px #ffa8B6;
+      }
+      div{
+        padding: 50px;
+        margin: auto;
+      }
+
+  </style>
+</head>
+
+<body>
+    <h1>Deepak portfolio</h1>
+    <amp-img layout="responsive" width="300" height="200" src="https://miro.medium.com/max/1400/1*NW5Hhpv4Gckxynr5U-MZwA.jpeg">
+    </amp-img>
+    <h1>About me</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+ <amp-carousel id="custom-button"
+  width="400"
+  height="300"
+  layout="responsive"
+  type="slides"
+  autoplay
+  delay="2000">
+  <amp-img src="https://amp.dev/static/samples/img/image1.jpg?width=820&hash=76879293ba11bf0d4524ce8f49f7ce68d1361404"
+    width="400"
+    height="300"
+    layout="responsive"
+    alt="a sample image"></amp-img>
+  <amp-img src="https://amp.dev/static/samples/img/image2.jpg?width=820&hash=6dfe2ae301c51995f00fb8292e361a9856c6d31b"
+    width="400"
+    height="300"
+    layout="responsive"
+    alt="another sample image"></amp-img>
+  <amp-img src="https://amp.dev/static/samples/img/image3.jpg?width=820&hash=0e43bb16829ff6d9176fee5dbc7f5c8d50ad0c52"
+    width="400"
+    height="300"
+    layout="responsive"
+    alt="and another sample image"></amp-img>
+</amp-carousel>
+    <amp-youtube width="480" height="270" layout="responsive" data-videoid="QOmCymVeJis" autoplay>
+    </amp-youtube>
+    <div class="social-bar">
+        <amp-social-share class="rounded" type="email" width="44" height="44"></amp-social-share>
+        <amp-social-share class="rounded" type="linkedin" width="44" height="44"></amp-social-share>
+        <amp-social-share class="rounded" type="tumblr" width="44" height="44"></amp-social-share>
+        <amp-social-share class="rounded" type="twitter" width="44" height="44"></amp-social-share>
+    </div>
+    <center>&copy; Made with ❤️ by Deepak</center>
+</body>
+
+</html>
