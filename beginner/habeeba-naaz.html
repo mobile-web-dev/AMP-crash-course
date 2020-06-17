@@ -8,6 +8,8 @@
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
   <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+  <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+  <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
   <link rel="canonical" href="/index.html">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
@@ -36,12 +38,14 @@
         font-weight: 700;
         color: tomato;
         font-size:30px;
-        border: 2px solid grey;
         text-align: center;
+        background-color: #a5f2e7;
+        width:50%;
     }
     amp-social-share.social-media{
         border: 10px solid grey;
         text-align:center;
+        border-radius: 50px;
     }
     .hamburger {
      padding-left: 10px; 
@@ -78,6 +82,31 @@
    #About{
     margin: 0px auto;
    }
+   .subscribe-card{
+    border: 10px solid tomato;
+   }
+   input {
+    width: 50%;
+    margin-bottom:20px;
+    padding:5px;
+    
+  }
+  label{
+      color:tomato;
+      font-family:cursive;
+      font-size:30px;
+  }
+  .btn{
+     background-color:#8ff04f;
+     color:tomato;
+     font-size:20px;
+     border-radius: 30px;
+     border: 3px solid grey;
+     font-family:cursive;
+  }
+  textarea{
+      width:50%;
+  }
   </style>
 </head>
 <header class="headerbar">
@@ -87,12 +116,12 @@
 <amp-sidebar id="sidebar1" layout="nodisplay" side="left">
     <div role="button" aria-label="close sidebar" on="tap:sidebar1.toggle" tabindex="0" class="close-sidebar">✕</div>
     <ul class="sidebar">
-      <li><a href="#">About Me</a></li>
+      <li><a href="#About">About Me</a></li>
       <li><a href="#skills">My Skills</a></li>
       <li><a href="#motivation-video">Motivational Video</a></li>
-      <li><a href="#contact">Contact Me</a></li>
+      <li><a href="#contact">Contact Me</a> </li>  
     </ul>
-  </amp-sidebar>
+</amp-sidebar>
 <body>
     <div id="About">
         <h2>About Me</h2>
@@ -109,7 +138,7 @@
     </div>
     <div id="skills">
        <h2>My Skills</h2>
-       <amp-carousel width="450" height="100" layout="responsive" type="slides">
+       <amp-carousel lightbox width="450" height="100" layout="responsive" type="slides">
        <amp-img
             src="images/html.jpg"
             width="450"
@@ -139,6 +168,26 @@
 </div>
 <div id="contact">
    <h2>Contact Me</h2>
+   <div class="subscribe-card-container">
+      <div class="subscribe-card">
+          <form method="post" target="#contact" class="main-form">
+            <div class="input">     
+                <label for="form-name">Name</label>
+                <input type="text" name="name" id="form-name" required>
+            </div>
+            <div class="input">
+                <label for="form-email">Email</label>
+                <input type="email" name="email" id="form-email" required>        
+            </div>
+            <div class="input">
+                <label for="form-info">Details</label>
+                <textarea cols="50" id="form-info" rows="5">
+                    specify Details
+                </textarea>        
+            </div>
+            <input type="submit" value="Contact" class="btn">
+        </form>
+    </div>
   <amp-social-share
     class = "social-media"
     type="linkedin"
