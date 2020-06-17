@@ -1,0 +1,106 @@
+<!doctype html>
+<html amp lang="en">
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+    <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+    <title>Hello, AMPs</title>
+    <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <style amp-boilerplate>
+            body{
+            -webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            src: url('./fonts/montserrat-v14-latin-regular.eot'); /* IE9 Compat Modes */
+            src: local('Montserrat Regular'), local('Montserrat-Regular'),
+            url('./fonts/montserrat-v14-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('./fonts/montserrat-v14-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+            url('./fonts/montserrat-v14-latin-regular.woff') format('woff'), /* Modern Browsers */
+            url('./fonts/montserrat-v14-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+            url('./fonts/montserrat-v14-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
+        }
+
+        body {
+            font-family: 'Montserrat';
+            background: linear-gradient(27deg,#414a4c,#3b444b,#353839,#232b2b,#0e1111);
+            background-size: 500% 100%;
+            -webkit-animation: Gradient 10s ease infinite;
+            -moz-animation: Gradient 10s ease infinite;
+            animation: Gradient 10s ease infinite;
+        }
+        @-webkit-keyframes Gradient {
+            0%{background-position:0 50%}
+            50%{background-position:100% 50%}
+            100%{background-position:0 50%}
+        }
+
+        @-moz-keyframes Gradient {
+            0%{background-position:0 50%}
+            50%{background-position:100% 50%}
+            100%{background-position:0 50%}
+        }
+
+        @keyframes Gradient {
+            0%{background-position:0 50%}
+            50%{background-position:100% 50%}
+            100%{background-position:0 50%}
+        }
+
+        h1{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<center><h1>Hello, I am Prem Chavhan</h1></center>
+<center><h1>My Projects</h1></center>
+<amp-carousel height="300"
+                             layout="fixed-height"
+                             type="carousel">
+    <amp-img src="./images/cas1.png"
+             width="400"
+             height="300"
+             alt="a sample image"></amp-img>
+    <amp-img src="./images/cas2.png"
+             width="400"
+             height="300"
+             alt="a sample image"></amp-img>
+    <amp-img src="./images/cas3.png"
+             width="400"
+             height="300"
+             alt="a sample image"></amp-img>
+    <amp-img src="./images/cas4.png"
+             width="400"
+             height="300"
+             alt="a sample image"></amp-img>
+</amp-carousel>
+<center><h1>Videos</h1></center>
+    <amp-youtube width="400"
+                 height="300"
+                 layout="responsive"
+                 data-videoid="5XVOD6js5YM">
+    </amp-youtube>
+
+<amp-youtube width="400"
+             height="300"
+             layout="responsive"
+             data-videoid="xhXyGRPeuVw">
+</amp-youtube>
+<center><h1>Share</h1></center>
+<center>
+<amp-social-share type="pinterest"></amp-social-share>
+<amp-social-share type="facebook"></amp-social-share>
+<amp-social-share type="twitter"></amp-social-share>
+<amp-social-share type="linkedin"></amp-social-share>
+<amp-social-share type="whatsapp"></amp-social-share>
+</center>
+</body>
+</html>
