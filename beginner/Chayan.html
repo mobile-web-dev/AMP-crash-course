@@ -1,0 +1,131 @@
+<!doctype html>
+<html ⚡>  
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
+    <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+    <link rel="canonical" href=".html">
+    <title>Hey AMP!!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-custom>
+      body
+      {
+        width: auto;
+        margin: auto;
+        padding: 0.5em;
+        font-family: 'Raleway', sans-serif;
+      }
+      
+      h1
+      {
+        margin: 0 70px;
+        padding: 0.5em;
+      }
+      
+      h2
+      {
+        margin: 0 10px;
+        padding: 0.5em;
+        font-size: 1rem;
+      }
+      
+      .social
+      {
+        margin: auto;
+        padding: 0.5em;
+      }
+      
+      amp-social-share
+      {
+        padding: 0.1em;
+      }
+      
+      h5
+      {
+        margin: 10px 100px;
+        padding: 1em;
+      }
+      
+    </style>
+
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  </head>
+  <body>
+    <h1>AMP in Action</h1>
+    <h2>
+      This is the First exercise on the basics of AMP
+    </h2>
+	
+    <div>
+      	<h4>This is an image</h4>
+        <amp-img src="https://images.unsplash.com/photo-1489945052260-4f21c52268b9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60"
+          width="800"
+          height="400"
+          layout="responsive">
+        </amp-img>
+    </div>
+    
+    <div>
+      	<h4>This is an image carousel</h4>
+     	<amp-carousel 
+              type="slides"
+              width="450"
+              height="300"
+              controls
+              loop
+              autoplay
+              delay="3000"  data-next-button-aria-label="Go to next slide"
+              data-previous-button-aria-label="Go to previous slide">
+              <amp-img src="https://images.unsplash.com/photo-1559394699-fdff0d95e7f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                width="450"
+                height="300"></amp-img>
+              <amp-img src="https://images.unsplash.com/photo-1485191742815-475686cdb3a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                width="450"
+                height="300"></amp-img>
+              <amp-img src="https://images.unsplash.com/photo-1559544948-da38a2615cb7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                width="450"
+                height="300"></amp-img>
+        </amp-carousel>
+    </div>
+    
+    <div>
+        <h4>This is a YouTube Video</h4>
+        <amp-youtube
+          data-videoid="luR70V5gdS0"
+          width="480"
+          height="270"
+          layout="responsive">
+        </amp-youtube>
+    </div>
+    
+    <div class="social">
+      	<h4>These are embedded social sharing buttons</h4>
+   		<amp-social-share
+          type="twitter"
+          width="50"
+          height="50"
+          data-param-text="Hey check out my first attempt at AMP: Hey AMP!!">
+        </amp-social-share>
+      
+      	<amp-social-share
+          type="facebook"
+          width="50"
+          height="50"
+          data-param-text="Hey check out my first attempt at AMP: Hey AMP!!">
+      	</amp-social-share>
+      
+      	<amp-social-share
+          type="whatsapp"
+          width="50"
+          height="50"
+          data-param-text="Hey check out my first attempt at AMP: Hey AMP!!">
+      	</amp-social-share>
+    </div>
+    
+    <h5>Made with ❤ by Chayan</h5>
+    
+  </body>
+</html>
