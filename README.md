@@ -1,2 +1,2 @@
 # AMP-crash-course
-Repo for submitting your assignments and tasks
+Repo for submitting your assignments and tasks.
