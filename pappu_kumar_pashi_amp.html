@@ -1,0 +1,179 @@
+<!doctype html>
+<html amp lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Hello, AMPs</title>
+    <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Open-source framework for publishing content",
+        "datePublished": "2015-10-07T12:02:41Z",
+        "image": [
+          "logo.jpg"
+        ]
+      }
+    </script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <script async custom-element="amp-social-share"
+        src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+    <script async custom-element="amp-image-slider"
+        src="https://cdn.ampproject.org/v0/amp-image-slider-0.1.js"></script>
+    <script async custom-element="amp-image-lightbox"
+        src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+
+
+
+
+
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+    </style>
+
+
+</head>
+<style amp-custom>
+    body {
+        font-family: cursive;
+        padding: 30px;
+        background-color: rgb(20, 239, 255);
+        color: rgb(0, 17, 255);
+        margin: center;
+    }
+
+    body h1 {
+        font-weight: bolder;
+        border: 1px rgb(121, 255, 12);
+    }
+
+    div {
+        padding: 50px;
+        margin: auto;
+    }
+</style>
+
+<body>
+    <div>
+        <amp-carousel width="20" height="20" layout="responsive" type="slides">
+            <amp-img src="people-woman-coffee-meeting.jpg" width="400" height="300" layout="responsive"
+                alt="a sample image">
+            </amp-img>
+            <amp-img src="pexels-photo-287237.jpeg" width="400" height="300" layout="responsive"
+                alt="another sample image">
+            </amp-img>
+            <amp-img src="photo-1510915228340-29c85a43dcfe.jpg" width="400" height="300" layout="responsive"
+                alt="and another sample image"></amp-img>
+        </amp-carousel>
+        <hr>
+        <section>
+            <amp-img on="tap:lightbox1" role="button" tabindex="0" src="pappukumar.jpg" alt="Picture of a dog"
+                title="Picture of a dog, view in lightbox" layout="responsive" width="300" height="246">
+            </amp-img>
+            <amp-image-lightbox id="lightbox1" layout="nodisplay"></amp-image-lightbox>
+        </section>
+        <hr>
+        <section>
+            <amp-youtube width="480" height="270" layout="responsive" data-videoid="lBTCB7yLs8Y">
+            </amp-youtube>
+        </section>
+    </div>
+    <div>
+        <amp-social-share type="linkedin" width="50" height="50" padding="20" class="rounded"
+            data-param-text="Hey!! would love to connect with you"
+            data-param-url="https://www.linkedin.com/in/pappu-kumar-pashi-75977a172/">
+        </amp-social-share>
+
+        <amp-social-share type="twitter" width="50" height="50" padding="20"
+            data-param-text="Hey!! I would love to connect with you" data-param-url="https://twitter.com/TwistedPappu">
+        </amp-social-share>
+
+        <amp-social-share type="facebook" width="50" height="50" padding="20"
+            data-param-text="Hey!! would love to connect with you"
+            data-param-url="https://www.facebook.com/pappukumarengineer">
+        </amp-social-share>
+
+        <amp-social-share type="email" width="50" height="50" padding="20"
+            data-param-text="Hey!! would love to connect with you" data-param-url="https://github.com/PappuKP">
+        </amp-social-share>
+
+        <amp-social-share type="whatsapp" width="50" height="50" padding="20" data-param-text="Hello world"
+            data-param-url="https://www.linkedin.com/in/pappu-kumar-pashi-75977a172/">
+        </amp-social-share>
+
+        <amp-social-share type="pinterest" width="50" height="50" padding="20" data-param-text="Hello world"
+            data-param-url="https://www.linkedin.com/in/pappu-kumar-pashi-75977a172/">
+        </amp-social-share>
+
+        <amp-social-share type="tumblr" width="50" height="50" padding="20" data-param-text="Hello world"
+            data-param-url="https://www.linkedin.com/in/pappu-kumar-pashi-75977a172/">
+        </amp-social-share>
+        <amp-social-share type="line" width="50" height="50" padding="20" data-param-text="Hello world"
+            data-param-url="https://www.linkedin.com/in/pappu-kumar-pashi-75977a172/">
+        </amp-social-share>
+
+    </div>
+    <marquee> Made with ❤️ by Pappu Kumar</marquee>
+</body>
+
+</html>
