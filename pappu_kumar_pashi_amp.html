@@ -1,37 +1,17 @@
 <!doctype html>
-<html amp lang="en">
+<html ⚡>
 
 <head>
     <meta charset="utf-8">
+    <title>amp-carousel - Example 1</title>
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <title>Hello, AMPs</title>
-    <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "NewsArticle",
-        "headline": "Open-source framework for publishing content",
-        "datePublished": "2015-10-07T12:02:41Z",
-        "image": [
-          "logo.jpg"
-        ]
-      }
-    </script>
-    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
+    <script custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async></script>
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
     <script async custom-element="amp-social-share"
         src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-    <script async custom-element="amp-image-slider"
-        src="https://cdn.ampproject.org/v0/amp-image-slider-0.1.js"></script>
-    <script async custom-element="amp-image-lightbox"
-        src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
-    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
-
-
-
-
-
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <link rel="canonical" href="/index.html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <style amp-boilerplate>
         body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -89,56 +69,155 @@
                 visibility: visible
             }
         }
+    </style><noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
+    </noscript>
+    <style amp-custom>
+        /* any custom styles go here. */
+        body {
+            background-color: rgb(233, 14, 253);
+            text-align: center;
+        }
+
+        amp-img {
+            border: 5px solid black;
+        }
+
+        .headerbar {
+            background-color: rgb(0, 68, 255);
+        }
+
+        .site-name {
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 700;
+            font-size: 50px;
+            color: rgb(255, 0, 0);
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 700;
+            color: rgb(60, 255, 0);
+            font-size: 30px;
+            border: 2px solid rgb(0, 68, 255);
+            text-align: center;
+        }
+
+        amp-social-share.social-media {
+            border: 10px solid rgb(0, 68, 255);
+            text-align: center;
+        }
+
+        .hamburger {
+            padding-right: 5px;
+            font-size: 40px;
+            color: rgb(94, 255, 0);
+            text-align: right;
+        }
+
+        .sidebar {
+            padding: 10px;
+            margin: 0;
+        }
+
+        .sidebar>li {
+            list-style: none;
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: rgb(55, 0, 255);
+        }
+
+        .close-sidebar {
+            font-size: 5.5em;
+            padding-right: 5px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid rgb(255, 255, 255);
+        }
+
+        table {
+            width: 100%;
+            background-color: #ff04c0;
+        }
+
+        th {
+            text-align: center;
+        }
+
+        #About {
+            margin: 0px auto;
+        }
     </style>
-
-
 </head>
-<style amp-custom>
-    body {
-        font-family: cursive;
-        padding: 30px;
-        background-color: rgb(20, 239, 255);
-        color: rgb(0, 17, 255);
-        margin: center;
-    }
-
-    body h1 {
-        font-weight: bolder;
-        border: 1px rgb(121, 255, 12);
-    }
-
-    div {
-        padding: 50px;
-        margin: auto;
-    }
-</style>
+<header class="headerbar">
+    <div role="button" on="tap:sidebar1.toggle" tabindex="0" class="hamburger">☰</div>
+    <div class="site-name">Pappu Kumar Pashi</div>
+</header>
+<amp-sidebar id="sidebar1" layout="nodisplay" side="right">
+    <div role="button" aria-label="close sidebar" on="tap:sidebar1.toggle" tabindex="0" class="close-sidebar">🗣</div>
+    <ul class="sidebar">
+        <li><a href="#">About Me</a></li>
+        <li><a href="#skills">Images</a></li>
+        <li><a href="#motivation-video">Play Youtube Video</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+    </ul>
+</amp-sidebar>
 
 <body>
-    <div>
-        <amp-carousel width="20" height="20" layout="responsive" type="slides">
-            <amp-img src="people-woman-coffee-meeting.jpg" width="400" height="300" layout="responsive"
-                alt="a sample image">
-            </amp-img>
-            <amp-img src="pexels-photo-287237.jpeg" width="400" height="300" layout="responsive"
-                alt="another sample image">
-            </amp-img>
-            <amp-img src="photo-1510915228340-29c85a43dcfe.jpg" width="400" height="300" layout="responsive"
-                alt="and another sample image"></amp-img>
+    <div id="About">
+        <h2>About Me</h2>
+        <amp-carousel height="200" layout="fixed-height" type="carousel">
+            <section>
+
+                <div class="mbr-overlay"></div>
+                <div class="container">
+                    <div>
+                        <div>
+                            <h1 Hello, my name Is <span class="mbr-regular">Pappu Kumar</span></h1>
+                            <h2>
+                                I am a Full Stack Developer</h2>
+                            <p>
+                                I'm a 3rd Year Student of (B.tech) Information Technology with Specialization of Full
+                                Stack
+                                Developer and Data Scientist with 2 Years of hands-on experience.
+                            <div><a class="btn-primary btn display-7" href="#">
+                                    CONTACT ME</a></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </amp-carousel>
-        <hr>
-        <section>
-            <amp-img on="tap:lightbox1" role="button" tabindex="0" src="pappukumar.jpg" alt="Picture of a dog"
-                title="Picture of a dog, view in lightbox" layout="responsive" width="300" height="246">
-            </amp-img>
-            <amp-image-lightbox id="lightbox1" layout="nodisplay"></amp-image-lightbox>
-        </section>
-        <hr>
-        <section>
-            <amp-youtube width="480" height="270" layout="responsive" data-videoid="lBTCB7yLs8Y">
-            </amp-youtube>
-        </section>
     </div>
-    <div>
+    <div id="skills">
+        <h2>Images Collection</h2>
+        <amp-carousel width="450" height="100" layout="responsive" type="slides">
+            <amp-img src="people-woman-coffee-meeting.jpg" width="450" height="300"></amp-img>
+            <amp-img src="pexels-photo-287237.jpeg" width="450" height="300"></amp-img>
+            <amp-img src="photo-1510915228340-29c85a43dcfe.jpg" width="450" height="300"></amp-img>
+            <amp-img src="pexels-photo-287237.jpeg" width="450" height="300"></amp-img>
+        </amp-carousel>
+    </div>
+    <div id="motivation-video">
+        <h2>Youtube Video</h2>
+        <amp-youtube data-videoid="lBTCB7yLs8Y" layout="responsive" width="300" height="100">
+        </amp-youtube>
+    </div>
+    <div id="contact">
+        <h2>Share my Profiles and Contact me</h2>
         <amp-social-share type="linkedin" width="50" height="50" padding="20" class="rounded"
             data-param-text="Hey!! would love to connect with you"
             data-param-url="https://www.linkedin.com/in/pappu-kumar-pashi-75977a172/">
@@ -171,9 +250,20 @@
         <amp-social-share type="line" width="50" height="50" padding="20" data-param-text="Hello world"
             data-param-url="https://www.linkedin.com/in/pappu-kumar-pashi-75977a172/">
         </amp-social-share>
-
     </div>
     <marquee> Made with ❤️ by Pappu Kumar</marquee>
 </body>
+<section ">
+
+
+    <div class=" footer-container container">
+
+    <div>
+        <p>
+            © <span>2020</span> <span>Made by Pappu Kumar Pashi</span></p>
+    </div>
+    </div>
+</section>
+
 
 </html>
