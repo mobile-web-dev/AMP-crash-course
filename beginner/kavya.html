@@ -10,6 +10,11 @@
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+    <script async custom-element="amp-image-lightbox" src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
+    <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+
 
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
@@ -25,12 +30,84 @@
         line-height: 1.6rem;
         padding: 20px;
       }
+
+     .sidebar {
+      width: 250px;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+
+    .sidebar li,
+    nav[toolbar] li {
+      margin: 1rem;
+      margin-left: 2rem;
+      list-style: none;
+    }
+
+    amp-accordion section[expanded] .show-more {
+      display: none;
+    }
+
+    amp-accordion section:not([expanded]) .show-less {
+      display: none;
+    }
+
+    #images .caption {
+           text-align: center;
+           position: absolute;
+           bottom: 0;
+           left: 0;
+           right: 0;
+           padding: 1.5rem;
+           background: rgba(200,200,200,.5);
+           color: #fff;
+           font-size: 26px;
+           max-height: 30%;
+           font-weight: 100;
+           font-family: cursive;
+         }
+
     </style>
 
   </head>
   <body>
 
+    <div>
+        <h2>Personal Portfolio [Dummy]</h2>
+        <button on="tap:sidebar-left.toggle">☰</button>
+    </div><br>
+
+    <amp-sidebar class="sidebar" id="sidebar-left" layout="nodisplay" side="left">
+      <button on="tap:sidebar-left.toggle">✕</button>
+      <nav class="nav">
+                  <ul>
+                    <li>
+                          <h3>About Me</h3>
+                    </li>
+                    <li>
+                          <h3>Interests</h3>
+                    </li>
+                  </ul>
+                  <amp-accordion layout="container">
+                    <section>
+                      <h3>Hobbies</h3>
+                      <ul>
+                        <li>
+                         <h4>Painting</h4>
+                         <h4>Dance</h4>
+                         <h4>Book Reading</h4>
+                        </li>
+                      </ul>
+                    </section>
+                  </amp-accordion>
+      </nav>
+    </amp-sidebar>
+
+    <amp-image-lightbox id="lightbox1" layout="nodisplay"></amp-image-lightbox>
     <amp-img
+      on = "tap:lightbox1"
+      role = "button"
+      tabindex = "0"
       alt="Dummy Portfolio"
       src="https://i2.wp.com/assets.portfolio.hu/images/facebook_ajanlo_2020.jpg?ssl=1"
       width="900"
@@ -40,30 +117,55 @@
 
     <h1>Something about me :- </h1>
 
-    <amp-carousel width="450" height="300" layout="responsive" type="slides">
+    <amp-carousel width="1024" height="480" layout="responsive" type="slides" autoplay id="images">
       <amp-img
-        src="https://www.brandknewmag.com/wp-content/uploads/2015/07/creative-way.jpg"
-        width="550"
-        height="400"
-        layout="responsive">
-      </amp-img>
+        src="https://officevibe.com/wp-content/uploads/2014/11/The-Rise-Of-The-_Smart-Creative_.png"
+        layout="fill">
+        <amp-fit-text
+          class="caption"
+          width="300"
+          height="200"
+          layout="responsive"
+          max-font-size="26">
+          I am creative
+        </amp-fit-text>
+        </amp-img>
       <amp-img
-        src="https://www.plumsteadbond.com/wp-content/uploads/2019/01/Full-time-hiring-8.2015-08-e1440676569839.png"
-        width="550"
-        height="400"
-        layout="responsive">
-      </amp-img>
+        src="https://richestsoft.com/blog/wp-content/uploads/2019/02/Android-app-development.jpg"
+        layout="fill">
+        <amp-fit-text
+          class="caption"
+          width="300"
+          height="200"
+          layout="responsive"
+          max-font-size="26">
+          I have an experience of android developement
+        </amp-fit-text>
+        </amp-img>
       <amp-img
         src="https://www.rcrwireless.com/wp-content/uploads/2018/07/70705836_l-1.jpg"
-        width="550"
-        height="400"
-        layout="responsive">
-      </amp-img>
+        layout="fill">
+        <amp-fit-text
+          class="caption"
+          width="300"
+          height="200"
+          layout="responsive"
+          max-font-size="26">
+          I am an AI/ML enthusiast
+        </amp-fit-text>
+        </amp-img>
       <amp-img
         src="https://plk.s6img.com/society6/img/InOW7FuIxVTT5VdZTEFcKAhEeqU/w_700/prints/~artwork/s6-0053/a/22750924_3220882/~~/tech-lover-prints.jpg?wait=0&attempt=0"
-        width="550"
-        height="400"
-        layout="responsive">
+        layout="fill">
+        <amp-fit-text
+          class="caption"
+          width="300"
+          height="200"
+          layout="responsive"
+          max-font-size="26">
+          I love to know about technologies.
+        </amp-fit-text>
+        </amp-img>
     </amp-carousel>
 
     <h1> To know more on introducing yourself in interviews :- </h1><br>
