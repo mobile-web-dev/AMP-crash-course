@@ -1,17 +1,30 @@
 <!doctype html>
-<html amp>
-<head>
-  <meta charset="utf-8">
-  <title>Mayank Goyal Portfolio</title>
-  <script async src="https://cdn.ampproject.org/v0.js"></script>
-  <script custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async></script>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Mayank Goyal Portfolio</title>
+    <script custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async></script>
   <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
   <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+  <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
   <link rel="canonical" href="mayank_goyal.html">
-  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "NewsArticle",
+        "headline": "Open-source framework for publishing content",
+        "datePublished": "2015-10-07T12:02:41Z",
+        "image": [
+          "logo.jpg"
+        ]
+      }
+    </script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
-<style amp-custom>
+  <style amp-custom>
 
   body, html{
     height:100%;
@@ -30,6 +43,58 @@
   .section-dark{
     background-color:#282e34;
     color:#FFFFFF;
+  }
+
+  header{
+    font-size: 45px;
+    color: white;
+    padding-top: 15px;
+    margin-left: 15px;
+  }
+
+  .navbar-trigger1{
+    padding-left: 15px;
+    padding-top: 15px;
+    color: #333;
+    font-size: 25px;
+  }
+
+
+  }
+
+  .nav-list{
+    list-style: none;
+    width: 100%
+    height:100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  li{
+    margin: .6rem;
+  }
+
+  ul{
+    list-style: none;
+    padding-top: 15px;
+    color: #333;
+    font-size: 30px;
+
+  }
+
+  .nav-link{
+    line-height: 3;
+  }
+
+  .nav-link:hover
+  .nav-link:focus{
+
+  }
+
+  .sidebar{
+    padding-right: 150px;
+    color: #333;
+    font-size: 15px;
   }
 
   .share{
@@ -71,6 +136,80 @@
       margin-left: 90px;
     }
 
+form{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Comfortaa', cursive;
+}
+
+body{
+  background: url('bg.jpg') no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.wrapper{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+}
+
+.wrapper h1{
+  margin-bottom: 40px;
+  font-size: 42px;
+  color: #fff;
+}
+
+.wrapper p{
+  margin-bottom: 40px;
+  color: #b2b2b2;
+  font-size: 20px;
+}
+
+.newsletter{
+  max-width: 550px;
+  width: 100%;
+  position: relative;
+}
+
+.newsletter .input{
+  width: 100%;
+  padding: 30px 100px 30px 60px;
+  border-radius: 5px;
+  border: none;
+  font-weight: bold;
+}
+
+.newsletter .fas{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);  
+  left: 20px;
+  font-size: 20px;
+}
+
+.newsletter .btn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30px;
+  background: #4dabf7;
+  padding: 15px 20px;
+  border-radius: 25px;
+  font-size: 12px;
+  letter-spacing: 5px;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
     button{
       border-width: 0px;
     }
@@ -85,14 +224,31 @@
 </style>
 </head>
 <body>
+
+<section class="navigation">
+  <header class="headerbar">
+    <div class="navbar-trigger" role="button" tabindex="0" on="tap:sidebar1.toggle">☰</div>
+  </header>
+  <amp-sidebar class="sidebar" id="sidebar1" layout="nodisplay" side="left">
+    <div class="navbar-trigger1" role="button" tabindex="0" on="tap:sidebar1.toggle">❌</div>
+      <nav class="top-nav">
+        <ul class="nav-list">
+          <li class="nav-link"><a href="#">Portfolio</a></li>
+          <li class="nav-link"><a href="#">Events</a></li>
+          <li class="nav-link"><a href="#">Contact me</a></li>
+        </ul>
+      </nav>
+  </amp-sidebar>
+</section>
+
 <section class="about section-dark">
-   <amp-img src="E:\Website Designs\AMP crash course\mayank_goyal\images\me.jpg" width="240" height="260" alt="myself" class="float"></amp-img>
-  <center><h1 class="title">ABOUT ME</h1></center> 
+  <amp-img src="https://i.pinimg.com/originals/1d/02/88/1d0288322469dcec682a52a56b93dbde.png" width="240" height="260" alt="myself" class="float"></amp-img>
+  <center><h1 class="title">ABOUT</h1></center> 
   <p>My name is Mayank Goyal. Curently, I am an 11th class student pursuing PCM with Computer science as my optional subject. I have a keen interest in programming, website designing, and graphic design. I have been working with a microcontroller like Arduino for the past 1 year and have created a few amazing projects. From these projects, Speed automated seatbelt is the latest and the most important project. I have even created a few websites. Looking forward to learn more...</p>
 </section>
 
 <section class="projects section-light">
-  <center><h1 class="title1">MY PROJECTS</h1></center>
+  <center><h1 class="title1">PROJECTS</h1></center>
   <amp-carousel id="carousel-with-preview" width="450" height="270" layout="responsive" type="slides">
     <amp-img src="https://i.pinimg.com/originals/f6/0d/79/f60d799396cb3e140aecf3e5ad12c207.jpg" width="270" height="180" layout="responsive" alt="ajith"></amp-img>
     <amp-img src="https://i.guim.co.uk/img/media/8f02bb49224d9a94699b75213664bf898617c062/0_288_5315_3189/master/5315.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=89721e1224115e05a05203a62cf93f7c" width="270" height="180" layout="responsive" alt="wolf"></amp-img>
@@ -102,7 +258,7 @@
      <amp-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSlwGTTbu_mawQJTBEYEY_wD2yTODBYCL5egKxTa_CM5vcGQ40P&usqp=CAU" width="270" height="180" layout="responsive" alt="raspberry"></amp-img>
   </amp-carousel>
 <br>
-  <div class="carousel-preview">
+  <div class="carousel">
     <center>
     <button on="tap:carousel-with-preview.goToSlide(index=0)">
       <amp-img src="https://i.pinimg.com/originals/f6/0d/79/f60d799396cb3e140aecf3e5ad12c207.jpg" width="90" height="75" alt="ajith"></amp-img>
@@ -127,6 +283,7 @@
 </section>
 
 <section class="videos section-dark">
+  <center><h1 class="title1">VIDEOS</h1></center>
   <amp-video width="720"
   height="405"
   src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
@@ -142,6 +299,15 @@
 
 <section class="share section-dark">
   <center>
+      <div class="wrapper">
+        <h1>Want to collaborate ?</h1>
+        <div class="newsletter">
+          <input type="text" class="input" placeholder="Enter Your Email">
+          <i class="fas fa-envelope"></i>
+          <div class="btn">Send</div>
+        </div>
+      </div>
+    <br>
     <amp-social-share class="rounded" type="email"></amp-social-share> 
     <amp-social-share class="rounded" type="facebook" data-param-app_id="254325784911610"></amp-social-share>
     <amp-social-share class="rounded" type="linkedin"></amp-social-share>
