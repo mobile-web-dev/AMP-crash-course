@@ -7,50 +7,117 @@
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
   <script custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async></script>
   <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+  <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+  <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
   <link rel="canonical" href="https://preview.amp.dev/documentation/components/amp-carousel.example.1.html">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
   <style amp-custom>
+      header{
+        text-align: center;
+      }
+      .navbar-trigger {
+        top: 0;
+        left: 0;
+        position: absolute;
+      }
+      ul {
+        display: block;
+        padding-left: 0;
+      }
       body{
           
           background-color: #f2f2f2;
       }
-      .about{
+      .intro_content{
         padding: 10px;
         letter-spacing: 1px;
         font-family: "Lucida Console", Courier, monospace;
       }
       a{
         color: black;
-        
+        text-decoration: none;
       }
     </style>
+   
+
 </head>
 
 <body>
     <center>
-      <h1>My Portfolio</h1>
-      <h2>Lakshya Bansal<h2>
-      <h4>Developer</h4>
-      <div class="about">
-        Hello there! I'm a b.tech second year student. I am developer and my major technical skills are Web Development, Machine Learning and VUI. I love spending time on fixing little details and optimizing things. Also I like working in a team,you'll learn faster and much more. If you find anything interesting in me then do hit me up!
+       <header class="headerbar">
+      <button class="navbar-trigger" role="button" tabindex="0" on="tap:sidebar1.toggle">=</button>
+      <h2>My Portfolio</h2>
+    </header>
+
+    <amp-sidebar id="sidebar1" class="sidebar1" layout="nodisplay" side="left">
+        <nav class="nav">
+          <button on="tap:sidebar1.close">x</button>
+          <ul>
+            <h3><li><a href="#intro" on="tap:intro.scrollTo">Introduction</a></li></h3>
+            <h3><li><a href="#technical" on="tap:technical.scrollTo">Technical Skills</a></li></h3>
+            <h3><li><a href="#about" on="tap:about.scrollTo">About</a></li></h3>
+            <li>
+              <amp-accordion class="additional-data">
+        <section>
+          <h3>Connect &#11206;</h3>
+          <ul class="description">
+            <li><a href="#twitter" on="tap:twitter.scrollTo">Twitter</a></li>
+            <li><a href="#linkedin" on="tap:linkedin.scrollTo">Linkedin</a></li>
+            <li><a href="#facebook" on="tap:facebook.scrollTo">Facebook</a></li>
+            <li><a href="#whatsapp" on="tap:whatsapp.scrollTo">Whatsapp</a></li>
+            <li><a href="#sms" on="tap:sms.scrollTo">SMS</a></li>
+          </ul>
+        </section>
+      </amp-accordion>
+            </li>
+          </ul>
+        </nav>    
+    </amp-sidebar>
+      <h2>Lakshya Bansal</h2>
+      <div class="intro" id="intro">
+        <h4>Developer</h4>
+        <div class="intro_content" >
+          Hello there! I'm a b.tech second year student. I am developer and my major technical skills are Web Development, Machine Learning and VUI. I love spending time on fixing little details and optimizing things. Also I like working in a team,you'll learn faster and much more. If you find anything interesting in me then do hit me up!
+        </div>
+        <amp-img src="https://drive.google.com/thumbnail?id=1vcxVi-6d7WyS31s9q77shhcsChDmi4uB" width="450" height="250" layout="responsive"></amp-img>
       </div>
-      <amp-img src="https://drive.google.com/thumbnail?id=1vcxVi-6d7WyS31s9q77shhcsChDmi4uB" width="450" height="250" layout="responsive"></amp-img>
-      <h3>Technical Stack</h3>
-      <amp-carousel width="450" height="300" layout="responsive" type="slides" loop>
-        <amp-img src="https://drive.google.com/thumbnail?id=1ZU56vbP0F8JJYCI-04HHPG7s02yhLO-f" width="450" height="300" layout="responsive"></amp-img>
-        <amp-img src="https://drive.google.com/thumbnail?id=18ozd6WaHviCEztdo3r9z24I4JSjzVw9A" width="450" height="300" layout="responsive"></amp-img>
-        <amp-img src="https://drive.google.com/thumbnail?id=1NvwRvNX34hI-kv8ZLrD5VLnR9O7MnE6B" width="450" height="300" layout="responsive"></amp-img>
-      </amp-carousel>
-      <h3>A short video about me</h3>
-      <amp-youtube data-videoid="aR4CEO0N_-I" layout="responsive" width="480" height="270"></amp-youtube>
-      <h3>Grow our network</h3>
-      <div>
-        <amp-social-share type="twitter" width="60" height="44" data-param-url="http://lakshyabansal.000webhostapp.com/"></amp-social-share>
-        <amp-social-share type="linkedin" width="60" height="44" data-param-url="http://lakshyabansal.000webhostapp.com/"></amp-social-share>
-        <amp-social-share type="facebook" width="60" height="44" data-param-url="http://lakshyabansal.000webhostapp.com/"></amp-social-share>
-        <amp-social-share type="whatsapp" width="60" height="44" data-param-url="http://lakshyabansal.000webhostapp.com/"></amp-social-share>
-        <amp-social-share type="sms" width="60" height="44" data-param-url="http://lakshyabansal.000webhostapp.com/"></amp-social-share>
+      <div class="technical" id="technical">
+        <h3>Technical Stack</h3>
+        <!-- <amp-carousel width="450" height="300" layout="responsive" type="slides" loop>
+          <amp-img src="https://drive.google.com/thumbnail?id=1ZU56vbP0F8JJYCI-04HHPG7s02yhLO-f" width="450" height="300" layout="responsive"></amp-img>
+          <amp-img src="https://drive.google.com/thumbnail?id=18ozd6WaHviCEztdo3r9z24I4JSjzVw9A" width="450" height="300" layout="responsive"></amp-img>
+          <amp-img src="https://drive.google.com/thumbnail?id=1NvwRvNX34hI-kv8ZLrD5VLnR9O7MnE6B" width="450" height="300" layout="responsive"></amp-img>
+        </amp-carousel> -->
+        <div>
+          <amp-selector id="carouselWithPreviewSelector" class="carousel-preview" on="select:carouselWithPreview.goToSlide(index=event.targetOption)" layout="container">
+            <amp-img option="0" selected src="https://drive.google.com/thumbnail?id=1ZU56vbP0F8JJYCI-04HHPG7s02yhLO-f" width="60" height="40" alt="a sample image"></amp-img>
+            <amp-img option="1" src="https://drive.google.com/thumbnail?id=18ozd6WaHviCEztdo3r9z24I4JSjzVw9A" width="60" height="40" alt="a sample image"></amp-img>
+            <amp-img option="2" src="https://drive.google.com/thumbnail?id=1NvwRvNX34hI-kv8ZLrD5VLnR9O7MnE6B" width="60" height="40" alt="a sample image"></amp-img>
+            <amp-img option="3" src="https://unsplash.it/60/40?image=13" width="60" height="40" alt="a sample image"></amp-img>
+          </amp-selector>
+          <amp-carousel id="carouselWithPreview" width="400" height="300" layout="responsive" type="slides" on="slideChange:carouselWithPreviewSelector.toggle(index=event.index, value=true)">
+            <amp-img src="https://drive.google.com/thumbnail?id=1ZU56vbP0F8JJYCI-04HHPG7s02yhLO-f" layout="fill" alt="a sample image"></amp-img>
+            <amp-img src="https://drive.google.com/thumbnail?id=18ozd6WaHviCEztdo3r9z24I4JSjzVw9A" layout="fill" alt="a sample image"></amp-img>
+            <amp-img src="https://drive.google.com/thumbnail?id=1NvwRvNX34hI-kv8ZLrD5VLnR9O7MnE6B" layout="fill" alt="a sample image"></amp-img>
+            <amp-img src="https://unsplash.it/400/300?image=13" layout="fill" alt="a sample image"></amp-img>
+          </amp-carousel>
+        </div>
+      </div>
+      <div class="about" id="about">
+        <h3>A short video about me</h3>
+        <amp-youtube data-videoid="aR4CEO0N_-I" layout="responsive" width="480" height="270"></amp-youtube>
+      </div>
+      <div class="connect" id="connect">
+        <h3>Grow our network</h3>
+        <div>
+          <amp-social-share type="twitter" id="twitter" width="60" height="44" data-param-url="http://lakshyabansal.000webhostapp.com/"></amp-social-share>
+          <amp-social-share type="linkedin" id="linkedin" width="60" height="44" data-param-url="http://lakshyabansal.000webhostapp.com/"></amp-social-share>
+          <amp-social-share type="facebook" id="facebook" width="60" height="44" data-param-url="http://lakshyabansal.000webhostapp.com/"></amp-social-share>
+          <amp-social-share type="whatsapp" id="whatsapp" width="60" height="44" data-param-url="http://lakshyabansal.000webhostapp.com/"></amp-social-share>
+          <amp-social-share type="sms" width="60" id="sms" height="44" data-param-url="http://lakshyabansal.000webhostapp.com/"></amp-social-share>
+        </div>
       </div>
       Made with ❤ by <a href="http://lakshyabansal.000webhostapp.com/">Lakshya</a>
     </center>
