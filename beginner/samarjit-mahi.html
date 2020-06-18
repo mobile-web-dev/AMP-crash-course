@@ -12,7 +12,7 @@
       name="viewport"
       content="width=device-width,minimum-scale=1,initial-scale=1"
     />
-    <link rel="canonical" href="https://steel-citrine-leo.glitch.me/" />
+    <link rel="canonical" href="https://samarjit-mahi.glitch.me/" />
 
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
@@ -23,13 +23,29 @@
     ></script>
     <script
       async
+      custom-element="amp-selector"
+      src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"
+    ></script>
+    <script
+      async
       custom-element="amp-youtube"
       src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"
     ></script>
+     <script
+      async
+      custom-template="amp-mustache"
+      src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"
+    ></script>
+
     <script
       async
       custom-element="amp-social-share"
       src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"
+    ></script>
+     <script
+      async
+      custom-element="amp-form"
+      src="https://cdn.ampproject.org/v0/amp-form-0.1.js"
     ></script>
 
     <style amp-custom>
@@ -79,6 +95,86 @@
    
       amp-youtube {
         margin-top: 40px;
+      }
+      .subscribe-card-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+      }
+
+      .subscribe-card {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        width: 600px;
+      }
+
+      .main-form {
+       
+        flex-direction: column;
+        margin-top: 10px;
+        padding: 1rem;
+      }
+
+   
+
+      input {
+        font-family: sans-serif;
+        font-size: 100%;
+      }
+
+      .input {
+        left: calc(50% - (230px / 2));
+        margin-bottom: 1.5rem;
+        max-width: 100%;
+        position: relative;
+        width: 230px;
+      }
+
+      .input > input {
+        background: none;
+        border: 0;
+        border-bottom: 1px solid #4a4a4a;
+        border-radius: 0;
+        color: #4a4a4a;
+        line-height: 1.5rem;
+        margin-top: 1rem;
+        outline: 0;
+        width: 100%;
+      }
+
+      .input > label {
+        bottom: 0;
+        left: 0;
+        line-height: 1rem;
+        position: absolute;
+        right: 0;
+        text-align: left;
+        top: 0;
+      }
+
+      .btn {
+        background-color: green;
+        border: 1px solid #fff;
+        color: #fff;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 1rem;
+        font-weight: inherit;
+        left: calc(50% - (150px / 2));
+        letter-spacing: 0.2em;
+        line-height: 1.125rem;
+        padding: 0.7em 0.8em;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        vertical-align: middle;
+        white-space: nowrap;
+        width: 150px;
+        word-wrap: normal;
+      }
+
+      .form-submit-response {
+        margin-bottom: 1rem;
+        margin-top: 1rem;
       }
 
 
@@ -152,6 +248,45 @@ I am a community guy. spending my weekends in attending meetups regarding techno
           >
             <div fallback><p>The video could not be loaded.</p></div>
           </amp-youtube>
+          
+          <div class="subscribe-card-container">
+            <div class="subscribe-card">
+              <form
+                method="post"
+                class="main-form"
+                action-xhr="/submit-form"
+                target="_top"
+              >
+                <div class="input">
+                  <input type="text" id="form-name" name="name" required />
+                  <label for="form-name" aria-hidden="true">
+                    Enter your Name
+                  </label>
+                </div>
+                <div class="input">
+                  <input type="email" id="form-email" name="email" required />
+                  <label for="form-email" aria-hidden="true">
+                    Enter your Email
+                  </label>
+                </div>
+                <input type="submit" value="Subscribe" class="btn" />
+                <div submit-success>
+                  <template type="amp-mustache">
+                    <p class="form-submit-response">
+                      Success! Thanks {{ name }} for subscribing!
+                    </p>
+                  </template>
+                </div>
+                <div submit-error>
+                  <template type="amp-mustache">
+                    <p class="form-submit-response">
+                      Uh-oh, there was an error!
+                    </p>
+                  </template>
+                </div>
+              </form>
+            </div>
+          </div>
 
           <div class="social-bar">
             <amp-social-share
@@ -184,3 +319,4 @@ I am a community guy. spending my weekends in attending meetups regarding techno
     </main>
   </body>
 </html>
+
