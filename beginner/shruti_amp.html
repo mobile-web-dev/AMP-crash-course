@@ -22,13 +22,14 @@
    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
    <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+   <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
   </head>
   <style amp-custom>
     h1 {
       text-align: center;
       font-family: cursive;
       text-shadow: 2px 2px 2px #222;
-      color: #557c3e;
+      color: maroon;
     }
     body {
       background-color: cornsilk;
@@ -64,7 +65,9 @@
     <br>
     <br>
     <br>
-<amp-carousel width="450" height="300" layout="responsive" type="slides">
+<amp-carousel on="slideChange:ampSelector.toggle(index=event.index)"
+              layout="responsive" width="412" height="309" type="slides"
+              loop id="carousel" lightbox>
   <amp-img
     src="https://thumbs.dreamstime.com/z/five-elements-nature-air-water-fire-earth-space-creation-natures-force-five-elements-nature-air-water-fire-earth-space-137991847.jpg"
     width="450"
