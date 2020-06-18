@@ -7,6 +7,13 @@
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
     <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+    <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
+
+
     <title>Hello, AMPs</title>
     <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -57,27 +64,88 @@
         h1{
             color: white;
         }
+
+        button{
+            background-color:transparent;
+            border: transparent;
+        }
+
+        div {
+           color: white;
+            margin: 5px 5px;
+        }
+
+        #buttonsub {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 5px 5px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+
+        input{
+            background-color: transparent;
+            color: white;
+            border: none;
+            border-bottom: 2px solid white;
+        }
     </style>
 </head>
 <body>
+<header class="headerbar">
+    <div class="navbar-trigger" role="button" tabindex="0"
+         on="tap:sidebar-left.toggle">☰</div>
+</header>
+<amp-sidebar id="sidebar-left" class="sample-sidebar" layout="nodisplay" side="left">
+    <h3>Sidebar</h3>
+    <nav toolbar="(min-width: 784px)" toolbar-target="target-element-left">
+        <!--<ul>
+            <li>Nav item 1</li>
+            <li>Nav item 2</li>
+        </ul>-->
+        <amp-accordion class="sample">
+            <section expanded>
+                <h4 style="color: black">Section 1</h4>
+                <ul>
+                <li style="color: black">Nav item 1</li>
+                <li style="color: black">Nav item 2</li>
+                </ul>
+            </section>
+            <section>
+                <h4 style="color: black">Section 2</h4>
+                <ul>
+                    <li style="color: black">Nav item 1</li>
+                    <li style="color: black">Nav item 2</li>
+                </ul>
+            </section>
+            </amp-accordion>
+    </nav>
+ <!--   <ul>
+        <li>Nav item 3</li>
+        <li>Nav item 4</li>
+    </ul>-->
+</amp-sidebar>
 <center><h1>Hello, I am Prem Chavhan</h1></center>
 <center><h1>My Projects</h1></center>
 <amp-carousel height="300"
                              layout="fixed-height"
                              type="carousel">
-    <amp-img src="./images/cas1.png"
+    <amp-img lightbox src="./images/cas1.png"
              width="400"
              height="300"
              alt="a sample image"></amp-img>
-    <amp-img src="./images/cas2.png"
+    <amp-img lightbox src="./images/cas2.png"
              width="400"
              height="300"
              alt="a sample image"></amp-img>
-    <amp-img src="./images/cas3.png"
+    <amp-img lightbox src="./images/cas3.png"
              width="400"
              height="300"
              alt="a sample image"></amp-img>
-    <amp-img src="./images/cas4.png"
+    <amp-img lightbox src="./images/cas4.png"
              width="400"
              height="300"
              alt="a sample image"></amp-img>
@@ -94,6 +162,26 @@
              layout="responsive"
              data-videoid="xhXyGRPeuVw">
 </amp-youtube>
+<center><h1>News Letter Subscription</h1></center>
+<div style="text-align: center;">
+<form class="sample-form" method="post" action-xhr="/documentation/examples/api/submit-form-input-text-xhr" target="_top">
+    <input type="text" name="name" placeholder="Name..." required>
+    <input type="email" name="email" placeholder="Email..." required>
+    <button id="buttonsub" type="submit" value="Subscribe">Subscribe</button>
+
+    <div submit-success>
+        <template type="amp-mustache">
+            Success! Thanks {{name}} for trying the <code>amp-form</code> demo! Try to insert the word "error" as a name input in the form to see how <code>amp-form</code> handles errors.
+        </template>i
+    </div>
+    <div submit-error>
+        <template type="amp-mustache">
+            Success! Thanks {{name}} for trying the <code>amp-form</code> demo! Try to insert the word "error" as a name input in the form to see how <code>amp-form</code> handles errors.
+
+        </template>
+    </div>
+</form>
+</div>
 <center><h1>Share</h1></center>
 <center>
 <amp-social-share type="pinterest"></amp-social-share>
