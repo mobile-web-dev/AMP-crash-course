@@ -8,6 +8,8 @@
   <script custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async></script>
   <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
   <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+  <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
   <link rel="canonical" href="/amp_portfolio.html">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
@@ -23,13 +25,13 @@
     }
 	
     .headerbar{
-        background-color:#212121;    
+        background-color:black;    
     }
 
     .site-name{
         font-family: Times New Roman;
         font-weight: 700;
-        font-size:50px;
+        font-size:30px;
         color:white;
         text-align: center;
     }
@@ -46,17 +48,104 @@
         text-align:center;
     }
 	
+	.hamburger {
+     padding-left: 10px; 
+     font-size: 70px;
+     color:white;
+     text-align:left;
+	 size:30px;
+    }
+	
+	.side_bar{
+	background-color:#757575;
+	}
+	
+	.sidebar {
+    padding: 10px;
+    margin: 0;
+    }
+    .sidebar > li {
+    list-style: none;
+    margin-bottom:10px;
+    }
+   .sidebar a {
+    text-decoration: none;
+    color:white;
+   }
+  .close-sidebar {
+    font-size: 1.5em;
+    padding-left: 5px;
+	color:white;
+   }
+
+    amp-accordion section[expanded] .show-more {
+      display: none;
+    }
+
+    amp-accordion section:not([expanded]) .show-less {
+      display: none;
+    }
+
+    .nested-accordion h3 {
+      font-size: 14px;
+      background-color: white;
+    }
+
+    amp-accordion.hidden-header section[expanded] h3 {
+      border: none;
+    }	
+
+    amp-accordion.sample {
+      margin: var(--space-2);
+    }
+	
    }
   </style>
   
 </head>
 <header class="headerbar">
+    <div class="hamburger" role="button" tabindex="0" 
+         on="tap:sidebar1.toggle">☰</div>
     <div class="site-name">Jyoti Jauhari</div>
 </header>
 
+<amp-sidebar class="side_bar" id="sidebar1" layout="nodisplay" side="left">
+    <div class="close-sidebar" role="button" tabindex="0"
+        on="tap:sidebar1.toggle">✕</div>
+		
+		<amp-accordion class="sample">
+        <section>		
+		<h3>Quick access</h3>
+		<ul class="sidebar">
+		  <li><a href="#profile">Profile</a></li>
+		  <li><a href="#about">About</a></li>
+		  <li><a href="#work">Work</a></li>
+		  <li><a href="#intro_v">Introduction Video</a></li>
+		  <li><a href="#share">Share</a></li>
+		</ul>  
+        </section>   		
+		</amp-accordion>
+		
+		<amp-accordion class="sample">
+        <section >		
+		<h3>Contact me</h3>
+		<ul class="sidebar">
+		  <li><a href="#">Website</a></li>
+		  <li><a href="#">Linkedin</a></li>
+		  <li><a href="#">Email</a></li>
+		  <li><a href="#">Github</a></li>
+		</ul>  
+        </section>   		
+		</amp-accordion>
+
+		
+    </amp-sidebar>
+
+
 <body>
 
-	<div id="Profile">
+
+	<div id="profile">
         <h2>Profile:</h2>
 			<amp-img src="img/image0.jpg"
 			  width="1080"
@@ -66,7 +155,7 @@
 	</div>		  
 
 
-    <div id="About">
+    <div id="about">
         <h2>About Me</h2>
         A CSE student from Bajaj Institute of Technology. 
 		I am tech enthusiast, Python intern at Cloud Conselage 
@@ -82,7 +171,7 @@
 
 		That's all about me. :) 
     </div>
-    <div id="My Work">
+    <div id="work">
        <h2>My Work</h2>
 	   
 	<amp-carousel width="400"
@@ -111,24 +200,24 @@
 		alt="and another sample image"></amp-img>
     </div>
 	
-<div id="Introduction Video">
-  <h2>Introduction Video</h2>
-  <amp-youtube
-   data-videoid="_Lx20uHmNag"
-   layout="responsive"
-   width="300"
-   height="100">
-  </amp-youtube>
-</div>
-<div id="Share">
-   <h2>Share the website to:</h2>
-    <amp-social-share type="email"></amp-social-share>
-    <amp-social-share type="linkedin"></amp-social-share>
-    <amp-social-share type="tumblr"></amp-social-share>
-    <amp-social-share type="twitter"></amp-social-share>
-    <amp-social-share type="whatsapp"></amp-social-share>
-    <amp-social-share type="line"></amp-social-share>
-   
-</div>
+	<div id="intro_v">
+	  <h2>Introduction Video</h2>
+	  <amp-youtube
+	   data-videoid="_Lx20uHmNag"
+	   layout="responsive"
+	   width="300"
+	   height="100">
+	  </amp-youtube>
+	</div>
+	<div id="share">
+	   <h2>Share the website to:</h2>
+		<amp-social-share type="email"></amp-social-share>
+		<amp-social-share type="linkedin"></amp-social-share>
+		<amp-social-share type="tumblr"></amp-social-share>
+		<amp-social-share type="twitter"></amp-social-share>
+		<amp-social-share type="whatsapp"></amp-social-share>
+		<amp-social-share type="line"></amp-social-share>
+	   
+	</div>
 </body>
 </html>
