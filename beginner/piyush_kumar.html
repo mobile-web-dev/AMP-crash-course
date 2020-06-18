@@ -1,0 +1,254 @@
+<!doctype html>
+<html amp lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Home-Piyush Kumar</title>
+    <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+    <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <script async custom-element="amp-image-lightbox" src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+        
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+        
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+        
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+        
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+        
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+    </style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+        /* any custom style goes here */
+        
+        .site-header {
+            border-bottom: 1px solid #e8e8e8;
+            padding-bottom: 1.33333em;
+            padding-top: 1.33333em;
+        }
+        
+        .outer {
+            padding-left: 4vw;
+            padding-right: 4vw;
+        }
+        
+        .inner {
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1140px;
+        }
+        
+        .site-header-inside {
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+        }
+        
+        .hamburger {
+            padding-right: 15px;
+            padding-top: 10px;
+        }
+        
+        .sidebar {
+            padding: 10px;
+            margin: 0;
+            width: 100%;
+        }
+        
+        .sidebar>li {
+            list-style: circle;
+            margin-bottom: 10px;
+        }
+        
+        .sidebar a {
+            text-decoration: none;
+        }
+        
+        .close-sidebar {
+            font-size: 1.5em;
+            padding-left: 1.3em;
+        }
+    </style>
+
+</head>
+
+<body style="color: black;">
+    <div>
+        <header class="headerbar" style="width: auto; height: 50px;">
+            <div role="button" on="tap:sidebar1.toggle" tabindex="0" class="hamburger" align="right" style="color: black;">☰</div>
+        </header>
+        <amp-sidebar id="sidebar1" layout="nodisplay" side="right" style="width: 15em;">
+            <div role="button" aria-label="close sidebar" on="tap:sidebar1.toggle" tabindex="0" class="close-sidebar" aria-hidden="true">✕</div>
+            <ul class="sidebar">
+                <li class="menu-item  current-menu-item">
+                    <a aria-current="page" class="" href="/Home">Home</a>
+                </li>
+                <li class="menu-item ">
+                    <a href="/portfolio/">Portfolio</a>
+                </li>
+                <li class="menu-item ">
+                    <a href="/blog/">Blog</a>
+                </li>
+                <li class="menu-item ">
+                    <a href="/about/">About</a>
+                </li>
+                <li class="menu-item ">
+                    <a href="/contact/">Contact</a>
+                </li>
+            </ul>
+        </amp-sidebar>
+        <hr>
+    </div>
+
+    <div id="target-element"></div>
+    <center>
+        <section id="hero" class="block hero-block outer">
+            <div class="inner-small">
+                <div class="block-header" style="font-size: xx-large;">
+                    <h1 class="block-title">Hi there, I&#x27;m Piyush Kumar</h1>
+                </div>
+                <div class="block-copy" style="font-size: large;">
+                    <p>
+                        <em>Data Analyst with a passion to become a Data Scientist. Love to talk Tech, love Data and Startups.</em>
+                    </p>
+                </div>
+
+                <amp-image-lightbox id="lightbox1" layout="nodisplay"></amp-image-lightbox>
+
+                <amp-img on="tap:lightbox1" role="button" tabindex="0" src="https://drive.google.com/thumbnail?id=1ggElx8JD72SqbSW_QJ0EM3pjUOpSIJoq" layout="responsive" width="100" height="100"></amp-img>
+
+
+
+            </div>
+        </section>
+    </center>
+    <div>
+
+        <section id="services" class="block services-block outer">
+            <div class="inner">
+                <div class="block-inside">
+                    <div class="block-header">
+                        <h2 class="block-title line-top">What We Do</h2>
+                        <p class="block-subtitle">An optional subtitle of the section</p>
+                    </div>
+                    <div class="block-content">
+                        <div class="services-list">
+                            <div class="service">
+                                <span class="service-counter" aria-hidden="true">1
+                            <!-- -->
+                            .</span>
+                                <h3 class="service-title">Service Title</h3>
+                                <div class="service-text">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nisl ligula, cursus id molestie vel, maximus aliquet risus. Vivamus in nibh fringilla, fringilla tortor at, pulvinar orci.</p>
+                                </div>
+                            </div>
+                            <div class="service">
+                                <span class="service-counter" aria-hidden="true">2
+                            <!-- -->
+                            .</span>
+                                <h3 class="service-title">Service Title</h3>
+                                <div class="service-text">
+                                    <p>Donec lobortis velit sed suscipit lobortis. Ut non quam metus. Nullam a maximus mi. Quisque justo nunc, sollicitudin euismod euismod at, tincidunt ut tellus. Vivamus rhoncus mattis varius. </p>
+                                </div>
+                            </div>
+                            <div class="service">
+                                <span class="service-counter" aria-hidden="true">3
+                            <!-- -->
+                            .</span>
+                                <h3 class="service-title">Service title</h3>
+                                <div class="service-text">
+                                    <p>Vestibulum a nunc ut eros condimentum posuere. Nullam dapibus quis nunc non interdum. Pellentesque tortor ligula, gravida ac commodo eu.</p>
+                                </div>
+                            </div>
+                            <div class="service">
+                                <span class="service-counter" aria-hidden="true">4
+                            <!-- -->
+                            .</span>
+                                <h3 class="service-title">Service title</h3>
+                                <div class="service-text">
+                                    <p>Aliquam pulvinar, orci ac scelerisque tempus, felis leo sagittis justo, sit amet condimentum lorem nibh vel quam. Duis consectetur lorem ipsum, non efficitur urna viverra et.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+        <div>
+            <amp-carousel id="custom-button" width="400" height="300" layout="responsive" type="slides" autoplay delay="2000">
+                <amp-youtube data-videoid="4ht80uzIhNs" layout="responsive" width="10" height="10"></amp-youtube>
+                <amp-youtube data-videoid="c8zRY0cBALE" layout="responsive" width="10" height="10"></amp-youtube>
+                <amp-youtube data-videoid="j6Keg3XKKjM" layout="responsive" width="10" height="10"></amp-youtube>
+                <amp-youtube data-videoid="j6Keg3XKKjM" layout="responsive" width="10" height="10"></amp-youtube>
+            </amp-carousel>
+        </div>
+
+        <hr>
+        <div>
+            <center>
+                <amp-social-share type="linkedin" width="20" height="20" data-param-text="Hey!! would love to connect with you" data-param-url="https://www.linkedin.com/in/kpiyush04/"></amp-social-share>
+                <amp-social-share type="twitter" width="20" height="20" data-param-text="Hey!! would love to connect with you" data-param-url="https://www.twitter.com/piyush04k/"></amp-social-share>
+            </center>
+            <center>
+                Made with ❤️ and 🔥 by Piyush Kumar
+            </center>
+
+        </div>
+    </div>
+</body>
+
+</html>
