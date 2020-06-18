@@ -18,6 +18,7 @@
         "datePublished": "2015-10-07T12:02:41Z",
         "image": ["logo.jpg"]
       }
+      
     </script>
 
     <script
@@ -46,7 +47,7 @@
       src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"
     ></script>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
     <style amp-boilerplate>
       body {
         -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
@@ -251,7 +252,21 @@
       >
       </amp-youtube>
     </div>
+<div>
+  <center>
+  <amp-state id="count">
+    <script type="application/json">
+      0
+    </script>
+  </amp-state>
+  <div>You Clicked <span [text]="count"> 0</span></div>
+  <button on="tap:AMP.pushState({ count: count + 1, text:'times'  })">
+<amp-img src="https://static3.depositphotos.com/1002188/144/i/450/depositphotos_1448005-stock-photo-smile.jpg" width="100" height="100"></amp-img>
+    <br>Click Here</button>
+</center>
+</div> 
     <div>
+      <center>
       <amp-social-share type="email" width="44" height="44"></amp-social-share>
       <amp-social-share
         type="linkedin"
@@ -263,11 +278,13 @@
         type="twitter"
         width="44"
         height="44"
-      ></amp-social-share>
+      ></amp-social-share> </center>
     </div>
     <a name="contact"> </a>
     <footer>
-      <center>&copy; Made by Khushi</center>
+    <center>
+       &copy; 2020 Made by Khushi
+    </center>
     </footer>
   </body>
 </html>
