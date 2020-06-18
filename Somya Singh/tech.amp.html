@@ -30,6 +30,7 @@
 <script custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js" async=""></script>
 <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
   <script async custom-element="amp-video-iframe" src="https://cdn.ampproject.org/v0/amp-video-iframe-0.1.js"></script>
+   <script custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js" async></script>
 
 <style amp-custom>/*! Bassplate | MIT License | http://github.com/basscss/bassplate */
 
@@ -135,12 +136,19 @@ html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-t
       
 
         <section>
-          <h1 class="mb4 px3" style="padding-top: 5rem;padding-bottom: 2rem; text-align:center">About Me</h1>
-          <amp-img src="img/somya.jpg" width="300" height="200" layout="responsive" class="mb3" alt="Somya Kitty"></amp-img>
-          <p class="mb4">
+          <h1 [hidden]="hiddenState" class="mb4 px3" style="padding-top: 5rem;padding-bottom: 2rem; text-align:center">About Me</h1>
+		
+
+          <amp-img src="img/somya.jpg" [hidden]="hiddenState" width="300" height="200" layout="responsive" class="mb3" alt="Somya Kitty"></amp-img>
+		 
+          <p [hidden]="hiddenState" class="mb4">
             Somya Singh from BITS. I am highly interested in Web Development. I am curious about things and I have various hobbies.
           </p>
-        </section>
+		   <button on="tap:AMP.setState({hiddenState: true})">Hide</button>
+           <button on="tap:AMP.setState({hiddenState: false})">Show</button>
+		   
+        
+		 
 
       
 
@@ -175,5 +183,6 @@ html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-t
   </footer>
   
   <!-- End Footer -->
+  
   </body>
 </html>
