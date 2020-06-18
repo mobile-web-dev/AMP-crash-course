@@ -1,61 +1,29 @@
-<html ⚡>
+<!doctype html>
+<html ⚡="">
 
 <head>
     <meta charset="utf-8">
-    <title>demo page</title>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <script custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async></script>
-    <link rel="canonical" href="https://preview.amp.dev/documentation/components/amp-carousel.example.3.html">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
-    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <title>demo</title>
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <style amp-boilerplate>
+    <script async="" src="https://cdn.ampproject.org/v0.js"></script>
+
+    <script custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async=""></script>
+    <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async=""></script>
+    <script custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js" async=""></script>
+    <script custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js" async=""></script>
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+
+
+
+
+    <style amp-boilerplate="">
         body {
             -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
             -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
             -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
             animation: -amp-start 8s steps(1, end) 0s 1 normal both
-        }
-        
-        .footer {
-            background-color: #fbbc05;
-            height: 250px;
-            display: flex;
-            justify-content: space-evenly;
-        }
-        
-        .content {
-            background-color: #fbbc05;
-            display: flex;
-            align-self: center;
-            padding-top: 10vh;
-            padding-left: 60vh;
-        }
-        
-        .content2 {
-            background-color: #fbbc05;
-            display: flex;
-            justify-content: center;
-        }
-        
-        .top {
-            height: 10vh;
-            width: 210vh;
-            display: flex;
-            justify-content: space-around;
-            background-color: #fbbc05;
-            z-index: 10;
-            position: fixed;
-            top: 0;
-            justify-content: space-between;
-        }
-        
-        h1 {
-            color: #4285f4;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            font-size: 5vh;
         }
         
         @-webkit-keyframes -amp-start {
@@ -102,81 +70,255 @@
                 visibility: visible
             }
         }
-    </style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    </style><noscript><style amp-boilerplate="">body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+    <style amp-custom="">
+        .pp {
+            padding: 10%;
+            padding-bottom: 10%;
+            display: inline;
+        }
+        
+        .footer2 {
+            background-color: #daa00dec;
+            height: 250px;
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        html {
+            font-family: sans-serif;
+            line-height: 1.15;
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%
+        }
+        
+        body {
+            margin: 0
+        }
+        
+        footer,
+        nav,
+        section {
+            display: block
+        }
+        
+        .footer {
+            background-color: #3f2e02bd;
+            height: 250px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        
+        .content {
+            background-color: #fbbc05;
+            display: flex;
+            align-self: center;
+            padding-top: 10vh;
+            padding-left: 60vh;
+        }
+        
+        .content2 {
+            background-color: #fbbc05;
+            justify-content: center;
+        }
+        
+        .gg {
+            background-color: #fbbd05e7;
+        }
+        
+        .top {
+            height: 10vh;
+            width: 210vh;
+            display: flex;
+            justify-content: space-around;
+            background-color: #fbbc05;
+            z-index: 10;
+            position: fixed;
+            top: 0;
+            justify-content: space-between;
+        }
+        
+        h1 {
+            color: #4285f4;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 5vh;
+        }
+        
+        figcaption,
+        figure,
+        main {
+            display: block
+        }
+        
+        figure {
+            margin: 1em 40px
+        }
+        
+        a {
+            background-color: transparent;
+            -webkit-text-decoration-skip: objects
+        }
+        
+        a:active,
+        a:hover {
+            outline-width: 0;
+            text-transform: 2;
+        }
+    </style>
 </head>
 
 <body>
-    <amp-sidebar id="sidebar-desktop" class="desktop-sidebar" layout="nodisplay" side="left">
-        <h1>Desktop Sidebar</h1>
-        <button on="tap:sidebar-desktop.close">Close sidebar</button>
-        <nav toolbar="(min-width: 784px)" toolbar-target="target-element-desktop">
+    <header class="top">
+        <div class="gg" role="button" aria-label="open sidebar" on="tap:header-sidebar.toggle" tabindex="0">☰|☰
+        </div>
+    </header>
+
+    <amp-sidebar id="header-sidebar" layout="nodisplay">
+        <div>
+            <div role="button" aria-label="close sidebar" on="tap:header-sidebar.toggle" tabindex="0">✕</div>
+        </div>
+        <nav>
             <ul>
-                <li>Projects</li>
-                <li>Recognisation</li>
-                <li>Experience and certifications</li>
-                <li>Contact</li>
+                <li>
+                    <amp-accordion layout="container" disable-session-states="">
+                        <section>
+                            <header>Projects</header>
+                            <ul>
+                                <li><a href="#">Web</a></li>
+                                <li><a href="#">Android</a></li>
+                                <li><a href="#">Clouds</a></li>
+                                <li><a href="#">UX</a></li>
+                            </ul>
+                        </section>
+                    </amp-accordion>
+                </li>
+                <li>
+                    <amp-accordion layout="container" disable-session-states="">
+                        <section>
+                            <header>Recognisations</header>
+                            <ul>
+                                <li><a href="#">Hackhons</a></li>
+                                <li><a href="#">Achievements</a></li>
+                                <li><a href="#">Certification</a></li>
+                            </ul>
+                        </section>
+                    </amp-accordion>
+                </li>
+
+                <li>
+                    <amp-accordion layout="container" disable-session-states="">
+                        <section>
+                            <header>Organisations</header>
+                            <ul>
+                                <li><a href="#">github</a></li>
+                                <li><a href="#">google</a></li>
+                                <li><a href="#">Amazon</a></li>
+                                <li><a href="#">Microsoft</a></li>
+                            </ul>
+                        </section>
+                    </amp-accordion>
+                </li>
             </ul>
         </nav>
+
+        <ul>
+            <li><a href="#">Resume</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
     </amp-sidebar>
-    <div class="top">
-        <h1><i class="fas fa-bars"></i></h1>
-        <h1> <i>Demo portfolio page</i></h1>
-        <h1><i class="far fa-question-circle"></i></h1>
+    <h1 class="top">
+        Demo Protfolio
+    </h1>
+    <figure>
+        <amp-img width="404" height="720" alt="Demo Protfolio" layout="responsive" src="https://a-static.besthdwallpaper.com/pacific-rim-aesthetic-black-and-yellow-wallpaper-1920x1080-13993_48.jpg" media="(max-width: 415px)"></amp-img>
+        <amp-img height="720" alt="Demo Protfolio" layout="fixed-height" src="https://a-static.besthdwallpaper.com/pacific-rim-aesthetic-black-and-yellow-wallpaper-1920x1080-13993_48.jpg" media="(min-width: 416px)"></amp-img>
+        <figcaption>
 
-    </div class="content">
-    <amp-img src="https://mk0abtastybwtpirqi5t.kinstacdn.com/wp-content/uploads/boostrap-landing-page-template-portfolio.jpg" width="600" height="450" layout="responsive">
-    </amp-img>
-    <div>
+        </figcaption>
+        <div class="content">
+            <amp-carousel type="slides" width="650" height="400" margin="0 auto" controls loop autoplay delay="3000" data-next-button-aria-label="Go to next slide" data-previous-button-aria-label="Go to previous slide">
+                <amp-img src="https://a-static.besthdwallpaper.com/pacific-rim-aesthetic-black-and-yellow-wallpaper-1920x1080-13993_48.jpg" width="450" height="300"></amp-img>
+                <amp-img src="https://parttime.syr.edu/wp-content/uploads/2020/03/WebDevelopment_Coding-1200x630.jpg" width="450" height="300"></amp-img>
+                <amp-img src="https://i.ytimg.com/vi/xFmOdLsw33A/maxresdefault.jpg" width="450" height="300"></amp-img>
+                <amp-img src="https://www.motocms.com/blog/wp-content/uploads/2017/03/what-is-google-amp-main.jpg" width="450" height="300"></amp-img>
+            </amp-carousel>
+            <hr>
+        </div>
 
-    </div>
-    <div class="content">
-        <amp-carousel type="slides" width="650" height="400" margin="0 auto" controls loop autoplay delay="3000" data-next-button-aria-label="Go to next slide" data-previous-button-aria-label="Go to previous slide">
-            <amp-img src="https://parttime.syr.edu/wp-content/uploads/2020/03/WebDevelopment_Coding-1200x630.jpg" width="450" height="300"></amp-img>
-            <amp-img src="https://i.ytimg.com/vi/xFmOdLsw33A/maxresdefault.jpg" width="450" height="300"></amp-img>
-            <amp-img src="https://www.motocms.com/blog/wp-content/uploads/2017/03/what-is-google-amp-main.jpg" width="450" height="300"></amp-img>
-        </amp-carousel>
-        <hr>
-    </div>
+        <div class="content2">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen
+                Lorem Ipsum is simply dummy </p>
+            <p> of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen Lorem Ipsum is simply dummy text
+                of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen Lorem Ipsum is simply dummy
+                text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen Lorem Ipsum is simply dummy
+                text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen Lorem Ipsum is simply dummy
+                text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen Lorem Ipsum is simply dummy
+                text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen Lorem Ipsum is simply dummy
+                text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen Lorem Ipsum is simply dummy
+                text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen Lorem Ipsum is simply </p>dummy
+            text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen Lorem Ipsum is simply dummy
+            text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen Lorem Ipsum is simply dummy
+            text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen Lorem Ipsum is simply dummy
+            text of the printing and typesetting industry.
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </p>
+        </div>
+        <div>
+            <amp-youtube data-videoid="lBTCB7yLs8Y" layout="responsive" width="480" height="270"></amp-youtube>
+        </div>
+        <div class="footer2">
+            <form class="pp" method="post" action-xhr="https://example.com/subscribe" custom-validation-reporting="show-all-on-submit" target="_blank">
+                <fieldset>
+                    <label>
+        <span class="pp">Name:</span>
+        <input type="text"
+          name="name"
+          id="name5"
+          required
+          pattern="\w+\s\w+">
+        <span visible-when-invalid="valueMissing"
+          validation-for="name5"></span>
+        <span visible-when-invalid="patternMismatch"
+          validation-for="name5">
+          Please enter your first and last name separated by a space (e.g. Jane Miller)
+        </span>
+      </label>
+                    <br>
+                    <label>
+        <span class="pp">Email:</span>
+        <input type="email"
+          name="email"
+          id="email5"
+          required>
+        <span visible-when-invalid="valueMissing"
+          validation-for="email5"></span>
+        <span visible-when-invalid="typeMismatch"
+          validation-for="email5"></span>
+      </label>
+                    <br>
+                    <input type="submit" value="Subscribe">
+                </fieldset>
+            </form>
+        </div>
+        <div class="footer">
+            <amp-social-share type="twitter" data-param-text="Some URL" border-radius="50%" padding-right="50px">
+            </amp-social-share>
 
-    <div class="content2">
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen Lorem
-            Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen Lorem
-            Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen Lorem
-            Ipsum is simply dummy </p>
-        <p> of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen Lorem Ipsum is simply dummy text of
-            the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen Lorem Ipsum is simply dummy text of
-            the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen Lorem Ipsum is simply dummy text of
-            the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen Lorem Ipsum is simply dummy text of
-            the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen Lorem Ipsum is simply dummy text of
-            the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen Lorem Ipsum is simply dummy text of
-            the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen Lorem Ipsum is simply dummy text of
-            the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen Lorem Ipsum is simply </p>dummy text
-        of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen Lorem Ipsum is simply dummy text of
-        the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen Lorem Ipsum is simply dummy text of the
-        printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen Lorem Ipsum is simply dummy text of the printing
-        and typesetting industry.
-        <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-            Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-            Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        </p>
-    </div>
-    <div>
-        <amp-youtube data-videoid="lBTCB7yLs8Y" layout="responsive" width="480" height="270"></amp-youtube>
-    </div>
+            <amp-social-share type="email" data-param-text="Some URL" border-radius="50%">
+            </amp-social-share>
 
-    <div class="footer">
-        <amp-social-share type="twitter" data-param-text="Some URL" border-radius="50%" padding-right="50px">
-        </amp-social-share>
+            <amp-social-share type="linkedin" data-param-text="Some URL" border-radius="50%">
+            </amp-social-share>
 
-        <amp-social-share type="email" data-param-text="Some URL" border-radius="50%">
-        </amp-social-share>
-
-        <amp-social-share type="linkedin" data-param-text="Some URL" border-radius="50%">
-        </amp-social-share>
-
-        <amp-social-share type="facebook" data-param-text="Some URL" border-radius="50%">
-        </amp-social-share>
-    </div>
+            <amp-social-share type="facebook" data-param-text="Some URL" border-radius="50%">
+            </amp-social-share>
+        </div>
 </body>
 
 </html>
