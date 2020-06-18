@@ -19,9 +19,12 @@
   <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
   <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
   <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async=""></script>
+  <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
   <style amp-custom="">
+    .category-title {  font-family: Georgia, 'Times New Roman', serif;  font-size: 1.5rem;   color: #005689;  background: none;  border:0;  border-top: 1px solid #ddd;  padding:0.25rem;}
     /*! Bassplate | MIT License | http://github.com/basscss/bassplate */
 
     /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -4142,6 +4145,7 @@
         <path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
       </svg>
     </div>
+    <!-- <h1>Portfolio</h1> -->
     <!--
       TODO: currently "fixeditems" is an array, therefore it's not possible to
       add additional classes to it. An alternative solution would be to make it
@@ -4157,12 +4161,14 @@
        }]
      }
      -->
-    <div class="ampstart-headerbar-fixed center m0 p0 flex justify-center nowrap absolute top-0 right-0 pt2 pr3">
+    <!-- <div class="ampstart-headerbar-fixed center m0 p0 flex justify-center nowrap absolute top-0 right-0 pt2 pr3">
       <div class="mr2">
+        
       </div>
       <a href="cart.amp.html" class="text-decoration-none mr2 ampstart-headerbar-fixed-link ">
 
-        <div class="ampstart-headerbar-icon-wrapper relative"><svg xmlns="http://www.w3.org/2000/svg"
+        <div class="ampstart-headerbar-icon-wrapper relative">
+          <svg xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 37 35">
             <g>
               <path
@@ -4172,7 +4178,7 @@
           </svg></div>
       </a>
 
-    </div>
+    </div> -->
   </header>
   <amp-sidebar id="header-sidebar"
     class="ampstart-sidebar px3  md-flex flex-column justify-content items-center justify-center" layout="nodisplay">
@@ -4231,6 +4237,20 @@
     <amp-img src="https://res.cloudinary.com/omkaragrawal/image/upload/v1592374926/IMG-20181203-WA0003_wdvjvp.jpg"
       width="700" height="600" layout="intrinsic"></amp-img>
   </p>
+  <amp-layout layout="container">
+    <amp-accordion class="category-title" animate expand-single-section>
+      <section>
+        <h4>Back End</h4>
+        <p>Proficient in using Nodejs and Php. Can work on Django, flask, Java based backends. </p>
+        <!-- <amp-img src="https://res.cloudinary.com/omkaragrawal/image/upload/c_scale,h_100,q_100/v1592462122/nodejs-new-black_lw2pmd.png" alt="Nodejs" width="auto" height="100" layout="fixed-height"> -->
+        </amp-img>
+      </section>
+      <section>
+        <h4>Front End</h4>
+        <p>I Develope front end using many things such as AMP, Materialize Css, Bootstrap, React, Angular. </p>
+      </section>
+    </amp-accordion>
+  </amp-layout>
 </body>
 
 </html>
