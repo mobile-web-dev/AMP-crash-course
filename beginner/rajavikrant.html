@@ -6,6 +6,9 @@
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+    <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
     <link rel="canonical" href=".html">
     <title>Sparrow World</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
@@ -61,7 +64,8 @@
 
     <div style="padding-top: 10vh;  padding-left: 67vh;">
       	<h4 style="text-align: center; width: 60%;">Image carousel</h4>
-     	<amp-carousel 
+       <amp-carousel 
+       lightbox
               type="slides"
               width="450"
               height="300"
@@ -85,7 +89,7 @@
     <div>
         <h4 style="text-align: center;">YouTube Video</h4>
         <amp-youtube
-          data-videoid="Uf9fpGe0PGs"
+          data-videoid="6UQ5ww-vHjU"
           width="480"
           height="200"
           layout="responsive">
@@ -119,7 +123,30 @@
        data-param-url="https://twitter.com/Raja_452"
       ></amp-social-share>
     </div>
-
+    <!--Form -->
+    <h2 class="sample-heading">Newsletter<code></code></h2>
+    <!-- Use `show-first-on-submit` strategy to show the first validation message when the user submit the form. -->
+    <form class="sample-form" method="post" action-xhr="/documentation/examples/api/submit-form-input-text-xhr" target="_top" custom-validation-reporting="show-first-on-submit">
+      <input type="text" id="show-first-on-submit-name" name="name" placeholder="Name..." required pattern="\p{L}+\s\p{L}+">
+      <span visible-when-invalid="valueMissing" validation-for="show-first-on-submit-name"></span>
+      <span visible-when-invalid="patternMismatch" validation-for="show-first-on-submit-name">
+        Please enter your first and last name separated by a space (e.g. Jane Miller)
+      </span>
+      <input type="email" id="show-first-on-submit-email" name="email" placeholder="Email..." required>
+      <span visible-when-invalid="valueMissing" validation-for="show-first-on-submit-email"></span>
+      <span visible-when-invalid="typeMismatch" validation-for="show-first-on-submit-email"></span>
+      <input type="submit" value="Subscribe">
+      <div submit-success>
+        <template type="amp-mustache">
+          Success! Thanks {{name}} for trying the <code>amp-form</code> demo! Try to insert the word "error" as a name input in the form to see how <code>amp-form</code> handles errors.
+        </template>
+      </div>
+      <div submit-error>
+        <template type="amp-mustache">
+          Error! Thanks {{name}} for trying the <code>amp-form</code> demo with an error response.
+        </template>
+      </div>
+    </form>
     <h3 style="text-align: right;">Made by Raja Vikrant Sharma</h3>
 
   </body>
