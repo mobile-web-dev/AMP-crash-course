@@ -43,13 +43,16 @@
 
     </style>
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-    
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+    <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
+
     
 
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway">
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
     <link rel="" href="https://amp.dev/documentation/examples/components/amp-social-share/index.html">
-
+	<script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
 
 
   </head>
@@ -57,6 +60,7 @@
     <header class="headerbar">
       <div role="button" on="tap:sidebar1.toggle" tabindex="0" class="hamburger">☰</div>
       <div class="site-name"></div>
+      
     </header>
     <amp-sidebar id="sidebar1" layout="nodisplay" side="left">
       <div role="button" aria-label="close sidebar" on="tap:sidebar1.toggle" tabindex="0" class="close-sidebar">✕</div>
@@ -66,13 +70,13 @@
         <li><a href="#">Contact</a></li>
       </ul>
     </amp-sidebar> 
-      <nav title="About">
+     
           <div class="section">
               Hi!<br>
               I'm Rashi Pathak.
           </div>
-      </nav>
-      <nav title="Education">
+      
+      
           <div class="section">
               <ul>
                   <li><strong>Graduation:</strong>IERT'23</li>
@@ -80,14 +84,51 @@
                   <li><strong>High School:</strong>St.Fidelis College</li>
 
               </ul>
+              <amp-img lightbox
+  src="iert.jpg"
+  width="300"
+  height="200"
+  layout="responsive"></amp-img>
+<p class="paragraph">IERT</p>
+<amp-img lightbox
+  src="sfc.jpg"
+  width="300"
+  height="200"
+  layout="responsive"></amp-img>
+<p class="paragraph">St. Fidelis College</p>
           </div>
-      </nav>
+      
       <nav title="Contact">
           <div class="section">
-              <a href="https://forms.gle/CCs935J8qxe5FoVW7">Contact Me</a>
-              <amp-social-share type="email" data-param-url="raship9119@gmail.com" data-param-text="Email"></amp-social-share>
-<amp-social-share type="linkedin" data-param-url="https://www.linkedin.com/in/rashi-pathak/" data-param-text="LinkedIn"></amp-social-share>
-<amp-social-share type="twitter" data-param-url="https://twitter.com/RashiPathak11" data-param-text="Twitter"></amp-social-share>
+            
+          <form class="sample-form"
+          method="post"
+          action-xhr="/documentation/examples/api/submit-form-input-text-xhr"
+          target="_top">
+          <input type="text"
+            name="name"
+            placeholder="Name..."
+            required>
+          <input type="email"
+            name="email"
+            placeholder="Email..."
+            required>
+          <input type="submit"
+            value="Submit">
+          <div submit-success>
+            <template type="amp-mustache">
+              Success! Thanks {{name}} for trying the <code>amp-form</code> demo! Try to insert the word "error" as a name input in the form to see how <code>amp-form</code> handles errors.
+            </template>
+          </div>
+          <div submit-error>
+            <template type="amp-mustache">
+              Error! Thanks {{name}} for trying the <code>amp-form</code> demo with an error response.
+            </template>
+          </div>
+        </form>
+              <amp-social-share type="email"  data-param-text="Email"></amp-social-share>
+<amp-social-share type="linkedin"  data-param-text="LinkedIn"></amp-social-share>
+<amp-social-share type="twitter" data-param-text="Twitter"></amp-social-share>
           </div>
       </nav>
 
