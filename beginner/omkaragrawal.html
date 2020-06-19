@@ -15,16 +15,30 @@
   <script async src="https://cdn.ampproject.org/v0.js"></script>
 
 
-  <script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>
+  <script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js">
+  </script>
   <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
   <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
   <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async=""></script>
   <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+  <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+  <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+  <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet">
   <style amp-custom="">
-    .category-title {  font-family: Georgia, 'Times New Roman', serif;  font-size: 1.5rem;   color: #005689;  background: none;  border:0;  border-top: 1px solid #ddd;  padding:0.25rem;}
+    .category-title {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 1.5rem;
+      color: #005689;
+      background: none;
+      border: 0;
+      border-top: 1px solid #ddd;
+      padding: 0.25rem;
+    }
+
     /*! Bassplate | MIT License | http://github.com/basscss/bassplate */
 
     /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
@@ -4137,6 +4151,21 @@
 </head>
 
 <body>
+  <!-- <amp-state id="imgList">
+    <script type="application/json">
+      {
+        "dataLink": {
+          "baseUrl": "https://picsum.photos/v2/list?page=",
+          "page": 1,
+          "endUrl": "&limit=3"
+        },
+        "imgLink": {
+          "imgUrl": "https://picsum.photos/id/"
+          "imgEnd": "/100"
+        }
+      }
+    </script>
+  </amp-state> -->
   <header class="ampstart-headerbar fixed flex justify-start items-center top-0 left-0 right-0 pl2 pr4 pt2 md-pt0">
     <div role="button" aria-label="open sidebar" on="tap:header-sidebar.toggle" tabindex="0"
       class="ampstart-navbar-trigger  pr2 absolute top-0 pr0 mr2 mt2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
@@ -4233,10 +4262,80 @@
     </ul>
   </amp-sidebar>
   <h1 align="center">OMKAR AGRAWAL</h1>
+  <amp-state id="likes">
+    <script type="application/json">
+      {
+        "count": 0,
+        "total": 0
+      }
+    </script>
+  </amp-state>
+  <amp-state id="dislikes">
+    <script type="application/json">
+      {
+        "count": 0,
+        "total": 0
+      }
+    </script>
+  </amp-state>
   <p id="image">
     <amp-img src="https://res.cloudinary.com/omkaragrawal/image/upload/v1592374926/IMG-20181203-WA0003_wdvjvp.jpg"
       width="700" height="600" layout="intrinsic"></amp-img>
   </p>
+  <p id="image">
+    <button class="likeButton"
+      on="tap:AMP.pushState({ likes: {count: 1 + likes.count, total: 1 + likes.total}, dislikes: {count: dislikes.count - 1} })">
+      👍
+      <div> <span [text]="likes.count">0</span></div></button>
+  </p>
+  <p id="image">
+    <button class="dislikeButton"
+      on="tap:AMP.pushState({ dislikes: {count: 1 + dislikes.count, total: 1 + dislikes.total}, likes: {count: likes.count - 1} })">
+      👎
+      <div> <span [text]="dislikes.count">0</span></div></button>
+  </p>
+  <div id="image">
+    <span [text]="'Total Likes: ' + likes.total"></span>
+    <span [text]="'Total dislikes: ' + dislikes.total"></span>
+  </div>
+  <!-- <amp-layout layout="container">
+    <div>
+      <amp-list id="amp-list-placeholder" noloading layout="fixed-height" height="654"
+        src="//imgList.dataLink.baseUrl+imgList.dataLink.page+imgList.dataLink.endUrl" binding="no">
+        <div placeholder>
+          <div class="product">
+            <div class="image-placeholder"></div>
+            <div>Loading...</div>
+          </div>
+          <div class="product">
+            <div class="image-placeholder"></div>
+            <div>Loading...</div>
+          </div>
+          <div class="product">
+            <div class="image-placeholder"></div>
+            <div>Loading...</div>
+          </div>
+        </div>
+        <div fallback>
+          <h1>FAILED</h1>
+        </div>
+        <template type="amp-mustache">
+          <div class="product">
+            <amp-img width="100" height="100" alt="{{name}}"
+              src="{{imgList[imgLink].imgUrl}} + {{id}} + {{imgList[imgLink].imgEnd}}"></amp-img>
+            <div>
+              <div>{{author}}</div>
+              <div>{{{id}}}</div>
+              <div>{{url}}</div>
+            </div>
+          </div>
+        </template>
+      </amp-list>
+      <button on="tap:AMP.setState({ imgList.page:  1 + imgList.page})">
+        Add items
+      </button>
+    </div>
+  </amp-layout> -->
   <amp-layout layout="container">
     <amp-accordion class="category-title" animate expand-single-section>
       <section>
