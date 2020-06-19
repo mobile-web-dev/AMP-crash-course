@@ -249,11 +249,11 @@
         <amp-state id="theFood">
             <script type="application/json">
                 {
-                    "cupcakes": {
+                    "edit_pic": {
                         "imageUrl": "https://drive.google.com/thumbnail?id=1ggElx8JD72SqbSW_QJ0EM3pjUOpSIJoq",
                         "style": "greenBorder"
                     },
-                    "sushi": {
+                    "normal_pic": {
                         "imageUrl": "https://drive.google.com/thumbnail?id=1jmEmFBsPewvbkvvKMoK3yuUy1dMRmMwN",
                         "style": "redBorder"
                     }
@@ -264,8 +264,8 @@
             <p>This is me.</p>
             <amp-img width="200" height="200" src="https://drive.google.com/thumbnail?id=1jmEmFBsPewvbkvvKMoK3yuUy1dMRmMwN" [src]="theFood[currentMeal].imageUrl">
             </amp-img>
-            <button on="tap:AMP.setState({currentMeal: 'sushi'})">edit pic</button>
-            <button on="tap:AMP.setState({currentMeal: 'cupcakes'})">
+            <button on="tap:AMP.setState({currentMeal: 'edit_pic'})">edit pic</button>
+            <button on="tap:AMP.setState({currentMeal: 'normal_pic'})">
               Normal pic
             </button>
         </div>
