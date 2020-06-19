@@ -9,6 +9,7 @@
     <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
     <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
     <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
     <link rel="canonical" href=".html">
     <title>Sparrow World</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
@@ -43,6 +44,13 @@
       {
         margin: 10px 100px;
         padding: 1em;
+      }
+      .clapbutton{
+        cursor: pointer;
+        border: none;
+        margin: 4px;
+        transition: background 300ms ease-in-out;
+        justify-content: center;
       }
 
     </style>
@@ -123,6 +131,26 @@
        data-param-url="https://twitter.com/Raja_452"
       ></amp-social-share>
     </div>
+    <!--
+          ## Push State
+
+          `AMP.pushState()` writes state changes to the history. Navigating back, will restore the previous state.
+          To test this, increase the count and use your browser's back button to decrease the count.
+        -->
+        <div style="text-align: center;">
+          <h3>Liked our Site? Show some love</h3>
+          <amp-state id="count"><script type="application/json">1</script></amp-state>
+            
+            <button class= "clapbutton" on="tap:AMP.pushState({ count: count + 1 })"><amp-img
+              alt="clap"
+              src="clap.jpg"
+              width="37"
+              height="47"
+              layout="fixed"
+            >
+            </amp-img><div> <span [text]="count">1</span></div></button>
+        </div>
+
     <!--Form -->
     <h2 class="sample-heading">Newsletter<code></code></h2>
     <!-- Use `show-first-on-submit` strategy to show the first validation message when the user submit the form. -->
