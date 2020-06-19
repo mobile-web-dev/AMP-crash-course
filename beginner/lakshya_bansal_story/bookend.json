@@ -1,0 +1,36 @@
+{
+  "bookendVersion": "v1.0",
+  "shareProviders": [
+    "facebook",
+    "twitter",
+    "email"
+  ],
+  "components": [
+    {
+      "type": "heading",
+      "text": "Few articles pulished by me"
+    },
+    {
+      "type": "small",
+      "title": "Getting Started with Data Visualization (Building a JavaScript Line Chart)",
+      "url": "https://medium.com/@bansallakshya94128/getting-started-with-data-visualization-building-a-javascript-line-chart-23f56f06d14c",
+      "image": "https://res.cloudinary.com/dstmsi8qv/image/upload/v1592594903/1_V-AzmpxiUt0yVskFYit-9Q_mq1m8g.jpg"
+    },
+    {
+      "type": "landscape",
+      "title": "Email Authentication with React Native and Firebase",
+      "url": "https://medium.com/@bansallakshya94128/email-authentication-with-react-native-and-firebase-bf41d829b9c7",
+      "image": "https://res.cloudinary.com/dstmsi8qv/image/upload/v1592595016/1_Fvb5taVP-QpGtYkLFzLROA_vc9jfu.png",
+      "category": "Technology"
+    },
+    {
+      "type": "cta-link",
+      "links": [
+        {
+          "text": "Learn more",
+          "url": "https://www.ampproject.org/stories/"
+        }
+      ]
+    }
+  ]
+}
