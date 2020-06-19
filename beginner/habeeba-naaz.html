@@ -10,6 +10,10 @@
   <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
   <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
   <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
+  <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+  <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+  <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+  
   <link rel="canonical" href="/index.html">
   <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
   <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
@@ -77,8 +81,14 @@
        background-color:#e0dcdc; 
    }
    th {
-     text-align: center;
+       padding:10px;
+       text-align: center;
+       background-color: yellow;
    } 
+   td {
+       padding:5px;
+       background-color: #e8a0b9;
+   }
    #About{
     margin: 0px auto;
    }
@@ -107,6 +117,26 @@
   textarea{
       width:50%;
   }
+  .greenBorder {
+      border: 5px solid green;
+    }
+    .redBorder {
+      border: 5px solid red;
+    }
+    .tomatoBorder {
+      border: 5px solid tomato;
+    }
+    .brownBorder {
+      border: 5px solid brown;
+    }
+    p{
+        font-family: cursive;
+        font-weight: 700;
+        color: tomato;
+        font-size:20px;
+        text-align: center;
+        width:50%;
+    }
   </style>
 </head>
 <header class="headerbar">
@@ -119,13 +149,14 @@
       <li><a href="#About">About Me</a></li>
       <li><a href="#skills">My Skills</a></li>
       <li><a href="#motivation-video">Motivational Video</a></li>
-      <li><a href="#contact">Contact Me</a> </li>  
+      <li><a href="#contact">Contact Me</a></li>
+      <li><a href="#favoritePlaces">Favorite Places</a></li>  
     </ul>
 </amp-sidebar>
 <body>
     <div id="About">
         <h2>About Me</h2>
-        <amp-carousel height="100"
+        <amp-carousel height="200"
         layout="fixed-height"
         type="carousel">
        <table>
@@ -138,24 +169,69 @@
     </div>
     <div id="skills">
        <h2>My Skills</h2>
-       <amp-carousel lightbox width="450" height="100" layout="responsive" type="slides">
-       <amp-img
-            src="images/html.jpg"
-            width="450"
-            height="300"></amp-img>
-       <amp-img
-           src="images/css.jpg"
-           width="450"
-           height="300"></amp-img>
-       <amp-img
-          src="images/javascript.png"
-          width="450"
-          height="300"></amp-img>
-        <amp-img
-          src="images/bootstrap.png"
-          width="450"
-          height="300"></amp-img>
-      </amp-carousel>
+        <amp-state id="selectSkills">
+            <script type="application/json">
+              {
+                  "html": {
+                  "imageUrl": "images/html.jpg",
+                  "style": "greenBorder"
+                },
+                "css": {
+                  "imageUrl": "images/css.jpg",
+                  "style": "redBorder"
+                },
+                "javascript": {
+                    "imageUrl": "images/javascript.png",
+                    "style": "tomatoBorder"
+                  },
+                  "bootstrap": {
+                    "imageUrl": "images/bootstrap.png",
+                    "style": "brownBorder"
+                  }
+              }
+            </script>
+          </amp-state>
+          <div class="greenBorder" [class]="selectSkills[currentSkill].style">
+            <p>Every Skill has different borders</p>
+            <p [text]="'I have experience in ' + currentSkill + '.'">I have experience in Html</p>
+            <amp-img
+              width="300"
+              height="200"
+              src="images/html.jpg"
+              [src]="selectSkills[currentSkill].imageUrl">
+            </amp-img><br>
+            <button class="btn" on="tap:AMP.setState({currentSkill: 'html'})">
+                HTML
+            </button>
+            <button class="btn" on="tap:AMP.setState({currentSkill: 'css'})">
+                CSS
+            </button>
+            <button class="btn" on="tap:AMP.setState({currentSkill: 'javascript'})">
+              Javascript
+            </button>
+            <button class="btn" on="tap:AMP.setState({currentSkill: 'bootstrap'})">
+              Bootstrap
+            </button>
+          </div>
+    </div>
+    <div id="favoritePlaces">
+        <h2>My Favorite Places</h2>
+        <amp-carousel lightbox width="450" height="100" layout="responsive" type="slides">
+            <amp-img
+              src="images/India.jpg"
+              width="450"
+              height="300"
+            ></amp-img>
+            <amp-img
+              src="images/US.jpg"
+              width="450"
+              height="300"
+            ></amp-img>
+            <amp-img
+              src="images/London.jpeg"
+              width="450"
+              height="300"
+            ></amp-img>
     </div>
 <div id="motivation-video">
   <h2>My Motivational Video</h2>
