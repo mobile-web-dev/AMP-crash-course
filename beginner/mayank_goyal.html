@@ -5,11 +5,17 @@
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <title>Mayank Goyal Portfolio</title>
     <script custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async></script>
-  <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
-  <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
-  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-  <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
-  <link rel="canonical" href="mayank_goyal.html">
+    <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+    <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+    <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+    <script async custom-element="amp-image-lightbox" src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
+    <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kreon&display=swap" rel="stylesheet">
+    <link rel="canonical" href="mayank_goyal.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type="application/ld+json">
       {
@@ -24,296 +30,426 @@
     </script>
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
-  <style amp-custom>
+    <style amp-custom>
 
-  body, html{
-    height:100%;
-    margin:0;
-    font-family:"Lato", sans-serif;
-    line-height:1.8em;
-    background-color:#282e34;
-  }
-  .section{
-    padding:50px 75px;
-  }
-  .section-light{
-    background-color:#f4f4f4;
-    color:#333;
-  }
-  .section-dark{
-    background-color:#282e34;
-    color:#FFFFFF;
-  }
+      body{
+        font-family: 'Seoge UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f5f2f2;
+      }
+       .section-dark{
+        background-color:#282e34;
+        color:#FFFFFF;
+      }
+      .section-light{
+        background-color:#f5f2f2;
+        color:#333;
+      }
+      .navigation{
+        margin-bottom:0px;
+      }
+      header{
+        font-size: 38px;
+        color: #282e34;
+        padding-top: 15px;
+        margin-left: 15px;
+        margin-bottom: 0px;
+      }
+      .navbar-trigger1{
+        padding-left: 15px;
+        padding-top: 15px;
+        padding-bottom: 0px;
+        color: #333;
+        font-size: 25px;
+      }
+      .nav-list{
+        list-style: none;
+        width: 100%
+        height:100%;
+        justify-content: center;
+        align-items: center;
+      }
+      li{
+        margin: .6rem;
+        text-decoration: none;
+      }
+      ul{
+        list-style: none;
+        padding-top: 15px;
+        color: #333;
+        font-size: 30px;
+        text-decoration: none;
+      }
+      .nav-link{
+        line-height: 3;
+      }
+      .sidebar{
+        padding-right: 150px;
+        color: #333;
+        font-size: 15px;
+      }
 
-  header{
-    font-size: 45px;
-    color: white;
-    padding-top: 15px;
-    margin-left: 15px;
-  }
-
-  .navbar-trigger1{
-    padding-left: 15px;
-    padding-top: 15px;
-    color: #333;
-    font-size: 25px;
-  }
-
-
-  }
-
-  .nav-list{
-    list-style: none;
-    width: 100%
-    height:100%;
-    justify-content: center;
-    align-items: center;
-  }
-
-  li{
-    margin: .6rem;
-  }
-
-  ul{
-    list-style: none;
-    padding-top: 15px;
-    color: #333;
-    font-size: 30px;
-
-  }
-
-  .nav-link{
-    line-height: 3;
-  }
-
-  .nav-link:hover
-  .nav-link:focus{
-
-  }
-
-  .sidebar{
-    padding-right: 150px;
-    color: #333;
-    font-size: 15px;
-  }
-
-  .share{
-    padding: 30px;
-    word-spacing: 20px;
-  }
-
-  .about{
-    padding-bottom: 20px;
-  }
-
-  .projects{
-    word-spacing: 18px;
-  }
-
-  p{
-    font-size:20px;
-    margin-left: 50px;
-    padding-bottom: 30px;
-    }
-
-    h1.title{
-      font-size:38px;
-      font-weight: bold;
-      padding: 24px;
-      margin-left: 380px;
-    }
-
-    h1.title1{
-      font-size:42px;
-      font-weight: bold;
-      padding: 24px;
-    }
-
-    .float{
-      float: right;
-      margin-right:90px; 
-      margin-top: 50px;
-      margin-left: 90px;
-    }
-
-form{
-  margin: 0;
-  padding: 0;
-  outline: none;
-  box-sizing: border-box;
-  font-family: 'Comfortaa', cursive;
-}
-
-body{
-  background: url('bg.jpg') no-repeat center;
-  background-size: cover;
-  width: 100%;
-  height: 100vh;
-}
-
-.wrapper{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  letter-spacing: 2px;
-}
-
-.wrapper h1{
-  margin-bottom: 40px;
-  font-size: 42px;
-  color: #fff;
-}
-
-.wrapper p{
-  margin-bottom: 40px;
-  color: #b2b2b2;
-  font-size: 20px;
-}
-
-.newsletter{
-  max-width: 550px;
-  width: 100%;
-  position: relative;
-}
-
-.newsletter .input{
-  width: 100%;
-  padding: 30px 100px 30px 60px;
-  border-radius: 5px;
-  border: none;
-  font-weight: bold;
-}
-
-.newsletter .fas{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);  
-  left: 20px;
-  font-size: 20px;
-}
-
-.newsletter .btn{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 30px;
-  background: #4dabf7;
-  padding: 15px 20px;
-  border-radius: 25px;
-  font-size: 12px;
-  letter-spacing: 5px;
-  color: #fff;
-  cursor: pointer;
-  text-transform: uppercase;
-}
-
-    button{
-      border-width: 0px;
-    }
+      .about{
+        padding-left: 42px;
+        padding-right: 42px;
+        padding-bottom: 26px;
+        margin-top: -10px;
+      }    
+      .about-info {
+        display: grid;
+        grid-gap: 30px;
+        grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+        grid-template-columns: repeat(3, 1fr); 
+        margin-top: 5px;
+      }
+      .about-info .bio-image {
+        grid-area: bioimage;
+        margin: auto;
+        border-radius: 50%;
+        border: #eece1a 3px solid; 
+      }
+      .about-info .bio {
+        grid-area: bio;
+        font-size: 20px; }
+      .about-info .job-1 {
+        grid-area: job1; }
+      .about-info .job-2 {
+        grid-area: job2; }
+      .about-info .job-3 {
+        grid-area: job3; }
+      .about-info .job {
+        background: #515151;
+        padding-left:17px;
+        border-bottom: #eece1a 5px solid; 
+      }
+      .lg-heading{
+        font-size: 57px;
+        padding-top: 18px;
+        margin-bottom: 5px;
+      }
+      .sm-heading{
+        font-size: 19px;
+        margin-top:5px;
+        margin-bottom: 10px;
+      }      
+      .text-secondary{
+        color: #FBB117;
+      }
+      .work{
+        font-size: 20px;
+        margin-bottom: 7px;
+      }
+      h6{
+        margin-top: 9px;
+        margin-bottom: 20px;
+      }
+      .title1{
+        font-size: 57px;
+        margin-bottom: 0px;
+        margin-top: 15px;
+      }
+      .title2{
+        margin-top: 4px;
+        font-size: 20px;
+      }
+      .title3{
+        font-size: 50px;
+        margin-bottom: 0px;
+        padding-top: 15px;
+      }
+      .title4{
+        margin-top: 4px;
+        font-size: 20px;
+        color: #FBB117;
+      }
+      .sample-heading{
+        font-size: 50px;
+        margin-bottom: 17px;
+        padding-top: 15px;
+      }
+      .sample-form {
+         padding: 0 var(--space-2);
+      }
+      .sample-form > * {
+        margin: var(--space-1);
+      }
+      form.amp-form-submit-success.sample-form.hide-inputs > input {
+      display: none;
+      }
+      input{
+        font-size: 25px;
+        border-radius:30px;
+      }
+      button{
+        border-width: 0px;
+      }
 
     amp-social-share.rounded {
-      border-radius: 40%;
+      border-radius: 40px;
       background-repeat: no-repeat;
       background-position: center;
-      background-size: 50%;
     }
+    .share{
+      padding-bottom: 18px;
+    }
+    .collaborate{
+      color: #FBB117;
+      font-weight: 3px;
+    }
+    .favorite-button input[type=submit] {
+        width: 48px;
+        height: 48px;
+        cursor: pointer;
+        border: none;
+        margin: 4px;
+        transition: background 300ms ease-in-out;
+      }
+      .favorite-button amp-list {
+        margin: var(--space-2);
+      }
 
-</style>
-</head>
-<body>
+      .favorite-button .heart-fill {
+        background: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>');
+      }
+      .favorite-button .heart-border {
+        background: url('data:image/svg+xml;utf8,<svg fill="%23000000" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg>');
+      }
+      /* While the page loads we show a grey heart icon to indicate that the functionality is not yet available. */
+      .favorite-button .heart-loading,
+      .favorite-button .heart-loading[placeholder] {
+        background: url('data:image/svg+xml;utf8,<svg fill="%23cccccc" height="48" viewBox="0 0 24 24" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg>');
+      }
+      .favorite-button .favorite-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .favorite-button .favorite-count {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--space-1);
+        margin-left: var(--space-1);
+        position: relative;
+        width: 48px;
+        background: var(--color-primary);
+        border-radius: .4em;
+        color: var(--color-text-light);
+      }
+      .favorite-button .favorite-count.loading {
+        color: #ccc;
+        background: var(--color-bg-light);
+      }
+      .favorite-button .favorite-count.loading:after {
+        border-right-color: var(--color-bg-light);
+      }
+      .favorite-button .favorite-count:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 0;
+        height: 0;
+        border: var(--space-1) solid transparent;
+        border-right-color: var(--color-primary);
+        border-left: 0;
+        margin-top: calc(-1 * var(--space-1));
+        margin-left: calc(-1 * var(--space-1));
+      }
+      /* A simple snackbar to show an error */
+      #favorite-failed-message {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 450px;
+        background: #323232;
+        color: white;
+        padding: 1rem 1.5rem;
+        z-index: 1000;
+      }
+      #favorite-failed-message div {
+        color: #64dd17;
+        margin: 0 1rem;
+        cursor: pointer;
+      }
 
-<section class="navigation">
-  <header class="headerbar">
-    <div class="navbar-trigger" role="button" tabindex="0" on="tap:sidebar1.toggle">☰</div>
-  </header>
-  <amp-sidebar class="sidebar" id="sidebar1" layout="nodisplay" side="left">
-    <div class="navbar-trigger1" role="button" tabindex="0" on="tap:sidebar1.toggle">❌</div>
-      <nav class="top-nav">
-        <ul class="nav-list">
-          <li class="nav-link"><a href="#">Portfolio</a></li>
-          <li class="nav-link"><a href="#">Events</a></li>
-          <li class="nav-link"><a href="#">Contact me</a></li>
-        </ul>
-      </nav>
-  </amp-sidebar>
-</section>
+    </style>
+  </head>
 
-<section class="about section-dark">
-  <amp-img src="https://i.pinimg.com/originals/1d/02/88/1d0288322469dcec682a52a56b93dbde.png" width="240" height="260" alt="myself" class="float"></amp-img>
-  <center><h1 class="title">ABOUT</h1></center> 
-  <p>My name is Mayank Goyal. Curently, I am an 11th class student pursuing PCM with Computer science as my optional subject. I have a keen interest in programming, website designing, and graphic design. I have been working with a microcontroller like Arduino for the past 1 year and have created a few amazing projects. From these projects, Speed automated seatbelt is the latest and the most important project. I have even created a few websites. Looking forward to learn more...</p>
-</section>
+  <body>
 
-<section class="projects section-light">
-  <center><h1 class="title1">PROJECTS</h1></center>
-  <amp-carousel id="carousel-with-preview" width="450" height="270" layout="responsive" type="slides">
-    <amp-img src="https://i.pinimg.com/originals/f6/0d/79/f60d799396cb3e140aecf3e5ad12c207.jpg" width="270" height="180" layout="responsive" alt="ajith"></amp-img>
-    <amp-img src="https://i.guim.co.uk/img/media/8f02bb49224d9a94699b75213664bf898617c062/0_288_5315_3189/master/5315.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=89721e1224115e05a05203a62cf93f7c" width="270" height="180" layout="responsive" alt="wolf"></amp-img>
-    <amp-img src="https://i.ytimg.com/vi/pZvBGsZy7qM/maxresdefault.jpg" width="270" height="180" layout="responsive" alt="manuplation"></amp-img>
-     <amp-img src="https://i.ytimg.com/vi/bvSwznwqlHU/maxresdefault.jpg" width="270" height="180" layout="responsive" alt="arduino"></amp-img>
-     <amp-img src="https://d3b8hk1o42ev08.cloudfront.net/wp-content/uploads/2018/07/microprocessor-chip-752x440.jpg" width="270" height="180" layout="responsive" alt="project"></amp-img>
-     <amp-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSlwGTTbu_mawQJTBEYEY_wD2yTODBYCL5egKxTa_CM5vcGQ40P&usqp=CAU" width="270" height="180" layout="responsive" alt="raspberry"></amp-img>
-  </amp-carousel>
-<br>
-  <div class="carousel">
-    <center>
-    <button on="tap:carousel-with-preview.goToSlide(index=0)">
-      <amp-img src="https://i.pinimg.com/originals/f6/0d/79/f60d799396cb3e140aecf3e5ad12c207.jpg" width="90" height="75" alt="ajith"></amp-img>
-    </button>
-    <button on="tap:carousel-with-preview.goToSlide(index=1)">
-      <amp-img src="https://i.guim.co.uk/img/media/8f02bb49224d9a94699b75213664bf898617c062/0_288_5315_3189/master/5315.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=89721e1224115e05a05203a62cf93f7c" width="90" height="75" alt="wolf"></amp-img>
-    </button>
-    <button on="tap:carousel-with-preview.goToSlide(index=2)">
-      <amp-img src="https://i.ytimg.com/vi/pZvBGsZy7qM/maxresdefault.jpg" width="90" height="75" alt="manuplation"></amp-img>
-    </button>
-    <button on="tap:carousel-with-preview.goToSlide(index=3)">
-      <amp-img src="https://i.ytimg.com/vi/bvSwznwqlHU/maxresdefault.jpg" width="90" height="75" alt="arduino"></amp-img>
-    </button>
-    <button on="tap:carousel-with-preview.goToSlide(index=4)">
-      <amp-img src="https://d3b8hk1o42ev08.cloudfront.net/wp-content/uploads/2018/07/microprocessor-chip-752x440.jpg" width="90" height="75" alt="project"></amp-img>
-    </button>
-    <button on="tap:carousel-with-preview.goToSlide(index=1)">
-      <amp-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSlwGTTbu_mawQJTBEYEY_wD2yTODBYCL5egKxTa_CM5vcGQ40P&usqp=CAU" width="90" height="75" alt="raspberry"></amp-img>
-    </button>
-  </center>
+  <div class="navigation">
+      <header class="headerbar">
+        <div class="navbar-trigger" role="button" tabindex="0" on="tap:sidebar1.toggle">☰</div>
+      </header>
+      <amp-sidebar class="sidebar" id="sidebar1" layout="nodisplay" side="left">
+        <div class="navbar-trigger1" role="button" tabindex="0" on="tap:sidebar1.toggle">❌</div>
+          <nav class="top-nav">
+            <ul class="nav-list">
+              <li class="nav-link"><a href="#">Portfolio</a></li>
+              <li class="nav-link"><a href="#">Events</a></li>
+              <li class="nav-link"><a href="#">Contact me</a></li>
+            </ul>
+          </nav>
+      </amp-sidebar>
   </div>
-</section>
 
-<section class="videos section-dark">
-  <center><h1 class="title1">VIDEOS</h1></center>
-  <amp-video width="720"
-  height="405"
-  src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-  poster="https://peach.blender.org/wp-content/uploads/bbb-splash.png"
-  layout="responsive"
-  controls
-  autoplay>
-  <div fallback>
-    <p>Your browser doesn't support HTML5 video.</p>
-  </div>
-</amp-video>
-</section>
+  <div class="about section-dark">
+      <h1 class="lg-heading">
+       About
+       <span class="text-secondary">Me</span>
+      </h1>
+      <h2 class="sm-heading">
+        Down image lightbox
+      </h2>
+      <div class="about-info">
+        <amp-img on="tap:lightbox1" role="button" tabindex="0" src="https://i.pinimg.com/originals/1d/02/88/1d0288322469dcec682a52a56b93dbde.png" width="190" height="180" alt="myself" class="bio-image"></amp-img>
 
-<section class="share section-dark">
-  <center>
-      <div class="wrapper">
-        <h1>Want to collaborate ?</h1>
-        <div class="newsletter">
-          <input type="text" class="input" placeholder="Enter Your Email">
-          <i class="fas fa-envelope"></i>
-          <div class="btn">Send</div>
+        <div class="bio">
+          <h3 class="text-secondary">BIO</h3>
+          <p>My name is Mayank Goyal. Curently, I am an 11th class student pursuing PCM with Computer science as my optional subject. I have a keen interest in programming, website designing, and graphic design. I have been working with a microcontroller like Arduino for the past 1 year and have created a few amazing projects. From these projects, Speed automated seatbelt is the latest and the most important project. I have even created a few websites. Looking forward to learn more...</p>
+        </div>
+
+        <div class="job job-1">
+          <h3 class="work">Web Designer</h3>
+          <h6>Front End Developer</h6>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates perferendis totam enim. Nesciunt porro dolores
+            expedita dolor necessitatibus deserunt nemo.</p>
+        </div>
+
+        <div class="job job-2">
+          <h3 class="work">Graphic Desiner</h3>
+          <h6>Arts and Illustrations</h6>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates perferendis totam enim. Nesciunt porro dolores
+            expedita dolor necessitatibus deserunt nemo.</p>
+        </div>
+
+        <div class="job job-3">
+          <h3 class="work">Programming</h3>
+          <h6>Python</h6>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates perferendis totam enim. Nesciunt porro dolores
+            expedita dolor necessitatibus deserunt nemo.</p>
         </div>
       </div>
-    <br>
-    <amp-social-share class="rounded" type="email"></amp-social-share> 
-    <amp-social-share class="rounded" type="facebook" data-param-app_id="254325784911610"></amp-social-share>
-    <amp-social-share class="rounded" type="linkedin"></amp-social-share>
-    <amp-social-share class="rounded" type="twitter"></amp-social-share>
-    <amp-social-share class="rounded" type="whatsapp"></amp-social-share>
-  </center>
-</section>
+  </div>
+
+  <section class="projects section-light">
+    <center><h1 class="title1">PROJECTS</h1>
+      <h3 class="title2">Check out some of my amazing works</h3>
+    </center>
+    <amp-carousel id="carousel-with-preview" width="150" height="100" layout="responsive" type="slides">
+      <amp-img on="tap:lightbox1" role="button" tabindex="0" src="https://i.pinimg.com/originals/f6/0d/79/f60d799396cb3e140aecf3e5ad12c207.jpg" width="150" height="100" layout="responsive" alt="ajith"></amp-img>
+      <amp-img src="https://i.guim.co.uk/img/media/8f02bb49224d9a94699b75213664bf898617c062/0_288_5315_3189/master/5315.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=89721e1224115e05a05203a62cf93f7c" width="150" height="100" layout="responsive" alt="wolf"></amp-img>
+      <amp-img on="tap:lightbox1" role="button" tabindex="0" src="https://i.ytimg.com/vi/pZvBGsZy7qM/maxresdefault.jpg" width="150" height="100" layout="responsive" alt="manuplation"></amp-img>
+      <amp-img src="https://i.ytimg.com/vi/bvSwznwqlHU/maxresdefault.jpg" width="150" height="100" layout="responsive" alt="arduino"></amp-img>
+      <amp-img on="tap:lightbox1" role="button" tabindex="0" src="https://d3b8hk1o42ev08.cloudfront.net/wp-content/uploads/2018/07/microprocessor-chip-752x440.jpg" width="150" height="100" layout="responsive" alt="project"></amp-img>
+      <amp-img on="tap:lightbox1" role="button" tabindex="0" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSlwGTTbu_mawQJTBEYEY_wD2yTODBYCL5egKxTa_CM5vcGQ40P&usqp=CAU" width="150" height="100"  layout="responsive" alt="raspberry"></amp-img>
+    </amp-carousel>
+      <br>
+    <div class="carousel">
+      <center>
+        <button on="tap:carousel-with-preview.goToSlide(index=0)">
+          <amp-img src="https://i.pinimg.com/originals/f6/0d/79/f60d799396cb3e140aecf3e5ad12c207.jpg" width="90" height="75" alt="ajith"></amp-img>
+        </button>
+        <button on="tap:carousel-with-preview.goToSlide(index=1)">
+          <amp-img src="https://i.guim.co.uk/img/media/8f02bb49224d9a94699b75213664bf898617c062/0_288_5315_3189/master/5315.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=89721e1224115e05a05203a62cf93f7c" width="90" height="75" alt="wolf"></amp-img>
+        </button>
+        <button on="tap:carousel-with-preview.goToSlide(index=2)">
+          <amp-img src="https://i.ytimg.com/vi/pZvBGsZy7qM/maxresdefault.jpg" width="90" height="75" alt="manuplation"></amp-img>
+        </button>
+        <button on="tap:carousel-with-preview.goToSlide(index=3)">
+          <amp-img src="https://i.ytimg.com/vi/bvSwznwqlHU/maxresdefault.jpg" width="90" height="75" alt="arduino"></amp-img>
+        </button>
+        <button on="tap:carousel-with-preview.goToSlide(index=4)">
+          <amp-img src="https://d3b8hk1o42ev08.cloudfront.net/wp-content/uploads/2018/07/microprocessor-chip-752x440.jpg" width="90" height="75" alt="project"></amp-img>
+        </button>
+        <button on="tap:carousel-with-preview.goToSlide(index=1)">
+          <amp-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSlwGTTbu_mawQJTBEYEY_wD2yTODBYCL5egKxTa_CM5vcGQ40P&usqp=CAU" width="90" height="75" alt="raspberry"></amp-img>
+        </button>
+      </center>
+    </div>
+  </section>
+
+  <section class="video section-dark">
+    <center><h1 class="title3">Just Videos</h1>
+       <h3 class="title4">Visualize the concept</h3>
+    </center>
+      <amp-youtube width="480" height="270" layout="responsive" data-videoid="lBTCB7yLs8Y">
+  </section>
+  Don't hit the like button
+  <amp-state id="favoriteWithCount" credentials="include" src="https://amp.dev/documentation/examples/interactivity-dynamic-content/favorite_button/favorite-with-count">
+    </amp-state>
+    <form class="favorite-button" method="post" action-xhr="https://amp.dev/documentation/examples/interactivity-dynamic-content/favorite_button/favorite-with-count" target="_top" on="submit:AMP.setState({
+                   previousFavoriteWithCount: favoriteWithCount,
+                   favoriteWithCount: {
+                     value: !favoriteWithCount.value,
+                     count: favoriteWithCount.count + (favoriteWithCount.value ? -1 : 1),
+                   }
+                 }),
+                 favorite-failed-message.hide;
+             submit-error:AMP.setState({
+                   value: !favoriteWithCount.value,
+                   favoriteWithCount: previousFavoriteWithCount.count
+                 }),
+                 favorite-failed-message.show">
+      <amp-list width="200" height="56" credentials="include" items="." single-item noloading src="https://amp.dev/documentation/examples/interactivity-dynamic-content/favorite_button/favorite-with-count" binding="always">
+        <template type="amp-mustache">
+          <div class="favorite-container">
+            <input type="submit" class="{{#value}}heart-fill{{/value}}{{^value}}heart-border{{/value}}" [class]="favoriteWithCount.value ? 'heart-fill' : 'heart-border'" value aria-label="Favorite Toggle">
+            <div class="favorite-count" [text]="favoriteWithCount.count ? favoriteWithCount.count : ''">{{count}}</div>
+          </div>
+        </template>
+        <div placeholder>
+          <div class="favorite-container">
+            <input type="submit" disabled class="heart-loading" value aria-label="favorite placeholder">
+            <div class="favorite-count loading">0</div>
+          </div>
+        </div>
+      </amp-list>
+    </form>
+
+  <section class="form section-dark">
+    <center>
+      <h2 class="sample-heading">Want to collaborate</h2>
+      <form class="sample-form" method="post" action-xhr="/documentation/examples/api/submit-form-input-text-xhr" target="_top" custom-validation-reporting="show-first-on-submit">
+        <input type="text" id="show-first-on-submit-name" name="name" placeholder=" &nbsp;Name..." required pattern="\p{L}+\s\p{L}+">
+          <span visible-when-invalid="valueMissing" validation-for="show-first-on-submit-name"></span>
+          <span visible-when-invalid="patternMismatch" validation-for="show-first-on-submit-name">
+          Please enter your first and last name separated by a space (e.g. Jane Miller)
+          </span>
+        <br>
+        <br>
+        <input type="email" id="show-first-on-submit-email" name="email" placeholder=" &nbsp;Email..." required>
+          <span visible-when-invalid="valueMissing" validation-for="show-first-on-submit-email"></span>
+          <span visible-when-invalid="typeMismatch" validation-for="show-first-on-submit-email"></span>
+        <br>
+        <br>
+        <input type="submit"value="&nbsp;Collaborate&nbsp;">
+          <div submit-success>
+            <template type="amp-mustache">
+             Success! Thanks {{name}} for filling the contact form. I will try to reach to you as soon as possible.
+            </template>
+          </div>
+        <div submit-error>
+          <template type="amp-mustache">
+            Error! Please try again
+          </template>
+        </div>
+      </form>
+      <br>
+      <br>
+      <div class="share">
+        <amp-social-share class="rounded" type="email"></amp-social-share> &nbsp;&nbsp;
+        <amp-social-share class="rounded" type="facebook" data-param-app_id="254325784911610"></amp-social-share>&nbsp;&nbsp;
+        <amp-social-share class="rounded" type="linkedin"></amp-social-share>&nbsp;&nbsp;
+        <amp-social-share class="rounded" type="twitter"></amp-social-share>&nbsp;&nbsp;
+        <amp-social-share class="rounded" type="whatsapp"></amp-social-share>&nbsp;&nbsp;
+      </div>
+    </center>
+  </section>
 </body>
 </html>
