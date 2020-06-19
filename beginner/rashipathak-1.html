@@ -26,16 +26,16 @@
         font-size: large;
         width: auto;
         margin: 0;
-        padding: 0;
+        padding: 5px;
         font-family: 'Raleway', sans-serif;
       }
       amp-img {
         background-color: gray;
         border: 1px solid black;
-        padding: 1px;
+        padding: 3px;
         border-radius: 1px;
         margin: 0.5px;
-        width: 20%;
+        width: 30%;
         height: 0 auto;
         
       }
@@ -46,7 +46,7 @@
     <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
     <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
     <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
-
+	<script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
     
 
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway">
@@ -61,6 +61,7 @@
       <div role="button" on="tap:sidebar1.toggle" tabindex="0" class="hamburger">☰</div>
       <div class="site-name"></div>
       
+      
     </header>
     <amp-sidebar id="sidebar1" layout="nodisplay" side="left">
       <div role="button" aria-label="close sidebar" on="tap:sidebar1.toggle" tabindex="0" class="close-sidebar">✕</div>
@@ -72,23 +73,26 @@
     </amp-sidebar> 
      
           <div class="section">
-              Hi!<br>
-              I'm Rashi Pathak.
+              <p><h3>Hi!</h3>
+              <h4>I'm Rashi Pathak.</h4></p>
+              
           </div>
       
       
           <div class="section">
               <ul>
-                  <li><strong>Graduation:</strong>IERT'23</li>
-                  <li><strong>Intermediate:</strong>St.Fidelis College</li>
-                  <li><strong>High School:</strong>St.Fidelis College</li>
+                  <li><h2>Graduation:</h2>IERT'23</li>
+                  <li><h2>Intermediate:</h2>St.Fidelis College</li>
+                  <li><h2>High School:</h2>St.Fidelis College</li>
 
               </ul>
               <amp-img lightbox
   src="iert.jpg"
   width="300"
   height="200"
+  
   layout="responsive"></amp-img>
+   
 <p class="paragraph">IERT</p>
 <amp-img lightbox
   src="sfc.jpg"
@@ -97,6 +101,64 @@
   layout="responsive"></amp-img>
 <p class="paragraph">St. Fidelis College</p>
           </div>
+          <p><h1>My Favourite Food</h1> </p>
+  <amp-img src="chilli-potato.jpg"
+  width="200"
+  [width]="myImageDimension.width"
+  height="100"
+  [height]="myImageDimension.height">
+</amp-img>
+<button on="tap:AMP.setState({
+                    myImageDimension: {
+                      width: 400,
+                      height: 200
+                    }
+                  })">
+  Change size
+</button>
+<amp-img src="pizza.jpg"
+width="200"
+[width]="myImageDimension.width"
+height="100"
+[height]="myImageDimension.height">
+</amp-img>
+<button on="tap:AMP.setState({
+                  myImageDimension: {
+                    width: 400,
+                    height: 200
+                  }
+                })">
+Change size
+</button>
+<amp-img src="freak-shake.jpg"
+width="200"
+[width]="myImageDimension.width"
+height="100"
+[height]="myImageDimension.height">
+</amp-img>
+<button on="tap:AMP.setState({
+                  myImageDimension: {
+                    width: 400,
+                    height: 200
+                  }
+                })">
+Change size
+</button>
+<amp-img src="chocolate.jpg"
+width="200"
+[width]="myImageDimension.width"
+height="100"
+[height]="myImageDimension.height">
+</amp-img>
+<button on="tap:AMP.setState({
+                  myImageDimension: {
+                    width: 400,
+                    height: 200
+                  }
+                })">
+                Change size
+                </button>
+               
       
       <nav title="Contact">
           <div class="section">
@@ -126,11 +188,12 @@
             </template>
           </div>
         </form>
-              <amp-social-share type="email"  data-param-text="Email"></amp-social-share>
+             <div> <amp-social-share type="email"  data-param-text="Email"></amp-social-share>
 <amp-social-share type="linkedin"  data-param-text="LinkedIn"></amp-social-share>
 <amp-social-share type="twitter" data-param-text="Twitter"></amp-social-share>
-          </div>
+          </div></div>
       </nav>
 
   </body>
 </html>
+
