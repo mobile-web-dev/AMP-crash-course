@@ -14,7 +14,8 @@
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
     <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
     <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
-
+    <script custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js" async></script>
+    <script custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js" async></script>
 
 
 
@@ -286,7 +287,7 @@
           validation-for="name5"></span>
         <span visible-when-invalid="patternMismatch"
           validation-for="name5">
-          Please enter your first and last name separated by a space (e.g. Jane Miller)
+          Please enter your first and last name separated by a space (e.g. John Snow)
         </span>
       </label>
                     <br>
@@ -319,6 +320,23 @@
             <amp-social-share type="facebook" data-param-text="Some URL" border-radius="50%">
             </amp-social-share>
         </div>
+        <div>
+            <amp-video [controls]="controls" width="640" height="360" layout="responsive" poster="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/hbo-got-emiliaclarke-1572468996.jpg?crop=1.00xw:0.892xh;0,0&resize=480:*">
+                <source src="https://www.youtube.com/watch?v=TZE9gVF1QbA" type="video/webm" />
+                <source src="https://www.youtube.com/watch?v=TZE9gVF1QbA" type="video/mp4" />
+                <div fallback>
+                    <p>This browser does not support the video element.</p>
+                </div>
+            </amp-video>
+            <button on="tap:AMP.setState({ controls: true })">
+  Allow access
+</button>
+            <button on="tap:AMP.setState({ controls: false })">
+  Do not disturbe
+</button>
+        </div>
+        <hr>
+        <hr>
 </body>
 
 </html>
