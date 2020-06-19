@@ -14,7 +14,10 @@
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
     <script async custom-element="amp-image-lightbox" src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
     <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
-
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
+    <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+    <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
 
     <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
@@ -25,10 +28,16 @@
         background-size: 60%;
       }
 
-      body.h1{
-        font-family: sans-serif;
+      h1{
+        font-family: sans;
         line-height: 1.6rem;
         padding: 20px;
+        text-align: center;
+      }
+
+      h3{
+        font-family:"Comic Sans MS", "Comic Sans", cursive;
+        text-align: center;
       }
 
      .sidebar {
@@ -67,19 +76,68 @@
            font-family: cursive;
          }
 
-    </style>
+    #carousel-with-preview amp-img {
+      transition: opacity 1s ease-in-out;
+    }
+
+    .carousel-preview {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+     }
+
+    .carousel-preview > * {
+      margin: 0.5rem;
+      padding: 0;
+    }
+
+    .carousel-preview [selected] {
+      opacity: 0.5;
+      outline: none;
+    }
+
+    .carousel-preview .amp-carousel-slide {
+      margin: 0.5rem;
+      padding: 0;
+    }
+    .carousel-preview button:active {
+      opacity: 0.5;
+    }
+
+    .interest {
+    height: 100px;
+    max-width: 400px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+    background: #FAFAFC;
+    border-radius: 2px;
+    margin: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .interest amp-img, .interest .image-placeholder {
+    margin-right: 1rem;
+  }
+
+  .interest .image-placeholder {
+    width: 150px;
+    height: 100px;
+    background-color: #999;
+  }
+
+  </style>
 
   </head>
   <body>
 
     <div>
-        <h2>Personal Portfolio [Dummy]</h2>
+        <h1>Personal Portfolio</h1>
         <button on="tap:sidebar-left.toggle">☰</button>
     </div><br>
 
     <amp-sidebar class="sidebar" id="sidebar-left" layout="nodisplay" side="left">
       <button on="tap:sidebar-left.toggle">✕</button>
-      <nav class="nav">
+      <nav>
                   <ul>
                     <li>
                           <h3>About Me</h3>
@@ -115,9 +173,17 @@
       layout="responsive">
     </amp-img><br>
 
-    <h1>Something about me :- </h1>
+    <h3>Something about me </h3>
 
-    <amp-carousel width="1024" height="480" layout="responsive" type="slides" autoplay id="images">
+    <amp-carousel
+      controls width="1024"
+      height="480"
+      layout="responsive"
+      type="slides"
+      [slide]="selectedSlide"
+      on="slideChange:AMP.setState({ selectedSlide: event.index }), carouselWithPreviewSelector.toggle(index=event.index, value=true)"
+      id="images">
+
       <amp-img
         src="https://officevibe.com/wp-content/uploads/2014/11/The-Rise-Of-The-_Smart-Creative_.png"
         layout="fill">
@@ -168,13 +234,50 @@
         </amp-img>
     </amp-carousel>
 
-    <h1> To know more on introducing yourself in interviews :- </h1><br>
+    <amp-selector id="carouselWithPreviewSelector" class="carousel-preview" on="select:images.goToSlide(index=event.targetOption)" layout="container">
+      <amp-img option="0" selected src="https://officevibe.com/wp-content/uploads/2014/11/The-Rise-Of-The-_Smart-Creative_.png" width="60" height="40"></amp-img>
+      <amp-img option="1" src="https://richestsoft.com/blog/wp-content/uploads/2019/02/Android-app-development.jpg" width="60" height="40"></amp-img>
+      <amp-img option="2" src="https://www.rcrwireless.com/wp-content/uploads/2018/07/70705836_l-1.jpg" width="60" height="40"></amp-img>
+      <amp-img option="3" src="https://plk.s6img.com/society6/img/InOW7FuIxVTT5VdZTEFcKAhEeqU/w_700/prints/~artwork/s6-0053/a/22750924_3220882/~~/tech-lover-prints.jpg?wait=0&attempt=0" width="60" height="40"></amp-img>
+    </amp-selector>
+
+    <center><p>Slide: <span [text]="+selectedSlide + 1">1</span>/4</p></center>
+
+    <h3>My Interest includes </h3>
+    <amp-list id="amp-list-placeholder" noloading layout="fixed-height" height="450" src="https://extendsclass.com/api/json-storage/bin/edccfaa" binding="no">
+    <div placeholder>
+      <div class="interest">
+        <div class="image-placeholder"></div>
+        <div>Loading...</div>
+      </div>
+      <div class="interest">
+        <div class="image-placeholder"></div>
+        <div>Loading...</div>
+      </div>
+      <div class="interest">
+        <div class="image-placeholder"></div>
+        <div>Loading...</div>
+      </div>
+    </div>
+    <template type="amp-mustache">
+        <div class="interest">
+            <amp-img width="150" height="100" alt="{{name}}" src="{{img}}"></amp-img>
+            <div>
+              <div>{{name}}</div>
+            </div>
+        </div>
+    </template>
+  </amp-list>
+
+
+
+    <h3> My favourite motivational video </h3><br>
 
     <amp-youtube
         width="480"
         height="270"
         layout="responsive"
-        data-videoid="tEEerFGhmFE"
+        data-videoid="PgQ3sW0BWfI"
         autoplay>
     </amp-youtube>
 
@@ -184,37 +287,38 @@
         <amp-social-share
             class="rounded"
             type="email"
-            width="60"
-            height="60"
+            width="50"
+            height="50"
             data-param-text="Check out my Personal Portfolio !"
             data-param-url="">
         </amp-social-share>
         <amp-social-share
             class="rounded"
             type="linkedin"
-            width="60"
-            height="60"
+            width="50"
+            height="50"
             data-param-text="Check out my Personal Portfolio to know more about me !"
             data-param-url="">
         </amp-social-share>
         <amp-social-share
             class="rounded"
             type="twitter"
-            width="60"
-            height="60"
+            width="50"
+            height="50"
             data-param-text="Check out my Personal Portfolio to know more about me !"
             data-param-url="">
         </amp-social-share>
         <amp-social-share
             class="rounded"
             type="whatsapp"
-            width="60"
-            height="60"
+            width="50"
+            height="50"
             data-param-text="Check out my Personal Portfolio to know more about me !"
             data-param-url="">
         </amp-social-share>
     </div>
 
     <amp-social-share type="system"></amp-social-share>
+
   </body>
 </html>
