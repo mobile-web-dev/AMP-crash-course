@@ -1,0 +1,43 @@
+{
+    "bookendVersion": "v1.0",
+    "shareProviders": [
+      "facebook",
+      "twitter",
+      "email"
+    ],
+    "components": [
+      {
+        "type": "heading",
+        "text": "More to read"
+      },
+      {
+        "type": "small",
+        "title": "Learn about cats",
+        "url": "https://wikipedia.org/wiki/Cat",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Cat_poster_1.jpg/390px-Cat_poster_1.jpg"
+      },
+      {
+        "type": "landscape",
+        "title": "Learn about border collies",
+        "url": "https://wikipedia.org/wiki/Border_Collie",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/BORDER_COLLIE%2C_Simaro_Million_Dollar_Baby_%2824290879465%29_2.jpg/330px-BORDER_COLLIE%2C_Simaro_Million_Dollar_Baby_%2824290879465%29_2.jpg",
+        "category": "Dogs"
+      },
+      {
+        "type": "portrait",
+        "title": "Learn about macaws",
+        "url": "https://wikipedia.org/wiki/Macaw",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Scarlet_Macaw.jpg/800px-Scarlet_Macaw.jpg",
+        "category": "birds"
+      },
+      {
+        "type": "cta-link",
+        "links": [
+          {
+            "text": "Learn more",
+            "url": "https://www.ampproject.org/stories/"
+          }
+        ]
+      }
+    ]
+  }
