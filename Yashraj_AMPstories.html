@@ -1,0 +1,198 @@
+
+<!doctype html>
+<html amp lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-anim" src="https://cdn.ampproject.org/v0/amp-anim-0.1.js"></script>
+    <script async custom-element="amp-audio" src="https://cdn.ampproject.org/v0/amp-audio-0.1.js"></script>
+    <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
+    <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+    <title>Game of Thrones-AMP Stories</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <link rel="canonical" href="https://amp.dev/documentation/examples/introduction/stories_in_amp/index.html">
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+        
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+        
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+        
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+        
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+        
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+            to {
+                visibility: visible
+            }
+        }
+    </style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+        amp-story {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI ", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji ", "Segoe UI Emoji ", "Segoe UI Symbol ";
+        }
+        
+        amp-story-page * {
+            color: white;
+            text-align: center;
+        }
+        
+        [template=thirds] {
+            padding: 0;
+        }
+        
+        .tt {
+            color: #4285f4;
+        }
+        
+        .blue {
+            background-color: #4285f4;
+            opacity: 0.5;
+        }
+        
+        .white {
+            background-color: white;
+            text-decoration-color: #4285f4;
+            opacity: 0.5;
+        }
+        
+        .lan {
+            color: #fbbc05;
+            background-color: black;
+            opacity: 0.8;
+        }
+        
+        .tar {
+            background-color: black;
+            color: red;
+            opacity: 0.8;
+        }
+        
+        .tar3 {
+            background-color: #4285f4;
+            opacity: 0.5;
+        }
+        
+        .gg {
+            color: #4285f4;
+        }
+    </style>
+</head>
+
+<body>
+
+    <amp-story standalone title="Game of Thrones" publisher="Hudson.inc" publisher-logo-src="https://wallpapermemory.com/uploads/512/game-of-thrones-wallpaper-full-hd-1920x1080-383414.jpg" poster-portrait-src="https://wallpapermemory.com/uploads/512/game-of-thrones-wallpaper-full-hd-1920x1080-383414.jpg"
+        poster-square-src="https://wallpapermemory.com/uploads/512/game-of-thrones-wallpaper-full-hd-1920x1080-383414.jpg" poster-landscape-src="https://wallpapermemory.com/uploads/512/game-of-thrones-wallpaper-full-hd-1920x1080-383414.jpg">
+
+        <amp-story-page id="page-1">
+            <amp-story-grid-layer template="fill">
+                <amp-img src="https://htc-wallpaper.com/wp-content/uploads/2015/05/Game-of-Thrones-Sword-576x1024.jpg" width="720" height="1280" layout="responsive">
+                </amp-img>
+            </amp-story-grid-layer>
+            <amp-story-grid-layer template="vertical">
+                <h1 animate-in="fade-in" animate-in-delay="0.6s" class="tt"><i>Welcome to</i></h1>
+                <h2 animate-in="twirl-in" animate-in-delay="1.2s">Stories of</h2>
+            </amp-story-grid-layer>
+            <amp-story-grid-layer template="thirds">
+                <amp-audio animate-in="fly-in-bottom" animate-in-delay="2s" grid-area="lower-third" src="https://storage.googleapis.com/media-session/sintel/snow-fight.mp3" artwork="https://storage.googleapis.com/media-session/sintel/artwork-512.png" title="Snow Fight"
+                    album="Jan Morgenstern" artist="Huds0nINC" height="50" width="auto" controls>
+                    <div fallback>
+                        <h2><i>A song of Ice & Fire</i></h2>
+                    </div>
+                </amp-audio>
+            </amp-story-grid-layer>
+        </amp-story-page>
+
+        <amp-story-page id="page-2">
+            <amp-story-grid-layer template="fill">
+                <amp-anim width="245" height="300" src="https://media2.giphy.com/media/cPfFmx04dYku76O0te/giphy.gif" alt="an animation">
+                </amp-anim>
+            </amp-story-grid-layer>
+            <amp-story-grid-layer template="thirds">
+                <h1 animate-in="fade-in" animate-in-delay="0.6s" grid-area="upper-third" class="gg">Several houses</h1>
+                <h1 animate-in="fly-in-bottom" animate-in-delay="1.2s" grid-area="middle-third" class="tar3"> proving their Legacy</h1>
+                <h1 animate-in="fly-in-bottom" animate-in-delay="2.0s" grid-area="lower-third" class="blue">For The Throne</h1>
+            </amp-story-grid-layer>
+        </amp-story-page>
+
+
+        <amp-story-page id="page-3">
+            <amp-story-grid-layer template="fill">
+                <amp-anim width="245" height="300" src="https://thumbs.gfycat.com/PassionateGlitteringAmurstarfish-size_restricted.gif" alt="an animation" object-position="53% 50%">
+                </amp-anim>
+            </amp-story-grid-layer>
+            <amp-story-grid-layer template="thirds">
+                <h1 animate-in="fly-in-bottom" grid-area="upper-third" animate-in-delay="0.5s">
+                    House Stark </h1>
+            </amp-story-grid-layer>
+        </amp-story-page>
+
+        <amp-story-page id="page-4">
+            <amp-story-grid-layer template="fill">
+                <amp-img src="https://seeklogo.com/images/H/house-lannister-logo-1BD88EA268-seeklogo.com.png" animate-in="fade-in" animate-in-delay="0.5s" width="1080" height="1440" layout="responsive">
+                </amp-img>
+            </amp-story-grid-layer>
+            <amp-story-grid-layer template="thirds">
+                <h1 animate-in="fly-in-bottom" grid-area="upper-third" animate-in-delay="1.2s">
+                    House Lannister </h1>
+                <h1 animate-in="fly-in-bottom" grid-area="lower-third" animate-in-delay="1.8s" class="lan">
+                    <i>Hear me Roar</i>
+                </h1>
+            </amp-story-grid-layer>
+            <amp-story-page-attachment layout="nodisplay" href="https://www.youtube.com/watch?v=DfWRuO7UwRI"></amp-story-page-attachment>
+        </amp-story-page>
+
+        <amp-story-page id="page-5">
+            <amp-story-grid-layer template="fill">
+                <amp-img src="https://wallpaperplay.com/walls/full/e/b/3/63765.jpg" animate-in="fade-in" animate-in-delay="0.3s" layout="responsive" object-position="48% 50%">
+                </amp-img>
+            </amp-story-grid-layer>
+            <amp-story-grid-layer template="thirds">
+                <h1 animate-in="fly-in-bottom" grid-area="upper-third" animate-in-delay="1.0s">
+                    House Targaryen</h1>
+                <h1 animate-in="fly-in-bottom" grid-area="lower-third" animate-in-delay="1.8s" class="tar">
+                    Fire and Blood
+            </amp-story-grid-layer>
+            <amp-story-page-attachment layout="nodisplay" data-cta-text="Read more" href="https://www.youtube.com/watch?v=ZA6AVg_oWK0"></amp-story-page-attachment>
+        </amp-story-page>
+    </amp-story>
+  </body>
+</html>
