@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script
+      async
+      custom-element="amp-story"
+      src="https://cdn.ampproject.org/v0/amp-story-1.0.js"
+    ></script>
+    <title>How AMP Works</title>
+    <link rel="canonical" href="/index.html" />
+    <meta
+      name="viewport"
+      content="width=device-width,minimum-scale=1,initial-scale=1"
+    />
+    <style amp-boilerplate>
+      body {
+        -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+      }
+      @-webkit-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-moz-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-ms-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @-o-keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+      @keyframes -amp-start {
+        from {
+          visibility: hidden;
+        }
+        to {
+          visibility: visible;
+        }
+      }
+    </style>
+    <noscript
+      ><style amp-boilerplate>
+        body {
+          -webkit-animation: none;
+          -moz-animation: none;
+          -ms-animation: none;
+          animation: none;
+        }
+      </style></noscript
+    >
+    <style amp-custom>
+        /* any custom styles go here. */
+        amp-img {
+          border: 5px solid black;
+        }
+  
+        amp-img.grey-placeholder {
+          background-color: grey;
+        }
+        #my-first-page h1{
+            color: white;
+            font-family:cursive;
+            margin-top:-30px;
+        }
+        #my-second-page h1{
+            color: yellow;
+            font-family:cursive;
+            margin-top:-45px;   
+        }
+        #my-second-page p{
+            color: yellow;
+            font-family:cursive;
+            margin-top: 500px;
+        }
+        #my-third-page h1{
+            color: #4d65eb;
+            font-family:cursive;
+            margin-top:-70px;   
+        }
+        #my-third-page p{
+            color: #4d65eb;
+            font-family:cursive;
+            margin-top: 450px;
+        }
+        #my-fourth-page h1{
+            color: #ebac4d;
+            font-family:cursive;
+            margin-top:-70px; 
+            font-size: 30px;;  
+        }
+        #my-fourth-page p{
+            color: #ebac4d;
+            font-family:cursive;
+            margin-top: 480px;
+        }
+        #my-fifth-page h1{
+            color: yellow;
+            font-family:cursive;
+            margin-top:-45px;   
+        }
+        #my-fifth-page p{
+            color: yellow;
+            font-family:cursive;
+            margin-top: 500px;
+        }
+        #my-sixth-page h1{
+            color: white;
+            font-family:cursive;
+            margin-top:-45px;   
+        }
+        #my-sixth-page p{
+            color: white;
+            font-family:cursive;
+            margin-top: 500px;
+        }
+        #my-seventh-page h1{
+            color: #38361d;
+            font-family:cursive;
+            margin-top:-45px;   
+        }
+        #my-seventh-page p{
+            color: #38361d;
+            font-family:cursive;
+            margin-top: 450px;
+        }
+        #my-eigth-page h1{
+            color: #38361d;
+            font-family:cursive;
+            margin-top:-45px;   
+        }
+        #my-eigth-page p{
+            color: #38361d;
+            font-family:cursive;
+            margin-top: 450px;
+        }
+        #my-ninth-page h1{
+            color: #38361d;
+            font-family:cursive;
+            margin-top:-45px;   
+        }
+        #my-ninth-page p{
+            color: #38361d;
+            font-family:cursive;
+            margin-top: 450px;
+        }
+        #my-tenth-page h1{
+            color: #38361d;
+            font-family:cursive;
+            margin-top:-45px;   
+        }
+        #my-tenth-page p{
+            color: #38361d;
+            font-family:cursive;
+            margin-top: 480px;
+        }
+        #my-eleventh-page h1{
+            color: #38361d;
+            font-family:cursive;
+            margin-top:-45px;   
+        }
+        #my-eleventh-page p{
+            color: #38361d;
+            font-family:cursive;
+            margin-top: 525px;
+        }
+            
+      </style>
+  </head>
+  <body>
+    <amp-story
+      standalone
+      title="How AMP Works"
+      publisher="Habeeba Naaz"
+      publisher-logo-src="https://example.com/logo/1x1.png"
+      poster-portrait-src="https://example.com/my-story/poster/3x4.jpg"
+    >
+      <amp-story-page id="my-first-page">
+        <amp-story-grid-layer template="fill">
+          <amp-img
+            src="Images/cover-page.png"
+            width="900"
+            height="1600"
+          >
+          </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical">
+          <h1>How AMP Works</h1>
+        </amp-story-grid-layer>
+      </amp-story-page>
+      <amp-story-page id="my-second-page">
+        <amp-story-grid-layer template="fill">
+          <amp-img
+            src="Images\js.jpg"
+            width="700"
+            height="1600"
+            layout="responsive"
+          >
+          </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical">
+          <h1>Execute all AMP JavaScript asynchronously</h1>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical">
+          <p>JavaScript is powerful,but it can also block DOM construction and delay page rendering. To keep JavaScript from delaying page rendering, AMP allows only asynchronous JavaScript.</p>
+        </amp-story-grid-layer>
+      </amp-story-page>
+      <amp-story-page id="my-third-page">
+        <amp-story-grid-layer template="fill">
+          <amp-img
+            src="Images/size.png"
+            width="700"
+            height="1600"
+            layout="responsive"
+          >
+          </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical">
+          <h1>Size all resources statically</h1>
+        </amp-story-grid-layer> 
+        <amp-story-grid-layer template="vertical">
+          <p>External resources such as images, ads or iframes must state their size in the HTML so that AMP can determine each element’s size and position before resources are downloaded. AMP loads the layout of the page without waiting for any resources to download.</p>
+        </amp-story-grid-layer>  
+      </amp-story-page>
+      <amp-story-page id="my-fourth-page">
+        <amp-story-grid-layer template="fill">
+          <amp-img
+            src="Images\externalMechanism.png"
+            width="700"
+            height="1600"
+            layout="responsive"
+          >
+          </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical">
+          <h1>Don’t let extension mechanisms block rendering</h1>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical">
+            <p>AMP supports extensions for things like lightboxes, instagram embeds, tweets, etc. While these require additional HTTP requests, those requests do not block page layout and rendering.</p>
+          </amp-story-grid-layer>  
+      </amp-story-page>
+      <amp-story-page id="my-fifth-page">
+        <amp-story-grid-layer template="fill">
+          <amp-img
+            src="Images\js.jpg"
+            width="700"
+            height="1600"
+            layout="responsive"
+          >
+          </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical">
+          <h1>Keep all third-party JavaScript out of the critical path</h1>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical">
+            <p>AMP pages allow third-party JavaScript but only in sandboxed iframes. By restricting them to iframes, they can’t block the execution of the main page.</p>
+          </amp-story-grid-layer>
+      </amp-story-page>
+      <amp-story-page id="my-sixth-page">
+        <amp-story-grid-layer template="fill">
+          <amp-img
+            src="Images/css.webp"
+            width="700"
+            height="1600"
+            layout="responsive"
+          >
+          </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical">
+          <h1>All CSS must be inline and size-bound</h1>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical">
+            <p>CSS blocks all rendering, it blocks page load, and it tends to get bloated. In AMP HTML pages, only inline styles are allowed. Also, the inline style sheet has a maximum size of 50 kilobytes.</p>
+          </amp-story-grid-layer>
+      </amp-story-page>
+      <amp-story-page id="my-seventh-page">
+        <amp-story-grid-layer template="fill">
+          <amp-img
+            src="Images/Fonts.png"
+            width="700"
+            height="1600"
+            layout="responsive"
+          >
+          </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical">
+          <h1>Font triggering must be efficient</h1>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical">
+            <p>Web fonts are super large, so web font optimization is crucial to performance.  All JS in AMP has the async attribute and only inline style sheets are allowed; there’s no HTTP requests blocking the browser from downloading fonts.</p>
+          </amp-story-grid-layer>
+      </amp-story-page>
+      <amp-story-page id="my-eigth-page">
+        <amp-story-grid-layer template="fill">
+          <amp-img
+            src="Images/recalculation.gif"
+            width="700"
+            height="1600"
+            layout="responsive"
+          >
+          </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical">
+          <h1>Minimize style recalculations</h1>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical">
+            <p>Each time you measure something, it triggers style recalculations which are expensive because the browser has to layout the entire page. In AMP pages, all DOM reads happen first before all the writes. This ensures there’s the max of one recalc of styles per frame.</p>
+          </amp-story-grid-layer>
+      </amp-story-page>
+      <amp-story-page id="my-ninth-page">
+        <amp-story-grid-layer template="fill">
+          <amp-img
+            src="Images\GPU.png"
+            width="700"
+            height="1600"
+            layout="responsive"
+          >
+          </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical">
+          <h1>Only run GPU-accelerated animations</h1>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical">
+           <p>The rules for animation-related CSS ensure that animations can be GPU-accelerated. Specifically, AMP only allows animating and transitioning on transform and opacity so that page layout isn’t required.</p>
+          </amp-story-grid-layer>
+      </amp-story-page>
+      <amp-story-page id="my-tenth-page">
+        <amp-story-grid-layer template="fill">
+          <amp-img
+            src="Images\prioritize.png"
+            width="700"
+            height="1600"
+            layout="responsive"
+          >
+          </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical">
+          <h1>Prioritize resource loading</h1>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical">
+            <p>When AMP downloads resources, it optimizes downloads so that the currently most important resources are downloaded first. AMP also prefetches lazy-loaded resources.</p>
+        </amp-story-grid-layer>
+      </amp-story-page>
+      <amp-story-page id="my-eleventh-page">
+        <amp-story-grid-layer template="fill">
+          <amp-img
+            src="Images\instant.gif"
+            width="700"
+            height="1600"
+            layout="responsive"
+          >
+          </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical">
+          <h1>Load pages in an instant</h1>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical">
+            <p>The new preconnect API is used heavily to ensure HTTP requests are as fast as possible when they are made.</p>
+          </amp-story-grid-layer>
+      </amp-story-page>
+      <amp-story-bookend src="bookendv1.json" layout="nodisplay">
+      </amp-story-bookend>
+    </amp-story>
+  </body>
+</html>
