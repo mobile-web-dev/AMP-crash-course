@@ -11,9 +11,13 @@
     <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
     <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
     <script async custom-element="amp-image-lightbox" src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js"></script>
+    <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
     <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
     <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
     <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+    <script async custom-element="amp-animation" src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
+    <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script>
+    <script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Kreon&display=swap" rel="stylesheet">
     <link rel="canonical" href="mayank_goyal.html">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
@@ -53,6 +57,7 @@
         padding-top: 15px;
         margin-left: 15px;
         margin-bottom: 0px;
+        margin-right: 900px;
       }
       .navbar-trigger1{
         padding-left: 15px;
@@ -69,8 +74,12 @@
         align-items: center;
       }
       li{
-        margin: .6rem;
+        padding-left: 35px;
         text-decoration: none;
+      }
+      .links{
+        text-decoration: none;
+        color:#282e34;
       }
       ul{
         list-style: none;
@@ -83,7 +92,7 @@
         line-height: 3;
       }
       .sidebar{
-        padding-right: 150px;
+        padding-right: 120px;
         color: #333;
         font-size: 15px;
       }
@@ -161,6 +170,46 @@
         font-size: 20px;
         color: #FBB117;
       }
+      .projects{
+        margin-left: 80px;
+        margin-right: 80px;
+        text-align: justify;
+        text-justify: inter-word;
+      }
+      .portfolio-item{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+      }      
+      .portfolio-item:last-child{
+        margin-bottom: 0;
+      }
+      .project-info1{
+        padding-left: 45px;
+      }
+      .project-info2{
+        padding-right: 45px;
+      }
+      .project-h6{
+        margin-bottom: 0px;
+      }
+      .project-h1{
+        margin-top: 6px;
+        font-size: 25px;
+        margin-bottom: 0px;
+      }
+      .portfolio-description h6{
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 300;
+        opacity: 0.6;
+        margin-top: 5px;
+      }
+      .cta{
+        text-decoration: none;
+        font-weight: 200;
+      }
       .sample-heading{
         font-size: 50px;
         margin-bottom: 17px;
@@ -195,7 +244,7 @@
       color: #FBB117;
       font-weight: 3px;
     }
-    .favorite-button input[type=submit] {
+     .favorite-button input[type=submit] {
         width: 48px;
         height: 48px;
         cursor: pointer;
@@ -276,180 +325,276 @@
         margin: 0 1rem;
         cursor: pointer;
       }
+      .heart-button{
+        margin-left: -60px;
+        margin-bottom: 0px;
+      }
+      .project-work{
+        margin-top: 5px;
+      }
+    @media screen and (max-width: 730px){
+      .about-info{
+        grid-template-areas:
+        'bioimage'
+        'bio'
+        'job1'
+        'job2'
+        'job3';
 
+        grid-template-columns: 1fr;
+      }
+      .title1{
+        font-size: 35px;
+      }
+      .title2{
+        font-size: 20px;
+      }
+      .portfolio-item{
+        flex-direction: column;
+      }
+      .portfolio-description{
+        order: 2;
+      }
+      .project-h1{
+        text-align:left;
+    }
+    @media screen and (max-width: 500px){
+       .project-info1 {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .project-info2{
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .project-h1{
+        text-align:left;
+      }
+
+    }
+  
     </style>
   </head>
 
   <body>
 
-  <div class="navigation">
-      <header class="headerbar">
-        <div class="navbar-trigger" role="button" tabindex="0" on="tap:sidebar1.toggle">☰</div>
-      </header>
-      <amp-sidebar class="sidebar" id="sidebar1" layout="nodisplay" side="left">
-        <div class="navbar-trigger1" role="button" tabindex="0" on="tap:sidebar1.toggle">❌</div>
-          <nav class="top-nav">
-            <ul class="nav-list">
-              <li class="nav-link"><a href="#">Portfolio</a></li>
-              <li class="nav-link"><a href="#">Events</a></li>
-              <li class="nav-link"><a href="#">Contact me</a></li>
-            </ul>
-          </nav>
-      </amp-sidebar>
-  </div>
-
-  <div class="about section-dark">
-      <h1 class="lg-heading">
-       About
-       <span class="text-secondary">Me</span>
-      </h1>
-      <h2 class="sm-heading">
-        Down image lightbox
-      </h2>
-      <div class="about-info">
-        <amp-img on="tap:lightbox1" role="button" tabindex="0" src="https://i.pinimg.com/originals/1d/02/88/1d0288322469dcec682a52a56b93dbde.png" width="190" height="180" alt="myself" class="bio-image"></amp-img>
-
-        <div class="bio">
-          <h3 class="text-secondary">BIO</h3>
-          <p>My name is Mayank Goyal. Curently, I am an 11th class student pursuing PCM with Computer science as my optional subject. I have a keen interest in programming, website designing, and graphic design. I have been working with a microcontroller like Arduino for the past 1 year and have created a few amazing projects. From these projects, Speed automated seatbelt is the latest and the most important project. I have even created a few websites. Looking forward to learn more...</p>
-        </div>
-
-        <div class="job job-1">
-          <h3 class="work">Web Designer</h3>
-          <h6>Front End Developer</h6>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates perferendis totam enim. Nesciunt porro dolores
-            expedita dolor necessitatibus deserunt nemo.</p>
-        </div>
-
-        <div class="job job-2">
-          <h3 class="work">Graphic Desiner</h3>
-          <h6>Arts and Illustrations</h6>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates perferendis totam enim. Nesciunt porro dolores
-            expedita dolor necessitatibus deserunt nemo.</p>
-        </div>
-
-        <div class="job job-3">
-          <h3 class="work">Programming</h3>
-          <h6>Python</h6>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates perferendis totam enim. Nesciunt porro dolores
-            expedita dolor necessitatibus deserunt nemo.</p>
-        </div>
-      </div>
-  </div>
-
-  <section class="projects section-light">
-    <center><h1 class="title1">PROJECTS</h1>
-      <h3 class="title2">Check out some of my amazing works</h3>
-    </center>
-    <amp-carousel id="carousel-with-preview" width="150" height="100" layout="responsive" type="slides">
-      <amp-img on="tap:lightbox1" role="button" tabindex="0" src="https://i.pinimg.com/originals/f6/0d/79/f60d799396cb3e140aecf3e5ad12c207.jpg" width="150" height="100" layout="responsive" alt="ajith"></amp-img>
-      <amp-img src="https://i.guim.co.uk/img/media/8f02bb49224d9a94699b75213664bf898617c062/0_288_5315_3189/master/5315.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=89721e1224115e05a05203a62cf93f7c" width="150" height="100" layout="responsive" alt="wolf"></amp-img>
-      <amp-img on="tap:lightbox1" role="button" tabindex="0" src="https://i.ytimg.com/vi/pZvBGsZy7qM/maxresdefault.jpg" width="150" height="100" layout="responsive" alt="manuplation"></amp-img>
-      <amp-img src="https://i.ytimg.com/vi/bvSwznwqlHU/maxresdefault.jpg" width="150" height="100" layout="responsive" alt="arduino"></amp-img>
-      <amp-img on="tap:lightbox1" role="button" tabindex="0" src="https://d3b8hk1o42ev08.cloudfront.net/wp-content/uploads/2018/07/microprocessor-chip-752x440.jpg" width="150" height="100" layout="responsive" alt="project"></amp-img>
-      <amp-img on="tap:lightbox1" role="button" tabindex="0" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSlwGTTbu_mawQJTBEYEY_wD2yTODBYCL5egKxTa_CM5vcGQ40P&usqp=CAU" width="150" height="100"  layout="responsive" alt="raspberry"></amp-img>
-    </amp-carousel>
-      <br>
-    <div class="carousel">
-      <center>
-        <button on="tap:carousel-with-preview.goToSlide(index=0)">
-          <amp-img src="https://i.pinimg.com/originals/f6/0d/79/f60d799396cb3e140aecf3e5ad12c207.jpg" width="90" height="75" alt="ajith"></amp-img>
-        </button>
-        <button on="tap:carousel-with-preview.goToSlide(index=1)">
-          <amp-img src="https://i.guim.co.uk/img/media/8f02bb49224d9a94699b75213664bf898617c062/0_288_5315_3189/master/5315.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=89721e1224115e05a05203a62cf93f7c" width="90" height="75" alt="wolf"></amp-img>
-        </button>
-        <button on="tap:carousel-with-preview.goToSlide(index=2)">
-          <amp-img src="https://i.ytimg.com/vi/pZvBGsZy7qM/maxresdefault.jpg" width="90" height="75" alt="manuplation"></amp-img>
-        </button>
-        <button on="tap:carousel-with-preview.goToSlide(index=3)">
-          <amp-img src="https://i.ytimg.com/vi/bvSwznwqlHU/maxresdefault.jpg" width="90" height="75" alt="arduino"></amp-img>
-        </button>
-        <button on="tap:carousel-with-preview.goToSlide(index=4)">
-          <amp-img src="https://d3b8hk1o42ev08.cloudfront.net/wp-content/uploads/2018/07/microprocessor-chip-752x440.jpg" width="90" height="75" alt="project"></amp-img>
-        </button>
-        <button on="tap:carousel-with-preview.goToSlide(index=1)">
-          <amp-img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSlwGTTbu_mawQJTBEYEY_wD2yTODBYCL5egKxTa_CM5vcGQ40P&usqp=CAU" width="90" height="75" alt="raspberry"></amp-img>
-        </button>
-      </center>
+    <div class="navigation">
+        <header class="headerbar">
+          <div class="navbar-trigger" role="button" tabindex="0" on="tap:sidebar1.toggle">☰</div>
+        </header>
+        <amp-sidebar class="sidebar" id="sidebar1" layout="nodisplay" side="left">
+          <div class="navbar-trigger1" role="button" tabindex="0" on="tap:sidebar1.toggle">❌</div>
+            <nav class="top-nav">
+              <center>
+                <ul class="nav-list">
+                  <li class="nav-link"><a href="#" class="links">Portfolio</a></li>
+                  <li class="nav-link"><a href="#" class="links">Events</a></li>
+                  <li class="nav-link"><a href="#" class="links">Contact me</a></li>
+                </ul>
+              </center> 
+            </nav>
+        </amp-sidebar>
     </div>
-  </section>
+      
+    <div class="about section-dark">
+      <a class="target-anchor" id="top"></a>
+        <h1 class="lg-heading">
+          About
+          <span class="text-secondary">Me</span>
+        </h1>
+        <h2 class="sm-heading">
+          Down image lightbox
+        </h2>
+      <amp-position-observer on="enter:hideAnim.start; exit:showAnim.start" layout="nodisplay">
+      </amp-position-observer>
+        <div class="about-info">
+          <amp-img on="tap:lightbox1" role="button" tabindex="0" src="https://i.pinimg.com/originals/1d/02/88/1d0288322469dcec682a52a56b93dbde.png" width="190" height="180" alt="myself" class="bio-image"></amp-img>
 
-  <section class="video section-dark">
-    <center><h1 class="title3">Just Videos</h1>
-       <h3 class="title4">Visualize the concept</h3>
-    </center>
-      <amp-youtube width="480" height="270" layout="responsive" data-videoid="lBTCB7yLs8Y">
-  </section>
-  Don't hit the like button
-  <amp-state id="favoriteWithCount" credentials="include" src="https://amp.dev/documentation/examples/interactivity-dynamic-content/favorite_button/favorite-with-count">
-    </amp-state>
-    <form class="favorite-button" method="post" action-xhr="https://amp.dev/documentation/examples/interactivity-dynamic-content/favorite_button/favorite-with-count" target="_top" on="submit:AMP.setState({
-                   previousFavoriteWithCount: favoriteWithCount,
-                   favoriteWithCount: {
-                     value: !favoriteWithCount.value,
-                     count: favoriteWithCount.count + (favoriteWithCount.value ? -1 : 1),
-                   }
-                 }),
-                 favorite-failed-message.hide;
-             submit-error:AMP.setState({
-                   value: !favoriteWithCount.value,
-                   favoriteWithCount: previousFavoriteWithCount.count
-                 }),
-                 favorite-failed-message.show">
-      <amp-list width="200" height="56" credentials="include" items="." single-item noloading src="https://amp.dev/documentation/examples/interactivity-dynamic-content/favorite_button/favorite-with-count" binding="always">
-        <template type="amp-mustache">
-          <div class="favorite-container">
-            <input type="submit" class="{{#value}}heart-fill{{/value}}{{^value}}heart-border{{/value}}" [class]="favoriteWithCount.value ? 'heart-fill' : 'heart-border'" value aria-label="Favorite Toggle">
-            <div class="favorite-count" [text]="favoriteWithCount.count ? favoriteWithCount.count : ''">{{count}}</div>
+          <div class="bio">
+            <h3 class="text-secondary">BIO</h3>
+            <p>My name is Mayank Goyal. Curently, I am an 11th class student pursuing PCM with Computer science as my optional subject. I have a keen interest in programming, website designing, and graphic design. I have been working with a microcontroller like Arduino for the past 1 year and have created a few amazing projects. From these projects, Speed automated seatbelt is the latest and the most important project. I have even created a few websites. Looking forward to learn more...</p>
           </div>
-        </template>
-        <div placeholder>
-          <div class="favorite-container">
-            <input type="submit" disabled class="heart-loading" value aria-label="favorite placeholder">
-            <div class="favorite-count loading">0</div>
+
+          <div class="job job-1">
+            <h3 class="work">Web Designer</h3>
+            <h6>Front End Developer</h6>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates perferendis totam enim. Nesciunt porro dolores
+              expedita dolor necessitatibus deserunt nemo.</p>
+          </div>
+
+          <div class="job job-2">
+            <h3 class="work">Graphic Desiner</h3>
+            <h6>Arts and Illustrations</h6>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates perferendis totam enim. Nesciunt porro dolores
+              expedita dolor necessitatibus deserunt nemo.</p>
+          </div>
+
+          <div class="job job-3">
+            <h3 class="work">Programming</h3>
+            <h6>Python</h6>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates perferendis totam enim. Nesciunt porro dolores
+              expedita dolor necessitatibus deserunt nemo.</p>
           </div>
         </div>
-      </amp-list>
-    </form>
+    </div>
 
-  <section class="form section-dark">
-    <center>
-      <h2 class="sample-heading">Want to collaborate</h2>
-      <form class="sample-form" method="post" action-xhr="/documentation/examples/api/submit-form-input-text-xhr" target="_top" custom-validation-reporting="show-first-on-submit">
-        <input type="text" id="show-first-on-submit-name" name="name" placeholder=" &nbsp;Name..." required pattern="\p{L}+\s\p{L}+">
-          <span visible-when-invalid="valueMissing" validation-for="show-first-on-submit-name"></span>
-          <span visible-when-invalid="patternMismatch" validation-for="show-first-on-submit-name">
-          Please enter your first and last name separated by a space (e.g. Jane Miller)
-          </span>
-        <br>
-        <br>
-        <input type="email" id="show-first-on-submit-email" name="email" placeholder=" &nbsp;Email..." required>
-          <span visible-when-invalid="valueMissing" validation-for="show-first-on-submit-email"></span>
-          <span visible-when-invalid="typeMismatch" validation-for="show-first-on-submit-email"></span>
-        <br>
-        <br>
-        <input type="submit"value="&nbsp;Collaborate&nbsp;">
-          <div submit-success>
+    <section class="projects section-light">
+      <div class="container">
+        <div class="section-heading">
+          <center><h1 class="title1">PROJECTS</h1>
+          <h3 class="title2">Check out some of my amazing works</h3>
+          </center>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-img1">
+            <amp-img amp-fx="fade-in" data-easing="linear" data-duration="2500ms" lightbox src="https://i.guim.co.uk/img/media/8f02bb49224d9a94699b75213664bf898617c062/0_288_5315_3189/master/5315.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=89721e1224115e05a05203a62cf93f7c" width="370" height="300"></amp-img>
+          </div>
+          <div class="portfolio-description">
+            <div class="project-info1">
+              <h6 class="project-h6">amp-fx-collection</h6>
+              <h1 class="project-h1">AMP Lightbox carousel </h1> 
+              <div class="heart-button">
+                <amp-state id="favoriteWithCount" credentials="include" src="https://amp.dev/documentation/examples/interactivity-dynamic-content/favorite_button/favorite-with-count">
+                </amp-state>
+                  <form class="favorite-button" method="post" action-xhr="https://amp.dev/documentation/examples/interactivity-dynamic-content/favorite_button/favorite-with-count" target="_top" on="submit:AMP.setState({
+                     previousFavoriteWithCount: favoriteWithCount,
+                     favoriteWithCount: {
+                       value: !favoriteWithCount.value,
+                       count: favoriteWithCount.count + (favoriteWithCount.value ? -1 : 1),}
+                  }),
+                   favorite-failed-message.hide;
+               submit-error:AMP.setState({
+                     value: !favoriteWithCount.value,
+                     favoriteWithCount: previousFavoriteWithCount.count
+                   }),
+                   favorite-failed-message.show">
+                  <amp-list width="200" height="56" credentials="include" items="." single-item noloading src="https://amp.dev/documentation/examples/interactivity-dynamic-content/favorite_button/favorite-with-count" binding="always">
+                    <template type="amp-mustache">
+                      <div class="favorite-container">
+                        <input type="submit" class="{{#value}}heart-fill{{/value}}{{^value}}heart-border{{/value}}" [class]="favoriteWithCount.value ? 'heart-fill' : 'heart-border'" value aria-label="Favorite Toggle">
+                        <div class="favorite-count" [text]="favoriteWithCount.count ? favoriteWithCount.count : ''">{{count}}</div>
+                      </div>
+                    </template>
+                    <div placeholder>
+                      <div class="favorite-container">
+                        <input type="submit" disabled class="heart-loading" value aria-label="favorite placeholder">
+                        <div class="favorite-count loading">0</div>
+                      </div>
+                    </div>
+                  </amp-list>
+                </form>
+              </div>
+              <p class="project-work">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <a href="#" class="cta">VIEW DETAILS</a>
+            </div> 
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <div class="portfolio-description">
+            <div class="project-info2">
+              <h6 class="project-h6">amp-fx-collection</h6>
+             <h1 class="project-h1">AMP Lightbox carousel</h1>
+             <div class="heart-button">
+                <amp-state id="favoriteWithCount" credentials="include" src="https://amp.dev/documentation/examples/interactivity-dynamic-content/favorite_button/favorite-with-count">
+                </amp-state>
+                  <form class="favorite-button" method="post" action-xhr="https://amp.dev/documentation/examples/interactivity-dynamic-content/favorite_button/favorite-with-count" target="_top" on="submit:AMP.setState({
+                     previousFavoriteWithCount: favoriteWithCount,
+                     favoriteWithCount: {
+                       value: !favoriteWithCount.value,
+                       count: favoriteWithCount.count + (favoriteWithCount.value ? -1 : 1),}
+                  }),
+                   favorite-failed-message.hide;
+               submit-error:AMP.setState({
+                     value: !favoriteWithCount.value,
+                     favoriteWithCount: previousFavoriteWithCount.count
+                   }),
+                   favorite-failed-message.show">
+                  <amp-list width="200" height="56" credentials="include" items="." single-item noloading src="https://amp.dev/documentation/examples/interactivity-dynamic-content/favorite_button/favorite-with-count" binding="always">
+                    <template type="amp-mustache">
+                      <div class="favorite-container">
+                        <input type="submit" class="{{#value}}heart-fill{{/value}}{{^value}}heart-border{{/value}}" [class]="favoriteWithCount.value ? 'heart-fill' : 'heart-border'" value aria-label="Favorite Toggle">
+                        <div class="favorite-count" [text]="favoriteWithCount.count ? favoriteWithCount.count : ''">{{count}}</div>
+                      </div>
+                    </template>
+                    <div placeholder>
+                      <div class="favorite-container">
+                        <input type="submit" disabled class="heart-loading" value aria-label="favorite placeholder">
+                        <div class="favorite-count loading">0</div>
+                      </div>
+                    </div>
+                  </amp-list>
+                </form>
+              </div>
+             <p class="project-work">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <a href="#" class="cta">VIEW DETAILS</a>
+            </div>  
+          </div>
+          <div class="portfolio-img">
+            <amp-img amp-fx="fade-in" data-easing="linear" data-duration="2500ms" lightbox src="https://i.ytimg.com/vi/bvSwznwqlHU/maxresdefault.jpg" width="390" height="290"></amp-img>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="video section-dark">
+      <center><h1 class="title3">Just Videos</h1>
+         <h3 class="title4">Visualize the concept</h3>
+      </center>
+        <amp-youtube width="480" height="270" layout="responsive" data-videoid="lBTCB7yLs8Y">
+    </section>
+   
+    <section class="form section-dark">
+      <center>
+        <h2 class="sample-heading">Want to collaborate</h2>
+        <form class="sample-form" method="post" action-xhr="/documentation/examples/api/submit-form-input-text-xhr" target="_top" custom-validation-reporting="show-first-on-submit">
+          <input type="text" id="show-first-on-submit-name" name="name" placeholder=" &nbsp;Name..." required pattern="\p{L}+\s\p{L}+">
+            <span visible-when-invalid="valueMissing" validation-for="show-first-on-submit-name"></span>
+            <span visible-when-invalid="patternMismatch" validation-for="show-first-on-submit-name">
+            Please enter your first and last name separated by a space (e.g. Jane Miller)
+            </span>
+          <br>
+          <br>
+          <input type="email" id="show-first-on-submit-email" name="email" placeholder=" &nbsp;Email..." required>
+            <span visible-when-invalid="valueMissing" validation-for="show-first-on-submit-email"></span>
+            <span visible-when-invalid="typeMismatch" validation-for="show-first-on-submit-email"></span>
+          <br>
+          <br>
+          <input type="submit" value="&nbsp;Collaborate&nbsp;">
+            <div submit-success>
+              <template type="amp-mustache">
+               Success! Thanks {{name}} for filling the contact form. I will try to reach to you as soon as possible.
+              </template>
+            </div>
+          <div submit-error>
             <template type="amp-mustache">
-             Success! Thanks {{name}} for filling the contact form. I will try to reach to you as soon as possible.
+              Error! Please try again
             </template>
           </div>
-        <div submit-error>
-          <template type="amp-mustache">
-            Error! Please try again
-          </template>
+        </form>
+        <br>
+        <br>
+        <div class="share">
+          <amp-social-share class="rounded" type="email"></amp-social-share> &nbsp;&nbsp;
+          <amp-social-share class="rounded" type="facebook" data-param-app_id="254325784911610"></amp-social-share>&nbsp;&nbsp;
+          <amp-social-share class="rounded" type="linkedin"></amp-social-share>&nbsp;&nbsp;
+          <amp-social-share class="rounded" type="twitter"></amp-social-share>&nbsp;&nbsp;
+          <amp-social-share class="rounded" type="whatsapp"></amp-social-share>&nbsp;&nbsp;
         </div>
-      </form>
-      <br>
-      <br>
-      <div class="share">
-        <amp-social-share class="rounded" type="email"></amp-social-share> &nbsp;&nbsp;
-        <amp-social-share class="rounded" type="facebook" data-param-app_id="254325784911610"></amp-social-share>&nbsp;&nbsp;
-        <amp-social-share class="rounded" type="linkedin"></amp-social-share>&nbsp;&nbsp;
-        <amp-social-share class="rounded" type="twitter"></amp-social-share>&nbsp;&nbsp;
-        <amp-social-share class="rounded" type="whatsapp"></amp-social-share>&nbsp;&nbsp;
-      </div>
-    </center>
-  </section>
+      </center>
+    </section>
+    
+
 </body>
 </html>
