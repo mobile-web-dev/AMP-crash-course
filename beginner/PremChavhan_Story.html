@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html amp lang="en">
+<head>
+    <meta charset="utf-8" />
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script
+            async
+            custom-element="amp-story"
+            src="https://cdn.ampproject.org/v0/amp-story-1.0.js"
+    ></script>
+    <title>Hello, amp-story</title>
+    <link rel="canonical" href="http://example.ampproject.org/my-story.html" />
+    <meta
+            name="viewport"
+            content="width=device-width,minimum-scale=1,initial-scale=1"
+    />
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+        }
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden;
+            }
+            to {
+                visibility: visible;
+            }
+        }
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden;
+            }
+            to {
+                visibility: visible;
+            }
+        }
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden;
+            }
+            to {
+                visibility: visible;
+            }
+        }
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden;
+            }
+            to {
+                visibility: visible;
+            }
+        }
+        @keyframes -amp-start {
+            from {
+                visibility: hidden;
+            }
+            to {
+                visibility: visible;
+            }
+        }
+    </style>
+    <noscript
+    ><style amp-boilerplate>
+        body {
+            -webkit-animation: none;
+            -moz-animation: none;
+            -ms-animation: none;
+            animation: none;
+        }
+    </style></noscript
+    >
+    <style amp-custom>
+        /*amp-img {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+        }
+        button{
+            background-color: #ACAD5C;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }*/
+        .circular--landscape {
+            display: inline-block;
+            position: relative;
+            width: 200px;
+            height: 200px;
+            display: block;
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: auto;
+            margin-right: auto;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+
+        .circular--landscape img {
+            width: auto;
+            height: 100%;
+            text-align: center;
+
+
+        }
+
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            src: url('./fonts/montserrat-v14-latin-regular.eot'); /* IE9 Compat Modes */
+            src: local('Montserrat Regular'), local('Montserrat-Regular'),
+            url('./fonts/montserrat-v14-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+            url('./fonts/montserrat-v14-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+            url('./fonts/montserrat-v14-latin-regular.woff') format('woff'), /* Modern Browsers */
+            url('./fonts/montserrat-v14-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+            url('./fonts/montserrat-v14-latin-regular.svg#Montserrat') format('svg'); /* Legacy iOS */
+        }
+
+        body {
+            font-family: 'Montserrat';
+        }
+
+    </style>
+</head>
+<body>
+<amp-story
+        standalone
+        title="Hello Story"
+        publisher="The AMP Team"
+        publisher-logo-src="https://example.com/logo/1x1.png"
+        poster-portrait-src="https://example.com/my-story/poster/3x4.jpg"
+>
+    <amp-story-page id="my-first-page">
+        <amp-story-grid-layer template="fill" animate-in="fade-in"
+                              animate-in-duration="3s">
+            <amp-img
+                    src="./images/blackback.jpg"
+                    width="720"
+                    height="1280"
+            >
+            </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="thirds">
+            <div animate-in="fade-in"
+                 animate-in-duration="2s" grid-area="upper-third">
+            <div  style="margin-top: 10px" class="circular--landscape"
+                 animate-in-duration="2s"
+                 animate-in="fly-in-left">
+                <img src="./images/Profile.png"/>
+            </div>
+                <div class="square"
+                     animate-in="fly-in-bottom" animate-in-duration="2s" style="margin-top: 60px">
+                    <div style="text-align: center;">
+                        <h1 style="color: white">Hello,</h1>
+                        <h1 style="color: white">I am</h1>
+                        <h1 style="color: white">Prem Chavhan</h1>
+                    </div>
+
+                </div>
+            </div>
+
+        </amp-story-grid-layer>
+    </amp-story-page>
+    <amp-story-page id="my-second-page">
+        <amp-story-grid-layer template="fill" animate-in="fade-in"
+                              animate-in-duration="3s">
+            <amp-img
+                    src="./images/backlight.jpg"
+                    width="900"
+                    height="1600">
+            </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="thirds">
+            <div style="text-align: center;"  animate-in="fly-in-bottom" animate-in-duration="2s" grid-area="middle-third">
+                <h1 style="">Education</h1>
+            </div>
+        </amp-story-grid-layer>
+    </amp-story-page>
+    <amp-story-page id="my-third-page">
+    <amp-story-grid-layer template="fill">
+        <amp-img
+                src="./images/backlight.jpg"
+                width="900"
+                height="1600">
+        </amp-img>
+    </amp-story-grid-layer>
+    <amp-story-grid-layer template="thirds">
+        <div class="row">
+            <div style="text-align: center; margin-top: 40px" grid-area="upper-third">
+            <div class="column" animate-in="fade-in" animate-in-duration="2s">
+                <img src="./images/university.png" alt="Snow" style="height:90px ; width:90px">
+            </div>
+            <div class="column" animate-in="fly-in-left" animate-in-duration="2s">
+                <h4>L.N.S Vidyalaya,Jalgaon</h4>
+            </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div style="text-align: center; margin-top: 30px" grid-area="middle-third">
+                <div class="column" animate-in="fade-in" animate-in-duration="2s">
+                    <img src="./images/university.png" alt="Snow" style="height:90px ; width:90px">
+                </div>
+                <div class="column" animate-in="fly-in-right" animate-in-duration="2s">
+                    <h4>Government Polytechnic,jalgaon</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div style="text-align: center; margin-top: 20px" grid-area="bottom-third">
+                <div class="column" animate-in="fade-in" animate-in-duration="2s">
+                    <img src="./images/university.png" alt="Snow" style="height:90px ; width:90px">
+                </div>
+                <div class="column" animate-in="fly-in-bottom" animate-in-duration="2s">
+                    <h4>Vishwakarma Institute of Technology,Pune</h4>
+                </div>
+            </div>
+        </div>
+
+    </amp-story-grid-layer>
+</amp-story-page>
+
+    <amp-story-page id="my-forth-page">
+        <amp-story-grid-layer template="fill">
+            <amp-img
+                    src="./images/backlight.jpg"
+                    width="900"
+                    height="1600">
+            </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="thirds">
+            <div style="text-align: center;" animate-in="fly-in-bottom" animate-in-duration="2s" grid-area="middle-third">
+                <h1 style="">Projects</h1>
+            </div>
+        </amp-story-grid-layer>
+    </amp-story-page>
+
+    <amp-story-page id="my-fifth-page">
+        <amp-story-grid-layer template="fill">
+            <amp-img
+                    src="./images/backlight.jpg"
+                    width="900"
+                    height="1600">
+            </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="thirds">
+            <div style="text-align: center; margin-top: 50px" grid-area="upper-third">
+                <amp-img
+                        animate-in="whoosh-in-left"
+                        src="./images/cas1.png"
+                        width="225"
+                        height="350">
+                </amp-img>
+            </div>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="thirds">
+            <div style="text-align: center; margin-bottom: 50px" animate-in="fly-in-bottom" animate-in-duration="2s" grid-area="bottom-third">
+                <h3>Mobomart Mobile Application</h3>
+            </div>
+        </amp-story-grid-layer>
+    </amp-story-page>
+
+    <amp-story-page id="my-sixth-page">
+        <amp-story-grid-layer template="fill">
+            <amp-img
+                    src="./images/backlight.jpg"
+                    width="900"
+                    height="1600">
+            </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="thirds">
+            <div style="text-align: center; margin-top: 50px" grid-area="upper-third">
+                <amp-img
+                        animate-in="whoosh-in-right"
+                        src="./images/cas2.png"
+                        width="225"
+                        height="350">
+                </amp-img>
+            </div>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="thirds">
+            <div style="text-align: center; margin-bottom: 50px" animate-in="fly-in-bottom" animate-in-duration="2s" grid-area="bottom-third">
+                <h3>Freelancer Portal Application</h3>
+            </div>
+        </amp-story-grid-layer>
+    </amp-story-page>
+    <amp-story-page id="my-seventh-page">
+        <amp-story-grid-layer template="fill">
+            <amp-img
+                    src="./images/backlight.jpg"
+                    width="900"
+                    height="1600">
+            </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="thirds">
+            <div style="text-align: center; margin-top: 50px" grid-area="upper-third">
+                <amp-img
+                        animate-in="whoosh-in-left"
+                        src="./images/cas3.png"
+                        width="225"
+                        height="350">
+                </amp-img>
+            </div>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="thirds">
+            <div style="text-align: center; margin-bottom: 50px" animate-in="fly-in-bottom" animate-in-duration="2s" grid-area="bottom-third">
+                <h3>Financial Analyzer Android Application</h3>
+            </div>
+        </amp-story-grid-layer>
+    </amp-story-page>
+
+    <amp-story-page id="my-Eighth-page">
+        <amp-story-grid-layer template="fill">
+            <amp-img
+                    src="./images/backlight.jpg"
+                    width="900"
+                    height="1600">
+            </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="thirds">
+            <div style="text-align: center; margin-top: 50px" grid-area="upper-third">
+                <amp-img
+                        animate-in="whoosh-in-right"
+                        src="./images/cas4.png"
+                        width="225"
+                        height="350">
+                </amp-img>
+            </div>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="thirds">
+            <div style="text-align: center; margin-bottom: 50px "  animate-in="fly-in-bottom" animate-in-duration="2s" grid-area="bottom-third">
+                <h3 style="padding-bottom: 40px">Stall Management Android Application</h3>
+            </div>
+        </amp-story-grid-layer>
+    </amp-story-page>
+    <amp-story-bookend layout="nodisplay">
+        <script type="application/json">
+            {
+                "bookendVersion": "v1.0",
+                "shareProviders": ["email",
+                    "twitter" ],
+                "components": [
+                    {
+                        "type": "heading",
+                        "text": "Prem Chavhan"
+                    },
+                    {
+                        "type": "heading",
+                        "text": "Connect"
+                    },
+                    {
+                        "type": "cta-link",
+                        "links": [
+                            {
+                                "text": "Portfolio",
+                                "url": "https://premchavhan.github.io/"
+                            },
+                            {
+                                "text": "Github",
+                                "url": "https://github.com/premchavhan"
+                            },
+                            {
+                                "text": "Linkedin",
+                                "url": "https://in.linkedin.com/in/prem-chavhan-6b5b75175"
+                            },
+                            {
+                                "text": "Facebook",
+                                "url": "https://www.facebook.com/prem.chavhan.378"
+                            },
+                            {
+                                "text": "Twitter",
+                                "url": "https://twitter.com/premchavhan3"
+                            },
+                            {
+                                "text": "Instagram",
+                                "url": "https://www.instagram.com/premrchavhan/"
+                            }
+                        ]
+                    }
+                     ]
+            }
+        </script>
+    </amp-story-bookend>
+</amp-story>
+</body>
+</html>
