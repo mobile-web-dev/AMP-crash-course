@@ -1,0 +1,168 @@
+<!--
+  ## Introduction
+  Learn how to create your first AMP Story. The [`amp-story`](/content/amp-dev/documentation/components/reference/amp-story-v1.0.md) extension provides a new format for displaying visual content.
+-->
+<!-- -->
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <!-- ## Setup -->
+    <!-- AMP Stories are written using AMPHTML and they use their own AMP extension: `amp-story`. The first step is to import the `amp-story` in the header. -->
+    <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
+    <!-- AMP Stories can make use of other AMP extensions such as `amp-video`. However, AMP Stories support only a subset of the available AMP extensions. You can find a full list of the supported extensions [here](/content/amp-dev/documentation/components/reference/amp-story.md#children-of-amp-story-grid-layer). -->
+    <script async custom-element="amp-video" src="https://cdn.ampproject.org/v0/amp-video-0.1.js"></script>
+    <title>Stories in AMP - Hello World</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <link rel="canonical" href="https://amp.dev/documentation/examples/introduction/stories_in_amp/index.html">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <!-- Stories can be styled using CSS: -->
+    <style amp-custom>
+      amp-story {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI ", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji ", "Segoe UI Emoji ", "Segoe UI Symbol ";
+      }
+      amp-story-page * {
+        color: white;
+        text-align: center;
+      }
+      [template=thirds] {
+        padding: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ## Writing the Story -->
+    <!-- Stories are declared inside the `amp-story` tag. Story-level metadata is provided via attributes. (The first four attributes are mandatory; the final two are optional, but recommended.) Note that this metadata augments, but does not replace, [Structured Data](https://developers.google.com/search/docs/data-types/article#amp). -->
+    <amp-story standalone
+      title="Motivation Booster"
+      publisher="AMP Project"
+      publisher-logo-src="https://amp.dev/favicons/coast-228x228.png"
+      poster-portrait-src="https://amp.dev/static/samples/img/story_dog2_portrait.jpg"
+      poster-square-src="https://amp.dev/static/samples/img/story_dog2_square.jpg"
+      poster-landscape-src="https://amp.dev/static/samples/img/story_dog2_landscape.jpg">
+
+    
+      
+      <!-- A story consists of one or more pages. Each page is declared by an `amp-story-page` element. Pages are designed by layering videos, images and text. Here we have a page that uses two layers. One layer filling the available space with an image and one text layer that shows a heading. -->
+      <amp-story-page id="page-1">
+        <amp-story-grid-layer template="fill">
+          <amp-img src="https://positivepsychology.com/wp-content/uploads/self-motivation1.jpg"
+                   width="720" height="1280"
+                   layout="responsive">
+          </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="vertical">
+          <h1>Motivations Booster</h1>
+        </amp-story-grid-layer>
+        
+   
+          <amp-story-grid-layer template="thirds">
+            <h3 animate-in="fly-in-bottom"
+                grid-area="lower-third"
+                animate-in-delay="0.4s">
+				People often say that motivation doesn't last. 
+            Well, neither does bathing - that's why we recommend it daily.
+            - Zig Ziglar
+            </h3>
+          </amp-story-grid-layer>        
+      </amp-story-page>
+
+      <!-- Here we have a page consisting of a video which autoplays and loops. -->
+      <amp-story-page id="page-2">
+        <amp-story-grid-layer template="fill">
+            <amp-img src="https://i.pinimg.com/originals/52/7c/7e/527c7e31b6b8cd2f3c2ced21cdc7f196.jpg"
+
+                     animate-in="fly-in-top"
+                     width="720" height="1280"
+                     layout="responsive">
+            </amp-img>
+          </amp-story-grid-layer>
+          <amp-story-grid-layer template="thirds">
+            <h2 animate-in="fly-in-bottom"
+                grid-area="lower-third"
+                animate-in-delay="0.4s">
+              Go get it!!
+            </h2>
+          </amp-story-grid-layer>
+      </amp-story-page>
+
+      <!-- Pre-defined entry animations make it possible to create dynamic pages without videos. The length and initial delay can be customized using the `animate-in-duration` and `animate-in-delay` properties. The [animations sample](/documentation/examples/visual-effects/amp_story_animations/) shows all available animantions in action. -->
+      <amp-story-page id="page 6">
+        <amp-story-grid-layer template="fill">
+          <amp-img src="https://i.pinimg.com/originals/9f/25/53/9f2553607c4d7458b6f03b17cbdbe370.jpg"
+                   animate-in="fly-in-top"
+                   width="720" height="1280"
+                   layout="responsive">
+          </amp-img>
+        </amp-story-grid-layer>
+        <amp-story-grid-layer template="thirds">
+          <h2 style = "color:black;"
+              animate-in="fly-in-left"
+              grid-area="lower-third"
+              animate-in-delay="0.4s">
+            Lets Save Sparrow
+          </h2>
+        </amp-story-grid-layer>
+      </amp-story-page>
+
+      <amp-story-page id="page-3">
+        <amp-story-grid-layer template="fill">
+            <amp-img src="https://cdn.shopify.com/s/files/1/0733/3039/t/48/assets/zooomy-1583341707free-motivational-phone-fitness-workout-gym-quote-iphone-phone-wallpaper-one-life.jpg?v=1583341709"
+
+                     animate-in="fly-in-top"
+                     width="720" height="1280"
+                     layout="responsive">
+            </amp-img>
+          </amp-story-grid-layer>
+          <amp-story-grid-layer template="thirds">
+            <h1 animate-in="fly-in-bottom"
+                grid-area="lower-third"
+                animate-in-delay="0.4s">
+             Only One!!
+            </h1>
+          </amp-story-grid-layer>
+      </amp-story-page>
+    
+      <amp-story-page id="page-4">
+        <amp-story-grid-layer template="fill">
+            <amp-img src="https://wallpaperplay.com/walls/full/c/3/e/182307.jpg"
+
+                     animate-in="fly-in-top"
+                     width="720" height="1280"
+                     layout="responsive">
+            </amp-img>
+          </amp-story-grid-layer>
+          <amp-story-grid-layer template="thirds">
+            <h2 animate-in="fly-in-bottom"
+                grid-area="lower-third"
+                animate-in-delay="0.4s">
+             Answer it!!
+            </h2>
+          </amp-story-grid-layer>
+      </amp-story-page>    
+    
+          <amp-story-page id="page-5">
+        <amp-story-grid-layer template="fill">
+            <amp-img src=" https://i.pinimg.com/originals/21/34/a9/2134a9e1044b8cd17e64bebc35d9124f.jpg"
+
+                     animate-in="fly-in-top"
+                     width="720" height="1280"
+                     layout="responsive">
+            </amp-img>
+          </amp-story-grid-layer>
+          <amp-story-grid-layer template="thirds">
+            <h1 animate-in="fly-in-bottom"
+                grid-area="lower-third"
+                animate-in-delay="0.4s">
+             Yes you, You are the Best!!
+            </h1>
+          </amp-story-grid-layer>
+      </amp-story-page>  
+
+
+
+    </amp-story>
+  </body>
+</html>
