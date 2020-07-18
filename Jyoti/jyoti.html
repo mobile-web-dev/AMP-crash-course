@@ -1,0 +1,322 @@
+<!doctype html>
+<html ⚡>
+<head>
+  <meta charset="utf-8">
+  <title>Jyoti Jauhari </title>
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+  <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+  <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+  <script custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async></script>
+  <script async custom-element="amp-youtube" src="https://cdn.ampproject.org/v0/amp-youtube-0.1.js"></script>
+  <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+  <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+  <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
+  <!-- For amp bind to create dynamic web pages-->
+  <link rel="canonical" href="/amp_portfolio.html">
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+  
+  <style amp-custom>
+    body {
+      background-color:#BDBDBD;
+      text-align:center;
+    }
+    amp-img {
+      border: 5px solid black;
+    }
+	
+    .headerbar{
+        background-color:black;    
+    }
+
+    .site-name{
+        font-family: Times New Roman;
+        font-weight: 700;
+        font-size:30px;
+        color:white;
+        text-align: center;
+    }
+    h2{
+        font-family: Times New Roman;
+        font-weight: 700;
+        color: black;
+        font-size:30px;
+        border: 2px solid grey;
+        text-align: center;
+    }
+    amp-social-share.social-media{
+        border: 10px solid grey;
+        text-align:center;
+    }
+	
+	.hamburger {
+     padding-left: 10px; 
+     font-size: 70px;
+     color:white;
+     text-align:left;
+	 size:30px;
+    }
+	
+	.side_bar{
+	background-color:#757575;
+	}
+	
+	.sidebar {
+    padding: 10px;
+    margin: 0;
+    }
+    .sidebar > li {
+    list-style: none;
+    margin-bottom:10px;
+    }
+   .sidebar a {
+    text-decoration: none;
+    color:white;
+   }
+  .close-sidebar {
+    font-size: 1.5em;
+    padding-left: 5px;
+	color:white;
+   }
+
+    amp-accordion section[expanded] .show-more {
+      display: none;
+    }
+
+    amp-accordion section:not([expanded]) .show-less {
+      display: none;
+    }
+
+    .nested-accordion h3 {
+      font-size: 14px;
+      background-color: white;
+    }
+
+    amp-accordion.hidden-header section[expanded] h3 {
+      border: none;
+    }	
+
+    amp-accordion.sample {
+      margin: var(--space-2);
+    }	
+    
+    	    .rating {
+      --star-size: 3;  
+      padding: 0;  
+      border: none; 
+      unicode-bidi: bidi-override; direction: rtl; 
+      user-select: none;  
+      font-size: 3em; 
+      font-size: calc(var(--star-size) * 1em);  
+      cursor: pointer;
+      
+      -webkit-tap-highlight-color: rgba(0,0,0,0);
+      -webkit-tap-highlight-color: transparent;
+      margin-bottom: 1em;
+    }
+
+    .rating > label {
+      display: inline-block;
+      position: relative;
+      width: 1.1em; 
+      width: calc(var(--star-size) / 3 * 1.1em);
+    }
+    .rating > *:hover,
+    .rating > *:hover ~ label,
+    .rating:not(:hover) > input:checked ~ label {
+      color: transparent; 
+      cursor: inherit;  
+    }
+    .rating > *:hover:before,
+    .rating > *:hover ~ label:before,
+    .rating:not(:hover) > input:checked ~ label:before {
+      content: "★";
+      position: absolute;
+      left: 0;
+      color: blue;
+    }
+    .rating > input {
+      position: relative;
+      transform: scale(3); 
+      transform: scale(var(--star-size));
+      
+      top: -0.5em;  
+      top: calc(var(--star-size) / 6 * -1em);
+      margin-left: -2.5em; 
+      margin-left: calc(var(--star-size) / 6 * -5em);
+      z-index: 2;  
+      opacity: 0;  
+      font-size: initial; 
+    }
+    form.amp-form-submit-error [submit-error] {
+      color: red;
+    }
+    
+  </style>
+  
+  
+</head>
+
+<body>
+
+  <header class="headerbar">
+    <div class="hamburger" role="button" tabindex="0" 
+         on="tap:sidebar1.toggle">☰</div>
+    <div class="site-name">Jyoti Jauhari</div>
+</header>
+
+<amp-sidebar class="side_bar" id="sidebar1" layout="nodisplay" side="left">
+    <div class="close-sidebar" role="button" tabindex="0"
+        on="tap:sidebar1.toggle">✕</div>
+		
+		<amp-accordion class="sample">
+        <section>		
+		<h3>Quick access</h3>
+		<ul class="sidebar">
+		  <li><a href="#profile">Profile</a></li>
+		  <li><a href="#about">About</a></li>
+		  <li><a href="#work">Work</a></li>
+		  <li><a href="#intro_v">Introduction Video</a></li>
+		  <li><a href="#share">Share</a></li>
+		</ul>  
+        </section>   		
+		</amp-accordion>
+		
+		<amp-accordion class="sample">
+        <section >		
+		<h3>Contact me</h3>
+		<ul class="sidebar">
+		  <li><a href="#">Website</a></li>
+		  <li><a href="#">Linkedin</a></li>
+		  <li><a href="#">Email</a></li>
+		  <li><a href="#">Github</a></li>
+		</ul>  
+        </section>   		
+		</amp-accordion>
+
+		
+    </amp-sidebar>
+
+
+
+	<div id="profile">
+        <h2>Profile:</h2>
+			<amp-img src="img/image0.jpg"
+			  width="1080"
+			  height="610"
+			  layout="responsive"
+			  alt="AMP"></amp-img>
+	</div>		  
+
+
+    <div id="about">
+        <h2>About Me</h2>
+        A CSE student from Bajaj Institute of Technology. 
+		I am tech enthusiast, Python intern at Cloud Conselage 
+		and Beginner in Android development. I am good in Python, 
+		C and basic Java with beginner in Competitive programming(C++). 
+		Currently I am Digital Communication Head in my college placement cell , 
+		Campus ambassador at Girlscript Summer of Code , member of GDG, Banglore(android dev).
+		I was an open source contributor at GSSOC, 
+		as well as project helper for two projects water monitoring system and root the box ctf, 
+		Project Admin at student code-in. 
+		I was Girlscript education outreach scholar for android development and git GitHub. 
+		I am keenly interested in learning new technologies and always open to new opportunities.
+
+		That's all about me. :) 
+    </div>
+    <div id="work">
+       <h2>My Work</h2>
+	   
+	<amp-carousel width="400"
+	  height="300"
+	  layout="responsive"
+	  type="slides">
+	  <amp-img src="img/image1.jpg"
+		width="400"
+		height="300"
+		layout="responsive"
+		alt="a sample image"></amp-img>
+	  <amp-img src="img/image2.jpg"
+		width="400"
+		height="300"
+		layout="responsive"
+		alt="another sample image"></amp-img>
+	  <amp-img src="img/image3.jpg"
+		width="400"
+		height="300"
+		layout="responsive"
+		alt="and another sample image"></amp-img>
+		<amp-img src="img/image4.jpg"
+		width="400"
+		height="300"
+		layout="responsive"
+		alt="and another sample image"></amp-img>
+    </div>
+	
+	<div id="intro_v">
+	  <h2>Introduction Video</h2>
+	  <amp-youtube
+	   data-videoid="_Lx20uHmNag"
+	   layout="responsive"
+	   width="300"
+	   height="100">
+	  </amp-youtube>
+	</div>
+	
+	<div id="motiv">
+      <h2>Hey, Get a message:  </h2>
+      <p [text]="'You are the ' + foo + '😇 '  "><i>Hola! Hello!</i></p>
+	<button on="tap:AMP.setState({foo: 'Best'})">
+		Get a message!!
+	</button>
+	</div>
+	
+	<div>
+        <h2> Show some love: </h2>
+		<p><b>Rate my website: </p>
+    </div>
+<form id="rating" method="post" action-xhr="https://amp.dev/documentation/examples/interactivity-dynamic-content/star_rating/set" target="_blank">
+    <fieldset class="rating">
+      <input name="rating" type="radio" id="rating5" value="5" on="change:rating.submit">
+      <label for="rating5" title="5 stars">☆</label>
+
+      <input name="rating" type="radio" id="rating4" value="4" on="change:rating.submit">
+      <label for="rating4" title="4 stars">☆</label>
+
+      <input name="rating" type="radio" id="rating3" value="3" on="change:rating.submit">
+      <label for="rating3" title="3 stars">☆</label>
+
+      <input name="rating" type="radio" id="rating2" value="2" on="change:rating.submit" checked="checked">
+      <label for="rating2" title="2 stars">☆</label>
+
+      <input name="rating" type="radio" id="rating1" value="1" on="change:rating.submit">
+      <label for="rating1" title="1 stars">☆</label>
+    </fieldset>
+    <div submit-success>
+      <template type="amp-mustache">
+        <p>Thanks for rating {{rating}} star(s)!</p>
+      </template>
+    </div>
+    <div submit-error>
+      <template type="amp-mustache">
+        Looks like something went wrong. Please try to rate again. {{error}}
+      </template>
+    </div>
+  </form>
+	
+	
+	
+	<div id="share">
+	   <h2>Share the website to:</h2>
+		<amp-social-share type="email"></amp-social-share>
+		<amp-social-share type="linkedin"></amp-social-share>
+		<amp-social-share type="tumblr"></amp-social-share>
+		<amp-social-share type="twitter"></amp-social-share>
+		<amp-social-share type="whatsapp"></amp-social-share>
+		<amp-social-share type="line"></amp-social-share>
+	   
+	</div>
+</body>
+</html>
